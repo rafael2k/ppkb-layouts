@@ -1,0 +1,213 @@
+default
+xkb_symbols "default" {
+
+    include "us(basic)"
+    name[Group1]= "PinePhone Keyboard Case EN-US Default";
+
+    // regular:    | regular            | shift                 | pine			| shift+pine		|
+    // fn:         | fn	                | shift+fn		| pine+fn		| shift+pine+fn		|
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    // ROW 1 (ESC TO BACKSPACE)
+
+    // Esc
+    key <ESC>  { [ Escape,		Escape,			NoSymbol,		NoSymbol		] };
+
+    // 1
+    key <AE01> { [ 1, 			exclam, 		bar,	 		bar			] };
+    key <FK01> { [ F1,			F1,			NoSymbol,		NoSymbol		] };
+
+    // 2
+    key <AE02> { [ 2,			at,			backslash,		backslash		] };
+    key <FK02> { [ F2,			F2,			NoSymbol,		NoSymbol		] };
+
+    // 3
+    key <AE03> { [ 3,			numbersign,		sterling,		sterling		] };
+    key <FK03> { [ F3,			F3,			NoSymbol,		NoSymbol		] };
+
+    // 4
+    key <AE04> { [ 4,			dollar,			EuroSign,		EuroSign		] };
+    key <FK04> { [ F4,			F4,			NoSymbol,		NoSymbol		] };
+
+    // 5
+    key <AE05> { [ 5,			percent,		asciitilde,		asciitilde		] };
+    key <FK05> { [ F5,			F5,			NoSymbol,		NoSymbol		] };
+
+    // 6
+    key <AE06> { [ 6,			asciicircum,		grave,			grave			] };
+    key <FK06> { [ F6,			F6,			NoSymbol,		NoSymbol		] };
+
+    // 7
+    key <AE07> { [ 7,			ampersand,		minus,	       		minus			] };
+    key <FK07> { [ F7,			F7,			NoSymbol,		NoSymbol		] };
+
+    // 8
+    key <AE08> { [ 8,			asterisk,		equal,			equal			] };
+    key <FK08> { [ F8,			F8,			NoSymbol,		NoSymbol		] };
+
+    // 9
+    key <AE09> { [ 9,			parenleft,		underscore,		underscore		] };
+    key <FK09> { [ F9,			F9,			NoSymbol,		NoSymbol		] };
+
+    // 0
+    key <AE10> { [ 0,			parenright,		plus,			plus			] };
+    key <FK10> { [ F10,			F10, 			NoSymbol, 		NoSymbol		] };
+
+    // Backspace
+    key <BKSP> { [ Backspace,		Backspace,		NoSymbol,		NoSymbol		] };
+    key <DELE> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    // ROW 2 (TAB TO ENTER)
+
+    // Tab
+    key <TAB>  { [ Tab,			Tab,			NoSymbol,		NoSymbol		] };
+
+    // Q
+    key <AD01> { [ q,			Q,			NoSymbol,		NoSymbol		] };
+
+    // W
+    key <AD02> { [ w,			W,			NoSymbol,		NoSymbol		] };
+
+    // E
+    key <AD03> { [ e,			E,			NoSymbol,		NoSymbol		] };
+
+    // R
+    key <AD04> { [ r,			R,			NoSymbol,		NoSymbol		] };
+
+    // T
+    key <AD05> { [ t,			T,			NoSymbol,		NoSymbol		] };
+
+    // Y
+    key <AD06> { [ y,			Y,			NoSymbol,		NoSymbol		] };
+
+    // U
+    key <AD07> { [ u,			U,			NoSymbol,		NoSymbol		] };
+
+    // I
+    key <AD08> { [ i,			I,			NoSymbol,		NoSymbol		] };
+
+    // O
+    key <AD09> { [ o,			O,			NoSymbol,		NoSymbol		] };
+
+    // P
+    key <AD10> { [ p,			P,			NoSymbol,		NoSymbol		] };
+
+    // Enter
+    key <RTRN> { [ Return,		Return,			NoSymbol,		NoSymbol		] };
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    // ROW 3 (PINE/CAPS/META/WIN TO SEMICOLON)
+
+    // Pine
+    key <LWIN> { [ Meta_L,		Meta_L,			NoSymbol,		NoSymbol		] };
+    key <PRSC> { [ PrintScreen,		PrintScreen,		NoSymbol,		NoSymbol		] };
+
+    // A
+    key <AC01> { [ a,			A,			NoSymbol,		NoSymbol		] };
+
+    // S
+    key <AC02> { [ s,			S,			NoSymbol,		NoSymbol		] };
+
+    // D
+    key <AC03> { [ d,			D,			NoSymbol,		NoSymbol		] };
+
+    // F
+    key <AC04> { [ f,			F,			NoSymbol,		NoSymbol		] };
+
+    // G
+    key <AC05> { [ g,			G,			NoSymbol,		NoSymbol		] };
+
+    // H
+    key <AC06> { [ h,			H,			NoSymbol,		NoSymbol		] };
+
+    // J
+    key <AC07> { [ j,			J,			NoSymbol,		NoSymbol		] };
+
+    // K
+    key <AC08> { [ k,			K,			NoSymbol,		NoSymbol		] };
+
+    // L
+    key <AC09> { [ l,			L,			NoSymbol,		NoSymbol		] };
+
+    // Semicolon
+    key <AC10> { [ semicolon,		colon,			NoSymbol,		NoSymbol		] };
+    key <INS>  { [ Insert,		Insert,			NoSymbol,		NoSymbol		] };
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    // ROW 4 (SHIFT TO SLASH)
+
+    // Shift
+    key <LFSH> { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] };
+
+    // Z
+    key <AB01> { [ z,			Z,			NoSymbol,		NoSymbol		] };
+
+    // X
+    key <AB02> { [ x,			X,			NoSymbol,		NoSymbol		] };
+
+    // C
+    key <AB03> { [ c, 			C,	 		NoSymbol,		NoSymbol		] };
+
+    // V
+    key <AB04> { [ v,			V,			NoSymbol,		NoSymbol		] };
+
+    // B
+    key <AB05> { [ b,			B,			NoSymbol,		NoSymbol		] };
+
+    // N
+    key <AB06> { [ n,			N,			NoSymbol,		NoSymbol		] };
+
+    // M
+    key <AB07> { [ m,			M,			NoSymbol,		NoSymbol		] };
+
+    // Comma
+    key <AB08> { [ comma,		less,			NoSymbol,		NoSymbol		] };
+    key <HOME> { [ Home,		Home,			NoSymbol,		NoSymbol		] };
+
+    // Period
+    key <AB09> { [ period,              greater,              	NoSymbol,             	NoSymbol                ] };
+    key <UP>   { [ Up,			Up,			NoSymbol,		NoSymbol		] };
+
+    // Slash
+    key <AB10> { [ slash,               question,		NoSymbol,		NoSymbol		] };
+    key <END>  { [ End,			End,			NoSymbol,		NoSymbol		] };
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    // ROW 5 (CTRL TO BRACKET)
+
+    // Ctrl
+    key <LCTL> { [ Control_L,           Control_L,              Control_L,              Control_L               ] };
+
+    // Fn
+    //    key <LFN>  { [												] }; // the fn key is not passed through to xkb
+
+    // Alt
+    key <LALT> { [ Alt_L,		Alt_L,			Alt_L,			Alt_L			] };
+
+    // Space
+    key <SPCE> { [ space,		space,			NoSymbol,		NoSymbol		] };
+
+    // AltG
+    key <RALT> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
+
+    // Apostrophe
+    key <AC11> { [ apostrophe,		quotedbl,		NoSymbol,		NoSymbol		] };
+    key <LEFT> { [ Left,		Left,			NoSymbol,		NoSymbol		] };
+    
+    // Left Bracket
+    key <AD11> { [ bracketleft,		braceleft,		NoSymbol,		NoSymbol		] };
+    key <DOWN> { [ Down,		Down,			NoSymbol,		NoSymbol		] };
+
+    // Right Bracket
+    key <AD12> { [ bracketright,	braceright,		NoSymbol,		NoSymbol		] };
+    key <RGHT> { [ Right,		Right,			NoSymbol,		NoSymbol		] };
+    
+    include "level3(lwin_switch)"
+
+};
