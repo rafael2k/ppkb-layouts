@@ -6809,7 +6809,14 @@
         <shortDescription>pp</shortDescription>
         <description>PinePhone Keyboard Case EN-US Default</description>
       </configItem>
-      <variantList/>
+      <variantList>
+       <variant>
+         <configItem>
+          <name>altgr</name>
+            <description>PinePhone Keyboard Case EN-US Default with RAlt/AltG(r) instead of Pine/Caps for more symbols</description>
+         </configItem>
+       </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
