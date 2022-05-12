@@ -211,3 +211,20 @@ xkb_symbols "default" {
     include "level3(lwin_switch)"
 
 };
+
+partial alphanumeric_keys
+xkb_symbols "altgr" {
+
+    include "pp(default)"
+    name[Group1]= "PinePhone Keyboard Case EN-US Default with RAlt/AltG(r) instead of Pine/Caps for more symbols";
+
+    // regular:    | regular            | shift                 | pine			| shift+pine		|
+    // fn:         | fn	                | shift+fn		| pine+fn		| shift+pine+fn		|
+
+    //--------------------------------------------------------------------------------------------------------------
+
+    key <LWIN> { [ Meta_L,		Meta_L,			NoSymbol,		NoSymbol		] };
+
+    include "level3(ralt_switch)"
+
+};
