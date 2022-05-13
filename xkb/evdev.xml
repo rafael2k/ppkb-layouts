@@ -6812,8 +6812,14 @@
       <variantList>
        <variant>
          <configItem>
+          <name>pine</name>
+            <description>PinePhone Keyboard Case EN-US with Pine/Caps for additional symbols</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
           <name>altgr</name>
-            <description>PinePhone Keyboard Case EN-US Default with RAlt/AltG(r) instead of Pine/Caps for more symbols</description>
+            <description>PinePhone Keyboard Case EN-US with RAlt/AltG(r) for additional symbols</description>
          </configItem>
        </variant>
       </variantList>
