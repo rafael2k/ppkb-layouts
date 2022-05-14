@@ -214,7 +214,7 @@ partial alphanumeric_keys
 xkb_symbols "pine" {
 
     include "pp(basic)"
-    name[Group1]= "PinePhone Keyboard Case EN-US Default with Pine/Caps for additional symbols";
+    name[Group1]= "PinePhone Keyboard Case EN-US with Pine/Caps for additional symbols";
 
     include "level3(lwin_switch)"
 
@@ -224,8 +224,65 @@ partial alphanumeric_keys
 xkb_symbols "altgr" {
 
     include "pp(basic)"
-    name[Group1]= "PinePhone Keyboard Case EN-US Default with RAlt/AltG(r) for additional symbols";
+    name[Group1]= "PinePhone Keyboard Case EN-US with RAlt/AltG(r) for additional symbols";
 
     include "level3(ralt_switch)"
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "fnsymbols-pinef12" {
+
+    include "pp(basic)"
+    name[Group1]= "PinePhone Keyboard Case EN-US with Fn for additional symbols and Pine for F1-F12";
+
+    // Esc
+    key <ESC>  { [ Escape,		Escape,			F11,			F11			] };
+
+    // 1
+    key <AE01> { [ 1, 			exclam, 		F1,	 		F1			] };
+    key <FK01> { [ bar,			bar,			NoSymbol,		NoSymbol		] };
+
+    // 2
+    key <AE02> { [ 2,			at,			F2,			F2			] };
+    key <FK02> { [ backslash,		backslash,		NoSymbol,		NoSymbol		] };
+
+    // 3
+    key <AE03> { [ 3,			numbersign,		F3,			F3			] };
+    key <FK03> { [ sterling,		sterling,		NoSymbol,		NoSymbol		] };
+
+    // 4
+    key <AE04> { [ 4,			dollar,			F4,			F4			] };
+    key <FK04> { [ EuroSign,		EuroSign,		NoSymbol,		NoSymbol		] };
+
+    // 5
+    key <AE05> { [ 5,			percent,		F5,			F5			] };
+    key <FK05> { [ asciitilde,		asciitilde,		NoSymbol,		NoSymbol		] };
+
+    // 6
+    key <AE06> { [ 6,			asciicircum,		F6,			F6			] };
+    key <FK06> { [ grave,		grave,			NoSymbol,		NoSymbol		] };
+
+    // 7
+    key <AE07> { [ 7,			ampersand,		F7,	       		F7			] };
+    key <FK07> { [ minus,		minus,			NoSymbol,		NoSymbol		] };
+
+    // 8
+    key <AE08> { [ 8,			asterisk,		F8,			F8			] };
+    key <FK08> { [ equal,		equal,			NoSymbol,		NoSymbol		] };
+
+    // 9
+    key <AE09> { [ 9,			parenleft,		F9,			F9			] };
+    key <FK09> { [ underscore,		underscore,		NoSymbol,		NoSymbol		] };
+
+    // 0
+    key <AE10> { [ 0,			parenright,		F10,			F10			] };
+    key <FK10> { [ plus,		plus, 			NoSymbol, 		NoSymbol		] };
+
+    // Backspace
+    key <BKSP> { [ Backspace,		Backspace,		F12,			F12			] };
+    key <DELE> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
+
+    include "level3(lwin_switch)"
 
 };
