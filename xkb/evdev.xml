@@ -6828,6 +6828,12 @@
             <description>PinePhone Keyboard Case EN-US with Fn for additional symbols and Pine for F1-F12</description>
          </configItem>
        </variant>
+       <variant>
+         <configItem>
+          <name>fnsymbols-altgrf12</name>
+            <description>PinePhone Keyboard Case EN-US with Fn for additional symbols and AltGr for F1-F12</description>
+         </configItem>
+       </variant>
       </variantList>
     </layout>
     <layout>
