@@ -6834,6 +6834,18 @@
             <description>PinePhone Keyboard Case EN-US with Fn for additional symbols and AltGr for F1-F12</description>
          </configItem>
        </variant>
+       <variant>
+         <configItem>
+          <name>de-pine</name>
+            <description>PinePhone Keyboard Case DE with Pine/Caps for additional symbols</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>de-altgr</name>
+            <description>PinePhone Keyboard Case DE with RAlt/AltG(r) for additional symbols</description>
+         </configItem>
+       </variant>
       </variantList>
     </layout>
     <layout>

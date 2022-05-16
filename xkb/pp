@@ -349,3 +349,158 @@ xkb_symbols "fnsymbols-altgrf12" {
     include "level3(ralt_switch)"
 
 };
+
+partial alphanumeric_keys
+xkb_symbols "de-pine" {
+
+    include "pp(basic)"
+    name[Group1]= "PinePhone Keyboard Case DE with Pine/Caps for additional symbols";
+
+    // regular:    | regular            | shift                 | pine		       	| shift+pine		|
+    // fn:         | fn	                | shift+fn		| pine+fn		| shift+pine+fn      	|
+
+    // Y
+    key <AD06> { [ z,			Z,			zcaron,			Zcaron			] };
+
+    // Z
+    key <AB01> { [ y,			Y,			less,			greater			] };
+
+    // Q
+    key <AD01> { [ q,			Q,			at,			NoSymbol		] };
+
+    // E
+    key <AD03> { [ e,			E,			EuroSign,      		Eacute			] };
+
+    // 1
+    key <AE01> { [ 1, 			exclam, 		bar,	 		exclamdown		] };
+
+    // 2
+    key <AE02> { [ 2,			quotedbl,		backslash,		backslash		] };
+
+    // 3
+    key <AE03> { [ 3,			section,		sterling,		sterling		] };
+
+    // 4
+    key <AE04> { [ 4,			dollar,			asterisk,		EuroSign		] };
+
+    // 5
+    key <AE05> { [ 5,			percent,		asciitilde,		dead_circumflex		] };
+
+    // 6
+    key <AE06> { [ 6,			ampersand,		dead_grave,		dead_acute		] };
+
+    // 7
+    key <AE07> { [ 7,			slash,			braceleft,     		endash			] };
+
+    // 8
+    key <AE08> { [ 8,			parenleft,		bracketleft,		equal			] };
+
+    // 9
+    key <AE09> { [ 9,			parenright,		bracketright,		underscore		] };
+
+    // 0
+    key <AE10> { [ 0,			equal,			braceright,		question		] };
+
+    // Semicolon
+    key <AC10> { [ numbersign,		apostrophe,		rightsinglequotemark,	NoSymbol		] };
+
+    // Comma
+    key <AB08> { [ comma,		semicolon,		less,		NoSymbol		] };
+
+    // Period
+    key <AB09> { [ period,              colon,              	greater,             	NoSymbol                ] };
+
+    // Slash
+    key <AB10> { [ minus,               underscore,		plus,			endash			] };
+
+    // AltG
+    key <RALT> { [ ssharp,              U1E9E,             	Alt_R,             	Alt_R			] };
+
+    // Apostrophe
+    key <AC11> { [ adiaeresis,		Adiaeresis,		rightsinglequotemark,	NoSymbol		] };
+    
+    // Left Bracket
+    key <AD11> { [ odiaeresis,		Odiaeresis,		NoSymbol,		NoSymbol		] };
+
+    // Right Bracket
+    key <AD12> { [ udiaeresis,		Udiaeresis,		NoSymbol,		NoSymbol		] };
+
+    include "level3(lwin_switch)"
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "de-altgr" {
+
+    include "pp(basic)"
+    name[Group1]= "PinePhone Keyboard Case DE with RAlt/AltG(r) for additional symbols";
+
+    // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
+    // fn:         | fn	                | shift+fn		| altgr+fn		| shift+altgr+fn      	|
+
+    // Y
+    key <AD06> { [ z,			Z,			zcaron,			Zcaron			] };
+
+    // Z
+    key <AB01> { [ y,			Y,			less,			greater			] };
+
+    // Q
+    key <AD01> { [ q,			Q,			at,			NoSymbol		] };
+
+    // E
+    key <AD03> { [ e,			E,			EuroSign,      		Eacute			] };
+
+    // 1
+    key <AE01> { [ 1, 			exclam, 		bar,	 		exclamdown		] };
+
+    // 2
+    key <AE02> { [ 2,			quotedbl,		backslash,		backslash		] };
+
+    // 3
+    key <AE03> { [ 3,			section,		sterling,		sterling		] };
+
+    // 4
+    key <AE04> { [ 4,			dollar,			asterisk,		EuroSign		] };
+
+    // 5
+    key <AE05> { [ 5,			percent,		asciitilde,		dead_circumflex		] };
+
+    // 6
+    key <AE06> { [ 6,			ampersand,		dead_grave,		dead_acute		] };
+
+    // 7
+    key <AE07> { [ 7,			slash,			braceleft,     		endash			] };
+
+    // 8
+    key <AE08> { [ 8,			parenleft,		bracketleft,		equal			] };
+
+    // 9
+    key <AE09> { [ 9,			parenright,		bracketright,		underscore		] };
+
+    // 0
+    key <AE10> { [ 0,			equal,			braceright,		question		] };
+
+    // Semicolon
+    key <AC10> { [ numbersign,		apostrophe,		rightsinglequotemark,	NoSymbol		] };
+
+    // Comma
+    key <AB08> { [ comma,		semicolon,		NoSymbol,		NoSymbol		] };
+
+    // Period
+    key <AB09> { [ period,              colon,              	ellipsis,             	NoSymbol                ] };
+
+    // Slash
+    key <AB10> { [ minus,               underscore,		plus,			endash			] };
+
+    // Apostrophe
+    key <AC11> { [ adiaeresis,		Adiaeresis,		rightsinglequotemark,	NoSymbol		] };
+    
+    // Left Bracket
+    key <AD11> { [ odiaeresis,		Odiaeresis,		NoSymbol,		NoSymbol		] };
+
+    // Right Bracket
+    key <AD12> { [ udiaeresis,		Udiaeresis,		NoSymbol,		NoSymbol		] };
+
+    include "level3(ralt_switch)"
+
+};
