@@ -4,8 +4,8 @@ xkb_symbols "basic" {
     include "us(basic)"
     name[Group1]= "PinePhone Keyboard Case EN-US Default";
 
-    // regular:    | regular            | shift                 | pine			| shift+pine		|
-    // fn:         | fn	                | shift+fn		| pine+fn		| shift+pine+fn		|
+    // regular:    | regular            | shift                 | level3	       	| shift+level3		|
+    // fn:         | fn	                | shift+fn		| level3+fn		| shift+level3+fn      	|
 
     //--------------------------------------------------------------------------------------------------------------
 
@@ -236,6 +236,9 @@ xkb_symbols "fnsymbols-pinef12" {
     include "pp(basic)"
     name[Group1]= "PinePhone Keyboard Case EN-US with Fn for additional symbols and Pine for F1-F12";
 
+    // regular:    | regular            | shift                 | pine		       	| shift+pine		|
+    // fn:         | fn	                | shift+fn		| pine+fn		| shift+pine+fn      	|
+
     // Esc
     key <ESC>  { [ Escape,		Escape,			F11,			F11			] };
 
@@ -292,6 +295,9 @@ xkb_symbols "fnsymbols-altgrf12" {
 
     include "pp(basic)"
     name[Group1]= "PinePhone Keyboard Case EN-US with Fn for additional symbols and AltGr for F1-F12";
+
+    // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
+    // fn:         | fn	                | shift+fn		| altgr+fn		| shift+altgr+fn      	|
 
     // Esc
     key <ESC>  { [ Escape,		Escape,			F11,			F11			] };
