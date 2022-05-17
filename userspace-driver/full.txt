@@ -1,0 +1,112 @@
+# Esc
+1:1  0 KP0 LEFTMETA+0
+# 1
+1:2  1 KP1 LEFTMETA+1
+# 2
+1:3  2 KP2 LEFTMETA+2
+# 3
+1:4  3 KP3 LEFTMETA+3
+# 4
+1:5  4 KP4 LEFTMETA+4
+# 5
+1:6  5 KP5 LEFTMETA+5
+# 6
+1:7  6 KP6 LEFTMETA+6
+# 7
+1:8  7 KP7 LEFTMETA+7
+# 8
+1:9  8 KP8 LEFTMETA+8
+# 9
+1:10 9 KP9 LEFTMETA+9
+# 0
+1:11 EQUAL GRAVE LEFTMETA+EQUAL
+# Backspace
+1:12 BACKSPACE DELETE LEFTMETA+BACKSPACE
+#--------------------------------
+# Tab
+2:1  TAB ESC LEFTMETA+TAB
+# Q
+2:2  Q HOME LEFTALT+F4
+# W
+2:3  W UP LEFTMETA+W
+# E
+2:4  E END LEFTMETA+E
+# R
+2:5  R PAGEUP LEFTMETA+R
+# T
+2:6  T SEMICOLON LEFTMETA+T
+# Y
+2:7  Y APOSTROPHE LEFTMETA+Y
+# U
+2:8  U 102ND LEFTMETA+U          # 102ND is the 102nd key on 102 key keyboards (the key between leftshift and z on many non-US keyboards)
+# I
+2:9  I COMPOSE LEFTMETA+I
+# O
+2:10 O SCROLLLOCK LEFTMETA+O
+# P
+2:11 P RIGHTSHIFT LEFTMETA+P
+# Enter
+2:12 ENTER INSERT LEFTMETA+ENTER
+#--------------------------------
+# Pine/Caps
+3:1  LEFTMETA SYSRQ              # layer 1 here is overridden by the Pine layer key so its own definition is irrelevant, SYSRQ is print; right Fn (AltGr) + this key won't activate print
+# A
+3:2  A LEFT LEFTMETA+A
+# S
+3:3  S DOWN LEFTMETA+S
+# D
+3:4  D RIGHT LEFTMETA+D
+# F
+3:5  F PAGEDOWN LEFTMETA+F
+# G
+3:6  G F19 LEFTMETA+G            # i wont plug a power supply into your phone with the keyboard attached for a pound
+# H
+3:7  H BACKSLASH LEFTMETA+H
+# J
+3:8  J CAPSLOCK LEFTMETA+J
+# K
+3:9  K YEN LEFTMETA+K
+# L
+3:10 L RIGHTMETA LEFTMETA+L
+# Semicolon
+3:11 SLASH F24 LEFTMETA+SLASH
+#--------------------------------
+# Shift
+4:1  LEFTSHIFT
+# Z
+4:2  Z KPDOT LEFTMETA+Z
+# X
+4:3  X KPCOMMA LEFTMETA+X
+# C
+4:4  C KPENTER LEFTMETA+C
+# V
+4:5  V KPEQUAL LEFTMETA+V
+# B
+4:6  B LEFTBRACE LEFTMETA+B
+# N
+4:7  N RIGHTBRACE LEFTMETA+N
+# M
+4:8  M KPPLUS LEFTMETA+M
+# Comma
+4:9  COMMA KPMINUS LEFTMETA+COMMA
+# Period
+4:10 DOT KPASTERISK LEFTMETA+DOT
+# Slash
+4:11 MINUS KPSLASH LEFTMETA+MINUS
+#--------------------------------
+# Ctrl
+5:1  LEFTCTRL F8 LEFTMETA+LEFTCTRL
+# Fn
+5:2  FN                          # there is no RIGHTFN, also this key is overridden by the driver-level Fn layer just like the Pine key
+# Alt
+5:3  LEFTALT F9 LEFTMETA+LEFTALT
+# Space
+5:4  SPACE F1 LEFTMETA+SPACE
+# AltGr
+5:5  RIGHTALT F2 LEFTMETA+RIGHTALT
+# Apostrophe
+5:6  F3 F4 LEFTMETA+F3
+# Left Bracket
+5:7  RIGHTCTRL F5 LEFTMETA+RIGHTCTRL
+# Right Bracket
+5:8  F6 F7 LEFTMETA+RIGHTCTRL
