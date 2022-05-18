@@ -74,7 +74,7 @@
 3:11	SLASH			F24			LEFTMETA+SLASH
 #--------------------------------------------------------------------------------
 # Shift
-4:1	LEFTSHIFT
+4:1	LEFTSHIFT		F10			LEFTMETA+LEFTSHIFT
 # Z
 4:2	Z			KPDOT			LEFTMETA+Z
 # X
@@ -97,18 +97,18 @@
 4:11	MINUS			KPSLASH			LEFTMETA+MINUS
 #--------------------------------------------------------------------------------
 # Ctrl
-5:1	LEFTCTRL		F8			LEFTMETA+LEFTCTRL
+5:1	LEFTCTRL		F1			LEFTMETA+LEFTCTRL
 # Fn
-5:2	FN									# there is no RIGHTFN, also this key is overridden by the driver-level Fn layer just like the Pine key
+5:2	FN									# there is no RIGHTFN, also this key is overridden by the driver-level Fn layer just like the Pine key no matter what is defined here
 # Alt
-5:3	LEFTALT			F9			LEFTMETA+LEFTALT
+5:3	LEFTALT			F2			LEFTMETA+LEFTALT
 # Space
-5:4	SPACE			F1			LEFTMETA+SPACE
+5:4	SPACE			F3			LEFTMETA+SPACE
 # AltGr
-5:5	RIGHTALT		F2			LEFTMETA+RIGHTALT
+5:5	RIGHTALT		F4			LEFTMETA+RIGHTALT
 # Apostrophe
-5:6	F3			F4			LEFTMETA+F3
+5:6	F5			F6			LEFTMETA+F3
 # Left Bracket
-5:7	RIGHTCTRL		F5			LEFTMETA+RIGHTCTRL
+5:7	RIGHTCTRL		F7			LEFTMETA+RIGHTCTRL
 # Right Bracket
-5:8	F6			F7			LEFTMETA+RIGHTCTRL
+5:8	F8			F9			LEFTMETA+RIGHTCTRL

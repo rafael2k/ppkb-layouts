@@ -6847,6 +6847,21 @@
          </configItem>
        </variant>
       </variantList>
+    </layout><layout>
+      <configItem>
+	<name>pp-usrspc</name>
+        <shortDescription>pp</shortDescription>
+        <description>PinePhone Keyboard Case Userspace Full</description>
+      </configItem>
+      <variantList>
+       <variant>
+         <configItem>
+          <name>phalio</name>
+            <description>PinePhone Keyboard Case Userspace Phalio</description>
+         </configItem>
+       </variant>
+       
+      </variantList>
     </layout>
     <layout>
       <configItem>

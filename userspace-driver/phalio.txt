@@ -97,18 +97,18 @@
 4:11	MINUS			KPSLASH			LEFTMETA+MINUS
 #--------------------------------------------------------------------------------
 # Ctrl
-5:1	LEFTCTRL		F1			LEFTMETA+LEFTCTRL
+5:1	LEFTCTRL		LEFTCTRL		LEFTMETA+LEFTCTRL
 # Fn
 5:2	FN									# there is no RIGHTFN, also this key is overridden by the driver-level Fn layer just like the Pine key
 # Alt
-5:3	LEFTALT			F2			LEFTMETA+LEFTALT
+5:3	LEFTALT			LEFTALT			LEFTMETA+LEFTALT
 # Space
-5:4	SPACE			F3			LEFTMETA+SPACE
+5:4	SPACE			F1			LEFTMETA+SPACE
 # AltGr
-5:5	LEFTALT			F4			LEFTMETA+LEFTALT	# leftalt again to use rightalt in an xkb layout to activate layer 3
+5:5	F2			F2			LEFTMETA+F2		# leftalt again to use rightalt in an xkb layout to activate layer 3
 # Apostrophe
-5:6	RIGHTALT		F5			LEFTMETA+RIGHTALT	# to be used to activate layer 3 in xkb which is a copy of the layer here, making it effectively another Fn key
+5:6	RIGHTALT		RIGHTALT		LEFTMETA+RIGHTALT	# to be used to activate layer 3 in xkb which is a copy of the layer here, making it effectively another Fn key
 # Left Bracket
-5:7	RIGHTCTRL		F6			LEFTMETA+RIGHTCTRL
+5:7	RIGHTCTRL		RIGHTCTRL		LEFTMETA+RIGHTCTRL
 # Right Bracket
-5:8	F7			F8			LEFTMETA+F7
+5:8	F3			F3			LEFTMETA+F3
