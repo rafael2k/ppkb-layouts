@@ -6854,13 +6854,18 @@
         <description>PinePhone Keyboard Case Userspace Full</description>
       </configItem>
       <variantList>
+	<variant>
+         <configItem>
+          <name>mirrored</name>
+            <description>PinePhone Keyboard Case Userspace (mirrored modifier keys)</description>
+         </configItem>
+       </variant>
        <variant>
          <configItem>
           <name>phalio</name>
             <description>PinePhone Keyboard Case Userspace Phalio</description>
          </configItem>
        </variant>
-       
       </variantList>
     </layout>
     <layout>
