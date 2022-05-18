@@ -6857,7 +6857,7 @@
 	<variant>
          <configItem>
           <name>mirrored</name>
-            <description>PinePhone Keyboard Case Userspace (mirrored modifier keys)</description>
+            <description>PinePhone Keyboard Case Userspace with mirrored modifier keys</description>
          </configItem>
        </variant>
        <variant>
