@@ -296,7 +296,7 @@ xkb_symbols "de-pine" {
     // Semicolon
     key <AC10> { [ numbersign,		apostrophe,		rightsinglequotemark,	NoSymbol		] };
     // Comma
-    key <AB08> { [ comma,		semicolon,		less,		NoSymbol		] };
+    key <AB08> { [ comma,		semicolon,		less,			ellipsis		] };
     // Period
     key <AB09> { [ period,              colon,              	greater,             	NoSymbol                ] };
     // Slash
