@@ -9,32 +9,38 @@ ShiftL keycode 1 =		F11
 keycode 2 =			one
 Shift keycode 2 =		exclam
 ShiftL keycode 2 =		F1
+Control Alt ShiftL keycode 2 =	Console_1  # at least on my arch sxmo install, both f2 and f3 open tty3, but binding f2 to Console_2 makes it open tty2, i don't know why it opens tty3 by default, change the f2 binding to Console_3 if it causes you any issues; it also seems common that the maximum is tty6 and binding anything above Console_6 to a key doesn't do anything
 keycode 59 =			bar
 Shift keycode 59 =		exclamdown
 # 2
 keycode 3 =			two
 Shift keycode 3 =		at
 ShiftL keycode 3 =		F2
+Control Alt ShiftL keycode 3 =	Console_2
 keycode 60 =			backslash
 # 3
 keycode 4 =			three
 Shift keycode 4 =		numbersign
 ShiftL keycode 4 =		F3
+Control Alt ShiftL keycode 4 =	Console_3
 keycode 61 =			pound
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 ShiftL keycode 5 =		F4
+Control Alt ShiftL keycode 5 =	Console_4
 keycode 62 =			U+20AC
 # 5
 keycode 6 =			five
 Shift keycode 6 =		percent
 ShiftL keycode 6 =		F5
+Control Alt ShiftL keycode 6 =	Console_5
 keycode 63 =			asciitilde
 # 6
 keycode 7 =			six
 Shift keycode 7 =		asciicircum
 ShiftL keycode 7 =		F6
+Control Alt ShiftL keycode 7 =	Console_6
 keycode 64 =			grave
 # 7
 keycode 8 =			seven
