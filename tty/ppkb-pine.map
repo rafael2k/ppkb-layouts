@@ -127,8 +127,8 @@ keycode 38 =			l
 ShiftL keycode 38 =		U+0142
 Shift ShiftL keycode 38 =	U+0141
 # Semicolon
-keycode 41 =			semicolon
-Shift keycode 41 =		colon
+keycode 39 =			semicolon
+Shift keycode 39 =		colon
 keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
