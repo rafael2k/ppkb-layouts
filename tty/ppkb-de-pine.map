@@ -11,7 +11,7 @@ keycode 2 =			one
 Shift keycode 2 =		exclam
 ShiftL keycode 2 =		bar
 Shift ShiftL keycode 2 =	exclamdown
-plain keycode 59 =		F1 # f keys have to include "plain", otherwise the key bindings to switch between gui and ttys won't work and one can get in but never out of tty, i assume without plain it overrides the ctrl+alt level of that binding, but regular terminal shortcuts like control-c still work, so i guess that specific level is redefined elsewhere to whatever does the tty switching
+plain keycode 59 =		F1 # f keys have to include "plain", otherwise the key bindings to switch between gui and ttys will be overridden and one can get in but never out of tty; alternatively define that level using "Control Alt AltGr keycode 59 = Console_1"
 # 2
 keycode 3 =			two
 Shift keycode 3 =		quotedbl
