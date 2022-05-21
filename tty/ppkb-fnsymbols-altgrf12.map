@@ -11,45 +11,53 @@ AltGr keycode 1 =		F11
 keycode 2 =			one
 Shift keycode 2 =		exclam
 AltGr keycode 2 =		F1
-Control Alt AltGr keycode 2 =	Console_1  # at least on my arch sxmo install, both f2 and f3 open tty3, but binding f2 to Console_2 makes it open tty2, i don't know why it opens tty3 by default, change the f2 binding to Console_3 if it causes you any issues; it also seems common that the maximum is tty6 and binding anything above Console_6 to a key doesn't do anything
+Control Alt AltGr keycode 2 =	Console_1
 keycode 59 =			bar
 Shift keycode 59 =		exclamdown
+Control Alt keycode 59 =	Console_1 # i added both fn and pine to switch ttys since it seems like the key binding is always bound to physical f keys on x/wayland
 # 2
 keycode 3 =			two
 Shift keycode 3 =		at
 AltGr keycode 3 =		F2
 Control Alt AltGr keycode 3 =	Console_2
 keycode 60 =			backslash
+Control Alt keycode 60 =	Console_2
 # 3
 keycode 4 =			three
 Shift keycode 4 =		numbersign
 AltGr keycode 4 =		F3
 Control Alt AltGr keycode 4 =	Console_3
 keycode 61 =			pound
+Control Alt keycode 61 =	Console_3
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 AltGr keycode 5 =		F4
 Control Alt AltGr keycode 5 =	Console_4
 keycode 62 =			U+20AC
+Control Alt keycode 62 =	Console_4
 # 5
 keycode 6 =			five
 Shift keycode 6 =		percent
 AltGr keycode 6 =		F5
-Control Alt AltGr keycode 6 =	nul # due to the layout of the keyboard's electrical matrix, alt+altgr+3 / alt+altgr+5 will also activate 6 / 3, in either case in the order of first 3 and then 5, so binding this to tty5 would cause both f3 and f5 to switch to tty3 and then immediately to tty5, making tty3 inaccessible; since tty3 is more likely to be used i bound alt+altgr+f5 to nul; now pressing either combination leads to tty3. if this is an issue for you, consider binding Console_5 to another key like f7, or use a layout with a different modifier key for f keys
+Control Alt AltGr keycode 6 =	nul
 keycode 63 =			asciitilde
+Control Alt keycode 63 =	Console_5
 # 6
 keycode 7 =			six
 Shift keycode 7 =		asciicircum
 AltGr keycode 7 =		F6
 Control Alt AltGr keycode 7 =	Console_6
 keycode 64 =			grave
+Control Alt keycode 64 =	Console_6
 # 7
 keycode 8 =			seven
 Shift keycode 8 =		ampersand
 AltGr keycode 8 =		F7
+Control Alt AltGr keycode 8 =	Console_7
 keycode 65 =			minus
 Shift keycode 65 =		U+2013
+Control Alt keycode 65 =	Console_7
 # 8
 keycode 9 =			eight
 Shift keycode 9 =		asterisk

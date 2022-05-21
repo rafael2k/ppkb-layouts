@@ -10,56 +10,63 @@ keycode 1 =			Escape
 keycode 2 =			one
 Shift keycode 2 =		exclam
 AltGr keycode 2 =		bar
-Shift AltGr keycode 2 =	exclamdown
-plain keycode 59 =		F1 # f keys have to include "plain", otherwise the key bindings to switch between gui and ttys will be overridden and one can get in but never out of tty; alternatively define that level using "Control Alt AltGr keycode 59 = Console_1"
+Shift AltGr keycode 2 =		exclamdown
+keycode 59 =			F1
+Control Alt keycode 59 =	Console_1
 # 2
 keycode 3 =			two
 Shift keycode 3 =		quotedbl
 AltGr keycode 3 =		backslash
-plain keycode 60 =		F2
+keycode 60 =			F2
+Control Alt keycode 60 =	Console_2
 # 3
 keycode 4 =			three
 Shift keycode 4 =		section
 AltGr keycode 4 =		pound
-plain keycode 61 =		F3
+keycode 61 =			F3
+Control Alt keycode 61 =	Console_3
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 AltGr keycode 5 =		asterisk
-plain keycode 62 =		F4
+keycode 62 =			F4
+Control Alt keycode 62 =	Console_4
 # 5
 keycode 6 =			five
 Shift keycode 6 =		percent
 AltGr keycode 6 =		asciitilde
-Shift AltGr keycode 6 =	dead_circumflex
-plain keycode 63 =		F5
+Shift AltGr keycode 6 =		dead_circumflex
+keycode 63 =			F5
+Control Alt keycode 63 =	Console_5
 # 6
 keycode 7 =			six
 Shift keycode 7 =		ampersand
 AltGr keycode 7 =		dead_grave
-Shift AltGr keycode 7 =	dead_acute
-plain keycode 64 =		F6
+Shift AltGr keycode 7 =		dead_acute
+keycode 64 =			F6
+Control Alt keycode 59 =	Console_6
 # 7
 keycode 8 =			seven
 Shift keycode 8 =		slash
 AltGr keycode 8 =		braceleft
-plain keycode 65 =		F7
+keycode 65 =			F7
+Control Alt keycode 59 =	Console_7
 # 8
 keycode 9 =			eight
 Shift keycode 9 =		parenleft
 AltGr keycode 9 =		bracketleft
-plain keycode 66 =		F8
+keycode 66 =			F8
 # 9
 keycode 10 =			nine
 Shift keycode 10 =		parenright
 AltGr keycode 10 =		bracketright
-plain keycode 67 =		F9
+keycode 67 =			F9
 # 0
 keycode 11 =			zero
 Shift keycode 11 =		equal
 AltGr keycode 11 =		braceright
 Shift AltGr keycode 11 =	question
-plain keycode 68 =		F10
+keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is

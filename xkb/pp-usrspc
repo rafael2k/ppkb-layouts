@@ -12,40 +12,40 @@ xkb_symbols "full" {
     // ROW 1 (ESC TO BACKSPACE)
     // Esc: 0 KP0
     key <AE10> { [ Escape,		Escape,			NoSymbol,		NoSymbol		] };
-    key <KP0>  { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <FK10>  { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // 1: 1 KP1
     key <AE01> { [ 1, 			exclam, 		bar,	 		exclamdown		] };
-    key <KP1>  { [ F1,			F1,			NoSymbol,		NoSymbol		] };
+    key <FK01>  { [ F1,			F1,			NoSymbol,		NoSymbol		] };
     // 2: 2 KP2
     key <AE02> { [ 2,			at,			backslash,		backslash		] };
-    key <KP2>  { [ F2,			F2,			NoSymbol,		NoSymbol		] };
+    key <FK02>  { [ F2,			F2,			NoSymbol,		NoSymbol		] };
     // 3: 3 KP3
     key <AE03> { [ 3,			numbersign,		sterling,		sterling		] };
-    key <KP3>  { [ F3,			F3,			NoSymbol,		NoSymbol		] };
+    key <FK03>  { [ F3,			F3,			NoSymbol,		NoSymbol		] };
     // 4: 4 KP4
     key <AE04> { [ 4,			dollar,			EuroSign,		EuroSign		] };
-    key <KP4>  { [ F4,			F4,			NoSymbol,		NoSymbol		] };
+    key <FK04>  { [ F4,			F4,			NoSymbol,		NoSymbol		] };
     // 5: 5 KP5
     key <AE05> { [ 5,			percent,		asciitilde,		asciitilde		] };
-    key <KP5>  { [ F5,			F5,			NoSymbol,		NoSymbol		] };
+    key <FK05>  { [ F5,			F5,			NoSymbol,		NoSymbol		] };
     // 6: 6 KP6
     key <AE06> { [ 6,			asciicircum,		grave,			grave			] };
-    key <KP6>  { [ F6,			F6,			NoSymbol,		NoSymbol		] };
+    key <FK06>  { [ F6,			F6,			NoSymbol,		NoSymbol		] };
     // 7: 7 KP7
     key <AE07> { [ 7,			ampersand,		minus,	       		endash			] };
-    key <KP7>  { [ F7,			F7,			NoSymbol,		NoSymbol		] };
+    key <FK07>  { [ F7,			F7,			NoSymbol,		NoSymbol		] };
     // 8: 8 KP8
     key <AE08> { [ 8,			asterisk,		equal,			equal			] };
-    key <KP8>  { [ F8,			F8,			NoSymbol,		NoSymbol		] };
+    key <FK08>  { [ F8,			F8,			NoSymbol,		NoSymbol		] };
     // 9: 9 KP9
     key <AE09> { [ 9,			parenleft,		underscore,		underscore		] };
-    key <KP9>  { [ F9,			F9,			NoSymbol,		NoSymbol		] };
+    key <FK09>  { [ F9,			F9,			NoSymbol,		NoSymbol		] };
     // 0: = `
     key <AE12> { [ 0,			parenright,		plus,			plus			] };
-    key <TLDE> { [ F10,			F10, 			NoSymbol, 		NoSymbol		] };
+    key <FK11> { [ F10,			F10, 			NoSymbol, 		NoSymbol		] };
     // Backspace: backspace delete
     key <BKSP> { [ Backspace,		Backspace,		NoSymbol,		NoSymbol		] };
-    key <DELE> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
+    key <FK12> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 2 (TAB TO ENTER)
     // Tab: tab esc
@@ -103,7 +103,7 @@ xkb_symbols "full" {
     key <PGDN> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // G: g f19
     key <AC05> { [ g,			G,			NoSymbol,		NoSymbol		] };
-    key <FK19> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <TLDE> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // H: h f20
     key <AC06> { [ h,			H,			NoSymbol,		NoSymbol		] };
     key <BKSL> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
@@ -118,12 +118,12 @@ xkb_symbols "full" {
     key <RWIN> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // Semicolon: / f24
     key <AB10> { [ semicolon,		colon,			NoSymbol,		NoSymbol		] };
-    key <FK24> { [ Insert,		Insert,			NoSymbol,		NoSymbol		] };
+    key <DELE> { [ Insert,		Insert,			NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 4 (SHIFT TO SLASH)
     // Shift: shift
     key <LFSH> { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] };
-    key <FK10> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP0> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // Z: z kpdot
     key <AB01> { [ z,			Z,			zcaron,			Zcaron			] };
     key <KPDL> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
@@ -158,27 +158,27 @@ xkb_symbols "full" {
     // ROW 5 (CTRL TO BRACKET)
     // Ctrl: lctrl f1
     key <LCTL> { [ Control_L,           Control_L,              Control_L,              Control_L               ] };
-    key <FK01> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP1> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // Fn: Fn
 //    key <LFN>  { [ ] };
     // Alt: lalt f2
     key <LALT> { [ Alt_L,		Alt_L,			Alt_L,			Alt_L			] };
-    key <FK02> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP2> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     //    : space f3
     key <SPCE> { [ space,		space,			NoSymbol,		NoSymbol		] };
-    key <FK03> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP3> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // AltG: ralt f4
     key <RALT> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
-    key <FK04> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP4> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // ": f5 f6
-    key <FK05> { [ apostrophe,		quotedbl,		rightsinglequotemark,	NoSymbol		] };
-    key <FK06> { [ Left,		Left,			NoSymbol,		NoSymbol		] };
+    key <KP5> { [ apostrophe,		quotedbl,		rightsinglequotemark,	NoSymbol		] };
+    key <KP6> { [ Left,		Left,			NoSymbol,		NoSymbol		] };
     // [: rctrl f7
     key <RCTL> { [ bracketleft,		braceleft,		NoSymbol,		NoSymbol		] };
-    key <FK07> { [ Down,		Down,			NoSymbol,		NoSymbol		] };
+    key <KP7> { [ Down,		Down,			NoSymbol,		NoSymbol		] };
     // ]: f8 f9
-    key <FK08> { [ bracketright,	braceright,		NoSymbol,		NoSymbol		] };
-    key <FK09> { [ Right,		Right,			NoSymbol,		NoSymbol		] };
+    key <KP8> { [ bracketright,	braceright,		NoSymbol,		NoSymbol		] };
+    key <KP9> { [ Right,		Right,			NoSymbol,		NoSymbol		] };
 
     include "level3(ralt_switch)"
 };
@@ -195,40 +195,40 @@ xkb_symbols "mirrored" {
     // ROW 1 (ESC TO BACKSPACE)
     // Esc: 0 KP0
     key <AE10> { [ Escape,		Escape,			NoSymbol,		NoSymbol		] };
-    key <KP0>  { [ NoSymbol,		NoSymbol,		F11,			F11			] };
+    key <FK10>  { [ NoSymbol,		NoSymbol,		F11,			F11			] };
     // 1: 1 KP1
     key <AE01> { [ 1, 			exclam, 		bar,	 		exclamdown		] };
-    key <KP1>  { [ bar,	 		exclamdown,		F1,			F1			] };
+    key <FK01>  { [ bar,	 		exclamdown,		F1,			F1			] };
     // 2: 2 KP2
     key <AE02> { [ 2,			at,			backslash,		backslash		] };
-    key <KP2>  { [ backslash,		backslash,		F2,			F2			] };
+    key <FK02>  { [ backslash,		backslash,		F2,			F2			] };
     // 3: 3 KP3
     key <AE03> { [ 3,			numbersign,		sterling,		sterling		] };
-    key <KP3>  { [ sterling,		sterling,		F3,			F3			] };
+    key <FK03>  { [ sterling,		sterling,		F3,			F3			] };
     // 4: 4 KP4
     key <AE04> { [ 4,			dollar,			EuroSign,		EuroSign		] };
-    key <KP4>  { [ EuroSign,		EuroSign,		F4,			F4			] };
+    key <FK04>  { [ EuroSign,		EuroSign,		F4,			F4			] };
     // 5: 5 KP5
     key <AE05> { [ 5,			percent,		asciitilde,		asciitilde		] };
-    key <KP5>  { [ asciitilde,		asciitilde,		F5,			F5			] };
+    key <FK05>  { [ asciitilde,		asciitilde,		F5,			F5			] };
     // 6: 6 KP6
     key <AE06> { [ 6,			asciicircum,		grave,			grave			] };
-    key <KP6>  { [ grave,		grave,			F6,			F6			] };
+    key <FK06>  { [ grave,		grave,			F6,			F6			] };
     // 7: 7 KP7
     key <AE07> { [ 7,			ampersand,		minus,	       		endash			] };
-    key <KP7>  { [ minus,	       	endash,			F7,			F7			] };
+    key <FK07>  { [ minus,	       	endash,			F7,			F7			] };
     // 8: 8 KP8
     key <AE08> { [ 8,			asterisk,		equal,			equal			] };
-    key <KP8>  { [ equal,		equal,			F8,			F8			] };
+    key <FK08>  { [ equal,		equal,			F8,			F8			] };
     // 9: 9 KP9
     key <AE09> { [ 9,			parenleft,		underscore,		underscore		] };
-    key <KP9>  { [ underscore,		underscore,		F9,			F9			] };
+    key <FK09>  { [ underscore,		underscore,		F9,			F9			] };
     // 0: = `
     key <AE12> { [ 0,			parenright,		plus,			plus			] };
-    key <TLDE> { [ plus,		plus,			F10,			F10 			] };
+    key <FK11> { [ plus,		plus,			F10,			F10 			] };
     // Backspace: backspace delete
     key <BKSP> { [ Backspace,		Backspace,		Delete,			Delete			] };
-    key <DELE> { [ Delete,		Delete,			F12,			F12			] };
+    key <FK12> { [ Delete,		Delete,			F12,			F12			] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 2 (TAB TO ENTER)
     // Tab: tab esc
@@ -286,7 +286,7 @@ xkb_symbols "mirrored" {
     key <PGDN> { [ Next,		Next,			Greek_theta,		NoSymbol		] };
     // G: g f19
     key <AC05> { [ g,			G,			NoSymbol,		NoSymbol		] };
-    key <FK19> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <TLDE> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // H: h f20
     key <AC06> { [ h,			H,			NoSymbol,		NoSymbol		] };
     key <BKSL> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
@@ -301,7 +301,7 @@ xkb_symbols "mirrored" {
     key <RWIN> { [ braceright,		braceright,		lstroke,		Lstroke			] };
     // Semicolon: / f24
     key <AB10> { [ semicolon,		colon,			quotedbl,		quotedbl		] };
-    key <FK24> { [ quotedbl,		quotedbl,		NoSymbol,		NoSymbol		] };
+    key <DELE> { [ quotedbl,		quotedbl,		NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 4 (SHIFT TO SLASH)
     // Shift: shift
@@ -341,33 +341,33 @@ xkb_symbols "mirrored" {
     // ROW 5 (CTRL TO BRACKET)
     // Ctrl: lctrl f1
     key <LCTL> { [ Control_L,           Control_L,              Control_L,              Control_L               ] };
-    key <FK01> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP1> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // Fn: Fn
 //    key <LFN>  { [ ] };
     // Alt: lalt f2
     key <LALT> { [ Alt_L,		Alt_L,			Alt_L,			Alt_L			] };
-    key <FK02> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP2> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     //    : space f3
     key <SPCE> { [ space,		space,			NoSymbol,		NoSymbol		] };
-    key <FK03> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP3> { [ NoSymbol,		NoSymbol,		NoSymbol,		NoSymbol		] };
     // AltG: ralt f4
     key <RALT> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
-    key <FK04> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
-    // ": f5 f6
-//    key <FK05> { [ ISO_Level3_Shift,	quotedbl,		rightsinglequotemark,	NoSymbol		] }; // both keys here are mapped to level 3 at the bottom of this layout
-//    key <FK06> { [ Left,		Left,			NoSymbol,		NoSymbol		] };
+    key <KP4> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
+    // ': f5 f6
+//    key <KP5> { [ ISO_Level3_Shift,	quotedbl,		rightsinglequotemark,	NoSymbol		] }; // both keys here are mapped to level 3 at the bottom of this layout
+//    key <KP6> { [ Left,		Left,			NoSymbol,		NoSymbol		] };
     // [: rctrl f7
     key <RCTL> { [ Control_R,		Control_R,		Control_R,		Control_R		] };
-    key <FK07> { [ Control_R,		Control_R,		Control_R,		Control_R		] };
+    key <KP7> { [ Control_R,		Control_R,		Control_R,		Control_R		] };
     // ]: f8 f9
-    key <FK08> { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <FK09> { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
+    key <KP8> { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
+    key <KP9> { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
 
-    key <FK05> {
+    key <KP5> {
       type[Group1]="ONE_LEVEL",
       symbols[Group1] = [ ISO_Level3_Shift ]
     };
-    key <FK06> {
+    key <KP6> {
       type[Group1]="ONE_LEVEL",
       symbols[Group1] = [ ISO_Level3_Shift ]
     };
@@ -386,40 +386,40 @@ xkb_symbols "phalio" {
     // ROW 1 (ESC TO BACKSPACE)
     // Esc: 0 KP0
     key <AE10> { [ 0, 			question,		dead_acute, 		questiondown 		] };
-    key <KP0>  { [ dead_acute,		questiondown, 		F10,			F10			] };
+    key <FK10>  { [ dead_acute,		questiondown, 		F10,			F10			] };
     // 1: 1 KP1
     key <AE01> { [ 1, 			exclam, 		dead_grave, 		exclamdown		] };
-    key <KP1>  { [ dead_grave, 		exclamdown,		F1,			F1			] };
+    key <FK01>  { [ dead_grave, 		exclamdown,		F1,			F1			] };
     // 2: 2 KP2
     key <AE02> { [ 2,			quotedbl,		seconds,		singlelowquotemark	] };
-    key <KP2>  { [ seconds,		singlelowquotemark,	F2,			F2			] };
+    key <FK02>  { [ seconds,		singlelowquotemark,	F2,			F2			] };
     // 3: 3 KP3
     key <AE03> { [ 3,			apostrophe,		minutes,		leftsinglequotemark	] };
-    key <KP3>  { [ minutes,		leftsinglequotemark,	F3,			F3			] };
+    key <FK03>  { [ minutes,		leftsinglequotemark,	F3,			F3			] };
     // 4: 4 KP4
     key <AE04> { [ 4,			rightsinglequotemark,	dead_circumflex,	dead_macron		] };
-    key <KP4>  { [ dead_circumflex,	dead_macron,		F4,			F4			] };
+    key <FK04>  { [ dead_circumflex,	dead_macron,		F4,			F4			] };
     // 5: 5 KP5
     key <AE05> { [ 5,			leftdoublequotemark,	doublelowquotemark,	leftsinglequotemark	] };
-    key <KP5>  { [ doublelowquotemark,	leftsinglequotemark,	F5,			F5			] };
+    key <FK05>  { [ doublelowquotemark,	leftsinglequotemark,	F5,			F5			] };
     // 6: 6 KP6
     key <AE06> { [ 6,			rightdoublequotemark,	leftdoublequotemark,	rightsinglequotemark	] };
-    key <KP6>  { [ leftdoublequotemark,	rightsinglequotemark,	F6,			F6			] };
+    key <FK06>  { [ leftdoublequotemark,	rightsinglequotemark,	F6,			F6			] };
     // 7: 7 KP7
     key <AE07> { [ 7,			percent,		asciitilde,		U2300			] };
-    key <KP7>  { [ asciitilde,		U2300,			F7,			F7			] };
+    key <FK07>  { [ asciitilde,		U2300,			F7,			F7			] };
     // 8: 8 KP8
     key <AE08> { [ 8,			numbersign,		plusminus,		U22C5			] };
-    key <KP8>  { [ plusminus,		U22C5,			F8,			F8			] };
+    key <FK08>  { [ plusminus,		U22C5,			F8,			F8			] };
     // 9: 9 KP9
     key <AE09> { [ 9,			asterisk,		U2212,			squareroot		] };
-    key <KP9>  { [ U2212,		squareroot,		F9,			F9			] };
+    key <FK09>  { [ U2212,		squareroot,		F9,			F9			] };
     // 0: = `
     key <AE12> { [ plus,		equal,			notequal,		approxeq		] };
-    key <TLDE> { [ notequal,		approxeq,		F11,			F11			] };
+    key <FK11> { [ notequal,		approxeq,		F11,			F11			] };
     // Backspace: backspace delete
     key <BKSP> { [ Backspace,		Backspace,		Delete,			Delete			] };
-    key <DELE> { [ Delete,		Delete,			F12,			F12			] };
+    key <FK12> { [ Delete,		Delete,			F12,			F12			] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 2 (TAB TO ENTER)
     // Tab: tab esc
@@ -477,7 +477,7 @@ xkb_symbols "phalio" {
     key <PGDN> { [ Next,		Next,			NoSymbol,		NoSymbol		] };
     // G: g f19
     key <AC05> { [ g,			G,			sterling,		U20A9			] };
-    key <FK19> { [ sterling,		U20A9,			NoSymbol,		NoSymbol		] };
+    key <TLDE> { [ sterling,		U20A9,			NoSymbol,		NoSymbol		] };
     // H: h f20
     key <AC06> { [ h,			H,			at,			idotless		] };
     key <BKSL> { [ at,			idotless,		NoSymbol,		NoSymbol		] };
@@ -492,7 +492,7 @@ xkb_symbols "phalio" {
     key <RWIN> { [ ampersand,		lstroke,		NoSymbol,		NoSymbol		] };
     // Semicolon: / f24
     key <AB10> { [ slash,		backslash,		bar,			division		] };
-    key <FK24> { [ bar,			division,		NoSymbol,		NoSymbol		] };
+    key <DELE> { [ bar,			division,		NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 4 (SHIFT TO SLASH)
     // Shift: shift
@@ -537,15 +537,15 @@ xkb_symbols "phalio" {
     key <LALT> { [ Alt_L,		Alt_L,			Alt_L,			Alt_L			] };
     //    : space f1
     key <SPCE> { [ space,		space,			U00A0,			NoSymbol		] };
-    key <FK01> { [ U00A0,	 	NoSymbol,		NoSymbol,		NoSymbol		] };
+    key <KP0> { [ U00A0,	 	NoSymbol,		NoSymbol,		NoSymbol		] };
     // AltG: f2
-    key <FK02> { [ Alt_R,		Alt_R,			Alt_R,			Alt_R			] };
+    key <KP1> { [ Alt_R,		Alt_R,			Alt_R,			Alt_R			] };
     // ": ralt
     key <RALT> { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R                   ] };
     // [: rctrl
     key <RCTL> { [ Control_R,       	Control_R,          	Control_R,		Control_R		] };
     // ]: f3
-    key <FK03> { [ Shift_R,          	Shift_R,              	Shift_R,          	Shift_R		        ] };
+    key <KP2> { [ Shift_R,          	Shift_R,              	Shift_R,          	Shift_R		        ] };
 
     include "level3(ralt_switch)"
 };
