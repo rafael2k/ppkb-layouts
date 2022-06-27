@@ -74,8 +74,8 @@ xkb_symbols "basic" {
     //--------------------------------------------------------------------------------------------------------------
     // ROW 3 (PINE/CAPS/META/WIN TO SEMICOLON)
     // Pine
-//    key <LWIN> { [ Meta_L,		Meta_L,			NoSymbol,		NoSymbol		] }; // it seems that sxmo binds lwin to super_l and binding it to something else here overrides that and breaks sway shortcuts, and binding the sway $mod key to anything other than Mod# (like Meta_L) didn't work, so i'll leave it unchanged in the default layout and only override it in layouts that require doing so
-    key <PRSC> { [ PrintScreen,		PrintScreen,		NoSymbol,		NoSymbol		] };
+    key <LWIN> { [ Super_L,		Super_L,		Sys_Req,		Sys_Req			] };
+    key <PRSC> { [ Sys_Req,		Sys_Req,		Sys_Req,		Sys_Req			] };
     // A
     key <AC01> { [ a,			A,			adiaeresis,		Adiaeresis		] };
     // S
