@@ -91,6 +91,7 @@ ShiftL keycode 18 =		eacute
 Shift ShiftL keycode 18 =	Eacute
 # R
 keycode 19 =			r
+ShiftL keycode 19 =		registered
 # T
 keycode 20 =			t
 ShiftL keycode 20 =		U+2122

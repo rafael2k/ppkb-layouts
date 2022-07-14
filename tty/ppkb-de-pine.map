@@ -6,6 +6,7 @@ keymaps 0-63
 
 # Esc
 keycode 1 =			Escape
+ShiftL keycode 1 =		F11
 # 1
 keycode 2 =			one
 Shift keycode 2 =		exclam
@@ -17,12 +18,14 @@ Control Alt keycode 59 =	Console_1
 keycode 3 =			two
 Shift keycode 3 =		quotedbl
 ShiftL keycode 3 =		backslash
+Shift ShiftL keycode 3 =	twosuperior
 keycode 60 =			F2
 Control Alt keycode 60 =	Console_2
 # 3
 keycode 4 =			three
 Shift keycode 4 =		section
 ShiftL keycode 4 =		pound
+Shift ShiftL keycode 4 =	threesuperior
 keycode 61 =			F3
 Control Alt keycode 61 =	Console_3
 # 4
@@ -69,6 +72,7 @@ Shift ShiftL keycode 11 =	question
 keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
+ShiftL keycode 14 =		F12
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
 #----------------------------------------------------------------
 # Tab
@@ -85,6 +89,7 @@ ShiftL keycode 18 =		U+20AC
 Shift ShiftL keycode 18 =	eacute
 # R
 keycode 19 =			r
+ShiftL keycode 19 =		registered
 # T
 keycode 20 =			t
 ShiftL keycode 20 =		U+2122

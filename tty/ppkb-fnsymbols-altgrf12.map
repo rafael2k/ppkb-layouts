@@ -91,6 +91,7 @@ AltGr keycode 18 =		eacute
 Shift AltGr keycode 18 =	Eacute
 # R
 keycode 19 =			r
+AltGr keycode 19 =		registered
 # T
 keycode 20 =			t
 AltGr keycode 20 =		U+2122
