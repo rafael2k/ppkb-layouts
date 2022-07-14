@@ -107,8 +107,9 @@ ShiftL keycode 88 =		F12
 #----------------------------------------------------------------
 # Tab
 keycode 15 =			Tab
-ShiftL keycode 15 =		Compose
-keycode 1 =			Compose
+ShiftL keycode 15 =		Escape
+keycode 1 =			Escape
+ShiftL keycode 1 =		Compose
 # Q
 keycode 16 =			q
 ShiftL keycode 16 =		Home
