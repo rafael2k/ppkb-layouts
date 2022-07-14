@@ -133,7 +133,7 @@ These layouts are limited in what they can do (specifically they cannot add an F
 
 ### AltGr/Pine
 
-![Keyboard layout AltGr/Pine](pp-altgr-pine.svg)
+![Keyboard layout AltGr/Pine](img/pp-altgr-pine.svg)
 
 These layouts are intended to be simple and just do two things: They make the extra symbols on the number row accessible using either AltGr or the Pine key and they add more symbols for international compatibility. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping.
 
@@ -144,7 +144,7 @@ tty: `ppkb-altgr.map` or `ppkb-pine.map`
 
 ### FnSymbols-AltGrF12 / FnSymbols-PineF12
 
-![Keyboard layout FnSymbols-AltGrF12 / FnSymbols-PineF12](pp-fnsymbols-altgrf12-fnsymbols-pinef12.svg)
+![Keyboard layout FnSymbols-AltGrF12 / FnSymbols-PineF12](img/pp-fnsymbols-altgrf12-fnsymbols-pinef12.svg)
 
 These layouts are the same as [pp \[altgr\] \[pine\]](#pp-altgr-pine) but they swap the number row extra layer keys, so they use the Fn key for extra number row symbols and AltGr or Pine for F1-F12, just like the old kernel driver did.
 
@@ -155,7 +155,7 @@ tty: ``ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
 
 ### DE-AltGr
 
-![Keyboard layout DE-AltGr](pp-altgr.svg)
+![Keyboard layout DE-AltGr](img/pp-de-altgr.svg)
 
 This layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. The extra letters “ÄÖÜ” are placed on dedicated keys at the bottom right while ß is on the third layer of S. The [DE-Pine](#pp-de-pine) layout is an alternative version of this one that uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping.
 
@@ -166,7 +166,7 @@ tty: `ppkb-de-altgr.map`
 
 ### DE-Pine
 
-![Keyboard layout DE-Pine](pp-pine.svg)
+![Keyboard layout DE-Pine](img/pp-de-pine.svg)
 
 This layout is the same as [DE-AltGr](#pp-de-altgr) but it uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. This means that all additional letters of the German alphabet, ÄÖÜß, have dedicated keys.
 
@@ -181,7 +181,7 @@ These layouts are limited in what they can do as they only change hardware key c
 
 ### Extended-Pine
 
-![Keyboard layout Extended-Pine](pp-usrspc-extended-pine.svg)
+![Keyboard layout Extended-Pine](img/pp-usrspc-extended-pine.svg)
 
 This layout is intended to be simple and does only two tings: It adds the additional number row symbols using the Fn as modifier, as well as extending the layout to include some missing keys that some might find important, specifically by adding F11 and F12 with the Pine key as modifier and PageUp/Down on P and ; with Fn, moving Insert from ; to Enter. [Extended-AltGr](#extended-altgr) is an alternative version of this layout that uses AltGr instead of Pine as a modifier and also adds international symbols, therefore requiring an xkb/tty component.
 
@@ -195,7 +195,7 @@ These layouts require both a driver component and an xkb and/or loadkeys compone
 
 ### Extended-AltGr
 
-![Keyboard layout Extended-AltGr](pp-usrspc-extended-altgr.svg)
+![Keyboard layout Extended-AltGr](img/pp-usrspc-extended-altgr.svg)
 
 This layout adds the additional number row symbols using the AltGr as modifier, as well as extending the layout to include some missing keys that some might find important, specifically by adding F11 and F12 and PageUp/Down on P and ;, moving Insert from ; to Enter and Del to the AltGr layer. It also adds international symbols on additional layers.
 
@@ -207,7 +207,7 @@ Userspace driver: `full.txt`
 
 ### Mirrored
 
-![Keyboard layout Mirrored](pp-usrspc-mirrored.svg)
+![Keyboard layout Mirrored](img/pp-usrspc-mirrored.svg)
 
 This layout provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12, PageUp/Down and international symbols.
 
@@ -219,7 +219,7 @@ Userspace driver: `full.txt`
 
 ### Mirrored-WASD
 
-![Keyboard layout Mirrored-WASD](pp-usrspc-mirrored-wasd.svg)
+![Keyboard layout Mirrored-WASD](img/pp-usrspc-mirrored-wasd.svg)
 
 This layout moves the arrow keys, home/end and pageup/down to WASD QE RF. Like regular [Mirrored](#mirrored), it also  provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12 and international symbols.
 
@@ -231,7 +231,7 @@ Userspace driver: `full.txt`
 
 ### DE-Mirrored
 
-![Keyboard layout DE-Mirrored](pp-usrspc-de-mirrored.svg)
+![Keyboard layout DE-Mirrored](img/pp-usrspc-de-mirrored.svg)
 
 This layout provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12, PageUp/Down and international symbols. It also expands key definitions by F11 F12, PageUp/Down and international symbols.
 
@@ -245,7 +245,7 @@ Userspace driver: `full.txt`
 
 ### DE-Mirrored-WASD
 
-![Keyboard layout DE-Mirrored-WASD](pp-usrspc-de-mirrored-wasd.svg)
+![Keyboard layout DE-Mirrored-WASD](img/pp-usrspc-de-mirrored-wasd.svg)
 
 This layout moves the arrow keys, home/end and pageup/down to WASD QE RF. Like regular [DE-Mirrored](#de-mirrored), it also provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12, PageUp/Down and international symbols. It also expands key definitions by F11 F12 and international symbols.
 
@@ -257,9 +257,9 @@ xkb: layout: `pp-usrspc`, variant: `de-mirrored-wasd`
 tty: `ppkb-de-mirrored-wasd.map`
 Userspace driver: `full.txt`
 
-### phalio
+### Phalio
 
-![Keyboard layout Phalio](pp-usrspc-phalio.svg)
+![Keyboard layout Phalio](img/pp-usrspc-phalio.svg)
 
 This layout started with the goal of making it as close to my usual custom layout as possible, of course also adding badly needed PageUp/Down, F11, F12 and lots of other characters and symbols. This also included putting navigational keys in the WASD area, which is probably the best part of my usual layout. While making it I also had a great idea to solve the thumb-only handheld typing issue: Mirrored modifier keys. In this case they’re really useful, unlike on a regular keyboard where I rarely use them. Typing and using shortcuts like in Emacs works wonderfully and smoothly now.
 
