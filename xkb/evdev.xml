@@ -6854,10 +6854,34 @@
         <description>PinePhone Keyboard Case Userspace Full</description>
       </configItem>
       <variantList>
-	<variant>
+       <variant>
+         <configItem>
+          <name>extended-altgr</name>
+            <description>PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)</description>
+         </configItem>
+       </variant>
+       <variant>
          <configItem>
           <name>mirrored</name>
             <description>PinePhone Keyboard Case Userspace with mirrored modifier keys</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>mirrored-wasd</name>
+            <description>PinePhone Keyboard Case Userspace with mirrored modifier keys and WASD movement keys</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>de-mirrored</name>
+            <description>PinePhone Keyboard Case Userspace DE with mirrored modifier keys</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>de-mirrored-wasd</name>
+            <description>PinePhone Keyboard Case Userspace DE with mirrored modifier keys and WASD movement keys</description>
          </configItem>
        </variant>
        <variant>

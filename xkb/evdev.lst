@@ -773,13 +773,17 @@
   phonetic        id: Indonesian (Arab Pegon, phonetic)
   phoneticx       id: Indonesian (Arab Pegon, extended phonetic)
   phonetic        my: Malay (Jawi, phonetic)
-  pine pp: PinePhone Keyboard (EN-US with Pine/Caps for additional symbols)
+  pine            pp: PinePhone Keyboard (EN-US with Pine/Caps for additional symbols)
   altgr           pp: PinePhone Keyboard (EN-US with RAlt/AltG(r) for additional symbols)
   fnsymbols-pinef12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and Pine for F1-F12)
   fnsymbols-altgrf12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and AltGr for F1-F12)
   de-pine         pp: PinePhone Keyboard (DE with Pine/Caps for additional symbols)
   de-altgr        pp: PinePhone Keyboard (DE with RAlt/AltG(r) for additional symbols)
+  extended-altgr  pp-usrspc: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
   mirrored        pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
+  mirrored-wasd   pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys, WASD movement keys)
+  de-mirrored     pp-usrspc: PinePhone Keyboard Userspace (DE mirrored modifier keys)
+  mirrored-wasd   pp-usrspc: PinePhone Keyboard Userspace (DE mirrored modifier keys, WASD movement keys)
   phalio          pp-usrspc: PinePhone Keyboard Userspace (Phalio)
 
 ! option
