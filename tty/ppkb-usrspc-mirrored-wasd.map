@@ -1,0 +1,279 @@
+# for emacs users: -*- mode: conf -*-
+
+strings as usual
+compose as usual for "iso-8859-1"
+keymaps 0-63
+
+# Esc
+keycode 11 =			Escape
+#keycode 68 =			
+ShiftL keycode 68 =		F11
+# 1
+keycode 2 =			one
+Shift keycode 2 =		exclam
+ShiftL keycode 2 =		bar
+Shift ShiftL keycode 2 =	exclamdown
+keycode 59 =			bar
+Shift keycode 59 =		exclamdown
+ShiftL keycode 59 =		F1
+Control Alt keycode 59 =	Console_1
+# 2
+keycode 3 =			two
+Shift keycode 3 =		at
+ShiftL keycode 3 =		backslash
+keycode 60 =			backslash
+ShiftL keycode 60 =		F2
+Control Alt keycode 60 =	Console_2
+# 3
+keycode 4 =			three
+Shift keycode 4 =		numbersign
+ShiftL keycode 4 =		pound
+keycode 60 =			pound
+ShiftL keycode 61 =		F3
+Control Alt keycode 61 =	Console_3
+# 4
+keycode 5 =			four
+Shift keycode 5 =		dollar
+ShiftL keycode 5 =		U+20AC
+keycode 62 =			U+20AC
+ShiftL keycode 62 =		F4
+Control Alt keycode 62 =	Console_4
+# 5
+keycode 6 =			five
+Shift keycode 6 =		percent
+ShiftL keycode 6 =		asciitilde
+keycode 63 =			asciitilde
+ShiftL keycode 63 =		F5
+Control Alt keycode 63 =	Console_5
+# 6
+keycode 7 =			six
+Shift keycode 7 =		asciicircum
+ShiftL keycode 7 =		grave
+keycode 64 =			grave
+ShiftL keycode 64 =		F6
+Control Alt keycode 64 =	Console_6
+# 7
+keycode 8 =			seven
+Shift keycode 8 =		ampersand
+ShiftL keycode 8 =		minus
+Shift ShiftL keycode 8 =		U+2013
+keycode 65 =			minus
+Shift keycode 65 =		U+2013
+ShiftL keycode 65 =		F7
+Control Alt keycode 65 =	Console_7
+# 8
+keycode 9 =			eight
+Shift keycode 9 =		asterisk
+ShiftL keycode 9 =		equal
+keycode 66 =			equal
+ShiftL keycode 66 =		F8
+# 9
+keycode 10 =			nine
+Shift keycode 10 =		parenleft
+ShiftL keycode 10 =		underscore
+keycode 67 =			underscore
+ShiftL keycode 67 =		F9
+# 0
+keycode 13 =			zero
+Shift keycode 13 =		parenright
+ShiftL keycode 13 =		plus
+keycode 87 =			plus
+ShiftL keycode 87 =		F10
+# Backspace
+keycode 14 =			BackSpace
+ShiftL keycode 14 =		Remove # "Delete" also exists but it doesn't delete things, no idea what that is
+keycode 88 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
+ShiftL keycode 88 =		F12
+#----------------------------------------------------------------
+# Tab
+keycode 15 =			Tab
+ShiftL keycode 15 =		Compose
+keycode 1 =			Compose
+# Q
+keycode 16 =			q
+ShiftL keycode 16 =		Home
+keycode 102 =			Home
+# W
+keycode 17 =			w
+ShiftL keycode 17 =		Up
+keycode 103 =			Up
+ShiftL keycode 103 = 	 	U+20A9
+# E
+keycode 18 =			e
+ShiftL keycode 18 =		End
+keycode 107 =			End
+ShiftL keycode 107 =		eacute
+Shift ShiftL keycode 107 =	Eacute
+# R
+keycode 19 =			r
+ShiftL keycode 19 =		Prior
+keycode 104 =			Prior
+ShiftL keycode 104 =		registered
+# T
+keycode 20 =			t
+ShiftL keycode 20 =		U+2122
+keycode 39 =  	 		U+2122
+# Y
+keycode 21 =			y
+ShiftL keycode 21 =		yen
+keycode 40 =  	 		yen
+# U
+keycode 22 =			u
+ShiftL keycode 22 =		udiaeresis
+Shift ShiftL keycode 22 =	Udiaeresis
+keycode 86 =			udiaeresis
+Shift keycode 86 =		Udiaeresis
+# I
+keycode 23 =			i
+ShiftL keycode 23 =		idotless
+keycode 127 =			idotless
+# O
+keycode 24 =			o
+ShiftL keycode 24 =		odiaeresis
+Shift ShiftL keycode 24 =	Odiaeresis
+keycode 70 =			odiaeresis
+Shift keycode 70 =		Odiaeresis
+# P
+keycode 25 =			p
+ShiftL keycode 25 =		U+20BD
+keycode 54 =			U+20BD
+# Enter
+keycode 28 =			Return
+ShiftL keycode 28 =		Insert
+keycode 110 =			Insert
+#----------------------------------------------------------------
+# Pine
+keycode 125 =			Meta_nul
+#keycode 99 =			? # didn't find what print is called but it's probably not used in ttys anyway
+# A
+keycode 30 =			a
+ShiftL keycode 30 =		Left
+keycode 105 =	       		Left
+ShiftL keycode 105 =		adiaeresis
+Shift ShiftL keycode 105 =	Adiaeresis
+# S
+keycode 31 =			s
+ShiftL keycode 31 =		Down
+keycode 108 =	       		Down
+ShiftL keycode 108 =		ssharp
+Shift ShiftL keycode 108 =	U+1E9E
+# D
+keycode 32 =			d
+ShiftL keycode 32 =		Right
+keycode 106 =	       		Right
+ShiftL keycode 106 =		degree
+Shift ShiftL keycode 106 =	eth
+# F
+keycode 33 =			f
+ShiftL keycode 33 =		Next
+keycode 109 = 	 		Next
+ShiftL keycode 109 =		U+03B8
+# G
+keycode 34 =			g
+#keycode 41 =			
+# H
+keycode 35 =			h
+#keycode 43 =			
+# J
+keycode 36 =			j
+#keycode 58 =			
+# K
+keycode 37 =			k
+ShiftL keycode 37 =		braceleft
+keycode 124 =			braceleft
+# L
+keycode 38 =			l
+ShiftL keycode 38 =		braceright
+keycode 126 =			braceright
+ShiftL keycode 126 =		U+0142
+Shift ShiftL keycode 126 =	U+0141
+# Semicolon
+keycode 53 =			semicolon
+Shift keycode 53 =		colon
+ShiftL keycode 53 =		quotedbl
+keycode 111 =			quotedbl
+#----------------------------------------------------------------
+# Shift
+keycode 42 =			Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
+keycode 82 =			Shift
+# Z
+keycode 44 =			z
+ShiftL keycode 44 =		U+017E
+Shift ShiftL keycode 44 =	U+017D
+keycode 83 =			U+017E
+Shift keycode 83 =		U+017D
+# X
+keycode 45 =			x
+ShiftL keycode 45 =		multiply
+keycode 121 = 	 		multiply
+# C
+keycode 46 =			c
+ShiftL keycode 46 =		U+010D
+Shift ShiftL keycode 46 =	U+010C
+keycode 96 =			U+010D
+Shift keycode 96 =		U+010C
+# V
+keycode 47 =			v
+#keycode 117 =			
+# B
+keycode 48 =			b
+#keycode 26 =			
+# N
+keycode 49 =			n
+ShiftL keycode 49 =		ntilde
+Shift ShiftL keycode 49 =	Ntilde
+keycode 27 =	       		ntilde
+Shift keycode 27 =		Ntilde
+# M
+keycode 50 =			m
+ShiftL keycode 50 =		mu
+keycode 78 =  	 		mu
+# Comma
+keycode 51 =			comma
+Shift keycode 51 =		less
+ShiftL keycode 51 =		bracketleft
+Shift ShiftL keycode 51 =	braceleft
+keycode 74 =			bracketleft
+Shift keycode 74 =		braceleft
+# Period
+keycode 52 =			period
+Shift keycode 52 =		greater
+ShiftL keycode 52 =		bracketright
+Shift ShiftL keycode 52 =	braceright
+keycode 55 =			bracketright
+Shift keycode 55 =		braceright
+ShiftL keycode 55 =		U+2026
+# Slash
+keycode 12 =			slash
+Shift keycode 12 =		question
+ShiftL keycode 12 =		apostrophe
+Shift ShiftL keycode 12 =	quotedbl
+keycode 98 =			apostrophe
+Shift keycode 98 =		quotedbl
+ShiftL keycode 98 =		questiondown
+Shift ShiftL keycode 98 =	U+2019
+#----------------------------------------------------------------
+# Ctrl
+keycode 29 =			Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
+keycode 79 =			Control
+# Fn
+#keycode			# fn is not passed through
+# Alt
+keycode 56 =			Alt # unlike Shift and Control that have regular, L and R versions, Alt only has LAlt and RAlt, Alt and AltGr are just aliases for them
+keycode 80 =			Alt
+# Space
+keycode 57 =			space
+keycode 81 =			space
+# AltGr
+keycode 100 =			AltGr
+keycode 75 =			AltGr
+# Apostrophe
+keycode 76 =			ShiftL # for level 3, not the same as Shift
+keycode 77 =			ShiftL
+# Left Bracket
+keycode 97 =			Control
+keycode 71 =			Control
+# Right Bracket
+keycode 72 =			Shift
+keycode 73 =			Shift
+
