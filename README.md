@@ -139,40 +139,40 @@ These layouts are intended to be simple and just do two things: They make the ex
 
 #### Installation Requirements
 
-xkb: layout: `pp`, variants: `altgr` or `pine`
+xkb: layout: `pp`, variants: `altgr` or `pine`  
 tty: `ppkb-altgr.map` or `ppkb-pine.map`
 
 ### FnSymbols-AltGrF12 / FnSymbols-PineF12
 
 ![Keyboard layout FnSymbols-AltGrF12 / FnSymbols-PineF12](img/pp-fnsymbols-altgrf12-fnsymbols-pinef12.svg)
 
-These layouts are the same as [pp \[altgr\] \[pine\]](#pp-altgr-pine) but they swap the number row extra layer keys, so they use the Fn key for extra number row symbols and AltGr or Pine for F1-F12, just like the old kernel driver did.
+These layouts are the same as [AltGr/Pine](#altgr-pine) but they swap the number row extra layer keys, so they use the Fn key for extra number row symbols and AltGr or Pine for F1-F12, just like the old kernel driver did.
 
 #### Installation Requirements
 
-xkb: layout: `pp`, variants: `fnsymbols-altgrf12` or `fnsymbols-pinef12`
-tty: ``ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
+xkb: layout: `pp`, variants: `fnsymbols-altgrf12` or `fnsymbols-pinef12`  
+tty: `ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
 
 ### DE-AltGr
 
 ![Keyboard layout DE-AltGr](img/pp-de-altgr.svg)
 
-This layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. The extra letters “ÄÖÜ” are placed on dedicated keys at the bottom right while ß is on the third layer of S. The [DE-Pine](#pp-de-pine) layout is an alternative version of this one that uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping.
+This layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. The extra letters “ÄÖÜ” are placed on dedicated keys at the bottom right while ß is on the third layer of S. The [DE-Pine](#de-pine) layout is an alternative version of this one that uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping.
 
 #### Installation Requirements
 
-xkb: layout: `pp`, variant: `de-altgr`
+xkb: layout: `pp`, variant: `de-altgr`  
 tty: `ppkb-de-altgr.map`
 
 ### DE-Pine
 
 ![Keyboard layout DE-Pine](img/pp-de-pine.svg)
 
-This layout is the same as [DE-AltGr](#pp-de-altgr) but it uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. This means that all additional letters of the German alphabet, ÄÖÜß, have dedicated keys.
+This layout is the same as [DE-AltGr](#de-altgr) but it uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. This means that all additional letters of the German alphabet, ÄÖÜß, have dedicated keys.
 
 #### Installation Requirements
 
-xkb: layout: `pp`, variant: `de-pine`
+xkb: layout: `pp`, variant: `de-pine`  
 tty: `ppkb-de-pine.map`
 
 ## Driver-Only Layouts
@@ -201,8 +201,8 @@ This layout adds the additional number row symbols using the AltGr as modifier, 
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `extended-altgr`
-tty: `ppkb-extended-altgr.map`
+xkb: layout: `pp-usrspc`, variant: `extended-altgr`  
+tty: `ppkb-extended-altgr.map`  
 Userspace driver: `full.txt`
 
 ### Mirrored
@@ -213,8 +213,8 @@ This layout provides mirrored modifier keys, meaning that both left and right ve
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `mirrored`
-tty: `ppkb-mirrored.map`
+xkb: layout: `pp-usrspc`, variant: `mirrored`  
+tty: `ppkb-mirrored.map`  
 Userspace driver: `full.txt`
 
 ### Mirrored-WASD
@@ -225,8 +225,8 @@ This layout moves the arrow keys, home/end and pageup/down to WASD QE RF. Like r
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `mirrored-wasd`
-tty: `ppkb-mirrored-wasd.map`
+xkb: layout: `pp-usrspc`, variant: `mirrored-wasd`  
+tty: `ppkb-mirrored-wasd.map`  
 Userspace driver: `full.txt`
 
 ### DE-Mirrored
@@ -239,8 +239,8 @@ Besides that, this layout intends to recreate the standard German QWERTZ layout,
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `de-mirrored`
-tty: `ppkb-de-mirrored.map`
+xkb: layout: `pp-usrspc`, variant: `de-mirrored`  
+tty: `ppkb-de-mirrored.map`  
 Userspace driver: `full.txt`
 
 ### DE-Mirrored-WASD
@@ -253,8 +253,8 @@ Besides that, this layout intends to recreate the standard German QWERTZ layout,
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `de-mirrored-wasd`
-tty: `ppkb-de-mirrored-wasd.map`
+xkb: layout: `pp-usrspc`, variant: `de-mirrored-wasd`  
+tty: `ppkb-de-mirrored-wasd.map`  
 Userspace driver: `full.txt`
 
 ### Phalio
@@ -265,8 +265,8 @@ This layout started with the goal of making it as close to my usual custom layou
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `phalio`
-tty: `ppkb-phalio.map`
+xkb: layout: `pp-usrspc`, variant: `phalio`  
+tty: `ppkb-phalio.map`  
 Userspace driver: `phalio.txt`
 
 ## Customising Layouts
