@@ -542,7 +542,7 @@ xkb_symbols "mirrored" {
     key <KP7>  { [ Down,		Down,			Control_L,		Control_L		] };
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <KP9>  { [ Right,		Right,			Shift_R,		Shift_R			] };
+    key <KP9>  { [ Right,		Right,			Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
 
     include "level3(modifier_mapping)"
 };
@@ -550,7 +550,7 @@ xkb_symbols "mirrored" {
 partial alphanumeric_keys
 xkb_symbols "mirrored-wasd" {
 
-  //    include "us(basic)"
+    include "us(basic)"
     name[Group1]= "PinePhone Keyboard Case Userspace with mirrored modifier keys";
 
     // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
@@ -725,7 +725,7 @@ xkb_symbols "mirrored-wasd" {
     key <KP7>  { [ Control_L,		Control_L,		Control_L,		Control_L		] }; // putting Control_R on any key that is not <RCTL> breaks all Control_Rs, so use Control_L for this non-<RCTL> key
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <KP9>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
+    key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
 
     key <KP5> {
       type[Group1]="ONE_LEVEL",
@@ -740,7 +740,7 @@ xkb_symbols "mirrored-wasd" {
 
 xkb_symbols "de-mirrored" {
 
-    include "us(basic)"
+    include "de(basic)"
     name[Group1]= "PinePhone Keyboard Case Userspace DE Mirrored";
 
     // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
@@ -755,10 +755,10 @@ xkb_symbols "de-mirrored" {
     key <FK01> { [ bar, 		exclamdown,		F1,			F1			] };
     // 2: 2 KP2
     key <AE02> { [ 2,			quotedbl,		backslash,		twosuperior		] };
-    key <FK02> { [ backslash,		backslash,		F2,			F2			] };
+    key <FK02> { [ backslash,		twosuperior,		F2,			F2			] };
     // 3: 3 KP3
     key <AE03> { [ 3,			section,		sterling,		threesuperior		] };
-    key <FK03> { [ sterling,		sterling,		F3,			F3			] };
+    key <FK03> { [ sterling,		threesuperior,		F3,			F3			] };
     // 4: 4 KP4
     key <AE04> { [ 4,			dollar,			asterisk,		EuroSign		] };
     key <FK04> { [ asterisk,		EuroSign,		F4,			F4			] };
@@ -778,7 +778,7 @@ xkb_symbols "de-mirrored" {
     key <AE09> { [ 9,			parenright,		bracketright,		underscore		] };
     key <FK09> { [ bracketright,	underscore,		F9,			F9			] };
     // 0: = `
-    key <AE10> { [ 0,			equal,			braceright,		question		] };
+    key <AE12> { [ 0,			equal,			braceright,		question		] };
     key <FK11> { [ braceright,		question,		F10,			F10 			] };
     // Backspace: backspace delete
     key <BKSP> { [ Backspace,		Backspace,		Delete,			Delete			] };
@@ -915,14 +915,14 @@ xkb_symbols "de-mirrored" {
     key <KP7>  { [ Down,		Down,			Control_L,		Control_L		] };
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <KP9>  { [ Right,		Right,			Shift_R,		Shift_R			] };
+    key <KP9>  { [ Right,		Right,			Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
 
     include "level3(modifier_mapping)"
 };
 
 xkb_symbols "de-mirrored-wasd" {
 
-    include "us(basic)"
+    include "de(basic)"
     name[Group1]= "PinePhone Keyboard Case Userspace DE Mirrored WASD";
 
     // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
@@ -937,10 +937,10 @@ xkb_symbols "de-mirrored-wasd" {
     key <FK01> { [ bar, 		exclamdown,		F1,			F1			] };
     // 2: 2 KP2
     key <AE02> { [ 2,			quotedbl,		backslash,		twosuperior		] };
-    key <FK02> { [ backslash,		backslash,		F2,			F2			] };
+    key <FK02> { [ backslash,		twosuperior,		F2,			F2			] };
     // 3: 3 KP3
     key <AE03> { [ 3,			section,		sterling,		threesuperior		] };
-    key <FK03> { [ sterling,		sterling,		F3,			F3			] };
+    key <FK03> { [ sterling,		threesuperior,		F3,			F3			] };
     // 4: 4 KP4
     key <AE04> { [ 4,			dollar,			asterisk,		EuroSign		] };
     key <FK04> { [ asterisk,		EuroSign,		F4,			F4			] };
@@ -960,7 +960,7 @@ xkb_symbols "de-mirrored-wasd" {
     key <AE09> { [ 9,			parenright,		bracketright,		underscore		] };
     key <FK09> { [ bracketright,	underscore,		F9,			F9			] };
     // 0: = `
-    key <AE10> { [ 0,			equal,			braceright,		question		] };
+    key <AE12> { [ 0,			equal,			braceright,		question		] };
     key <FK11> { [ braceright,		question,		F10,			F10 			] };
     // Backspace: backspace delete
     key <BKSP> { [ Backspace,		Backspace,		Delete,			Delete			] };
@@ -1071,7 +1071,7 @@ xkb_symbols "de-mirrored-wasd" {
     key <AB09> { [ period,              colon,              	greater,             	ellipsis                ] };
     key <KPMU> { [ greater,             ellipsis,		NoSymbol,		NoSymbol		] };
     // /: -, kpslash
-    key <AB10> { [ minus,               underscore,		plus,			endash			] };
+    key <AE11> { [ minus,               underscore,		plus,			endash			] };
     key <KPDV> { [ plus,		endash,			NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------
     // ROW 5 (CTRL TO BRACKET)
@@ -1098,7 +1098,7 @@ xkb_symbols "de-mirrored-wasd" {
     key <KP7>  { [ Control_L,		Control_L,		Control_L,		Control_L		] }; // putting Control_R on any key that is not <RCTL> breaks all Control_Rs, so use Control_L for this non-<RCTL> key
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <KP9>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
+    key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
 
     key <KP5> {
       type[Group1]="ONE_LEVEL",
@@ -1114,7 +1114,7 @@ xkb_symbols "de-mirrored-wasd" {
 partial alphanumeric_keys
 xkb_symbols "phalio" {
 
-    include "pp(basic)"
+    include "us(basic)"
     name[Group1]= "PinePhone Keyboard Case Userspace Phalio";
 
     // regular:    | regular            | shift                 | altgr		       	| shift+altgr		|
@@ -1182,7 +1182,7 @@ xkb_symbols "phalio" {
     key <AC11> { [ yen,			copyright,		NoSymbol,		NoSymbol		] };
     // U: u f15
     key <AD07> { [ u,			U,			udiaeresis,		Udiaeresis		] };
-    key <AC11> { [ yen,			copyright,		NoSymbol,		NoSymbol		] };
+    key <LSGT> { [ udiaeresis,		Udiaeresis,		NoSymbol,		NoSymbol		] };
     // I: i f16
     key <AD08> { [ i,			I,			adiaeresis,		Adiaeresis		] };
     key <MENU> { [ adiaeresis,		Adiaeresis,		idotless,		NoSymbol		] };
@@ -1234,6 +1234,7 @@ xkb_symbols "phalio" {
     // ROW 4 (SHIFT TO SLASH)
     // Shift: shift
     key <LFSH> { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] };
+    key <KP0>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] };
     // Z: z kpdot
     key <AB01> { [ z,			Z,			ssharp,			U1E9E			] };
     key <KPDL> { [ ssharp,		U1E9E,			NoSymbol,		NoSymbol		] };
@@ -1288,7 +1289,7 @@ xkb_symbols "phalio" {
     key <KP7>  { [ Control_L,		Control_L,		Control_L,		Control_L		] }; // putting Control_R on any key that is not <RCTL> breaks all Control_Rs, so use Control_L for this non-<RCTL> key
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
-    key <KP9>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
+    key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
 
     key <KP5> {
       type[Group1]="ONE_LEVEL",

@@ -35,8 +35,8 @@ keycode 4 =			three
 Shift keycode 4 =		apostrophe
 ShiftL keycode 4 =		U+2032
 Shift ShiftL keycode 4 =	U+2018
-keycode 60 =			U+2032
-Shift keycode 60 =		U+2018
+keycode 61 =			U+2032
+Shift keycode 61 =		U+2018
 ShiftL keycode 61 =		F3
 Control Alt keycode 61 =	Console_3
 # 4
@@ -164,9 +164,9 @@ Shift keycode 70 =		Odiaeresis
 # P
 keycode 25 =			p
 ShiftL keycode 25 =		U+20BD
-Shift ShiftL keycode 25 =	U+1F12F
+#Shift ShiftL keycode 25 =	U+1F12F # unicode symbols above f000 break layouts
 keycode 54 =			U+20BD
-Shift keycode 54 =		U+1F12F
+#Shift keycode 54 =		U+1F12F # unicode symbols above f000 break layouts
 # Enter
 keycode 28 =			Return
 ShiftL keycode 28 =		Insert
@@ -219,7 +219,7 @@ ShiftL keycode 126 =		U+0142
 Shift ShiftL keycode 126 =	U+0141
 # Semicolon
 keycode 53 =			slash
-Shift keycode 53 =		bashslash
+Shift keycode 53 =		backslash
 ShiftL keycode 53 =		bar
 Shift ShiftL keycode 53 =	division
 keycode 111 =			bar

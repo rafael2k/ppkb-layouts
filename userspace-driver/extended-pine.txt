@@ -15,7 +15,7 @@
 1:11	0			KPPLUS			F10
 1:12	BACKSPACE		DELETE			F12
 #--------------------------------------------------------------------------------
-2:1	TAB			TAB			LEFTMETA+TAB
+2:1	TAB			COMPOSE			LEFTMETA+TAB
 2:2	Q			Q			LEFTMETA+Q
 2:3	W			W			LEFTMETA+W
 2:4	E			E			LEFTMETA+E

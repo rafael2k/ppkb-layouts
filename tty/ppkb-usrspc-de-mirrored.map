@@ -31,8 +31,8 @@ keycode 4 =			three
 Shift keycode 4 =		section
 ShiftL keycode 4 =		pound
 Shift ShiftL keycode 4 =	threesuperior
-keycode 60 =			pound
-Shift keycode 60 =		threesuperior
+keycode 61 =			pound
+Shift keycode 61 =		threesuperior
 ShiftL keycode 61 =		F3
 Control Alt keycode 61 =	Console_3
 # 4
@@ -270,14 +270,11 @@ keycode 100 =			AltGr
 keycode 75 =			ShiftL
 # Apostrophe
 keycode 76 =			ShiftL # for level 3, not the same as Shift
-ShiftL keycode 76 =		Left
 keycode 77 =			Left
 # Left Bracket
 keycode 97 =			Control
-ShiftL keycode 97 =		Down
 keycode 71 =			Down
 # Right Bracket
 keycode 72 =			Shift
-ShiftL keycode 72 =		Right
 keycode 73 =			Right
 

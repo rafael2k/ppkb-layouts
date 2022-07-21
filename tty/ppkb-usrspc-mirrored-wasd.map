@@ -28,7 +28,7 @@ Control Alt keycode 60 =	Console_2
 keycode 4 =			three
 Shift keycode 4 =		numbersign
 ShiftL keycode 4 =		pound
-keycode 60 =			pound
+keycode 61 =			pound
 ShiftL keycode 61 =		F3
 Control Alt keycode 61 =	Console_3
 # 4

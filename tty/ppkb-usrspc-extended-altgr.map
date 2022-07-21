@@ -116,10 +116,10 @@ Shift AltGr keycode 24 =	Odiaeresis
 # P
 keycode 25 =			p
 AltGr keycode 25 =		U+20BD
-#keycode 54 =  	 		
+keycode 54 =  	 		Prior
 # Enter
 keycode 28 =			Return
-#keycode 110 =			
+keycode 110 =			Insert
 #----------------------------------------------------------------
 # Pine
 keycode 125 =			Meta_nul
@@ -163,7 +163,7 @@ Shift AltGr keycode 38 =	U+0141
 # Semicolon
 keycode 53 =			semicolon
 Shift keycode 53 =		colon
-keycode 111 =			Insert
+keycode 111 =			Next
 #----------------------------------------------------------------
 # Shift
 keycode 42 =			Shift # Shift, AltGr and ShiftR are separate and the default behavior is accessed via Shift
