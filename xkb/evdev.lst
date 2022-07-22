@@ -780,6 +780,7 @@
   de-pine         pp: PinePhone Keyboard (DE with Pine/Caps for additional symbols)
   de-altgr        pp: PinePhone Keyboard (DE with RAlt/AltG(r) for additional symbols)
   extended-altgr  pp-usrspc: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
+  extended-pine   pp-usrspc: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
   mirrored        pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
   mirrored-wasd   pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys, WASD movement keys)
   de-mirrored     pp-usrspc: PinePhone Keyboard Userspace (DE mirrored modifier keys)

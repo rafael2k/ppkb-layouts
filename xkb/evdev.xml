@@ -6857,7 +6857,13 @@
        <variant>
          <configItem>
           <name>extended-altgr</name>
-            <description>PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)</description>
+            <description>PinePhone Keyboard Case Userspace with additional characters, symbols and keys</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>extended-pine</name>
+            <description>PinePhone Keyboard Case Userspace with additional characters, symbols and keys</description>
          </configItem>
        </variant>
        <variant>

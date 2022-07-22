@@ -16,9 +16,9 @@ Some keyboard layouts for the PinePhone Keyboard Case to use it as intended or t
 		3. [DE-AltGr](#de-altgr)
 		4. [DE-Pine](#de-pine)
 	2. [Driver-Only Layouts](#driver-only-layouts)
-		1. [Extended-Pine](#extended-pine)
+		1. [Extended-Simple](#extended-simple)
 	3. [Full Layouts](#full-layouts)
-		1. [Extended-AltGr](#extended-altgr)
+		1. [Extended-AltGr/Pine](#extended-altgr-pine)
 		2. [Mirrored](#mirrored)
 		3. [Mirrored-WASD](#mirrored-wasd)
 		4. [DE-Mirrored](#de-mirrored)
@@ -31,7 +31,7 @@ Some keyboard layouts for the PinePhone Keyboard Case to use it as intended or t
 	4. [Userspace Driver](#userspace-driver-1)
 
 ## Introduction
-**I especially recommend the mirrored layouts for thumb-only handheld typing that add a second set of modifier keys on the right side of the keyboard.**
+**I especially recommend the [mirrored](#mirrored) layouts for thumb-only handheld typing that add a second set of modifier keys on the right side of the keyboard. If you don’t want anything fancy and just some additional useful things, the [AltGr/Pine](#altgr-pine) layouts, or if you need PageUp/Down the [Extended-Simple](#extended-simple)/[Extended](#extended-altgr-pine) layouts, are a good choice.**
 
 ## Installing Layouts
 
@@ -86,7 +86,7 @@ The key definitions are located in the file `keymaps/factory-keymap.txt`. You ca
 
 #### 3. Compiling
 
-To compile you must be in the `pinephone-keyboard` directory and simply use `make`. You may need to install `make` and `php` first if you don’t have them.
+To compile you must be in the `pinephone-keyboard` directory and simply use `make`. You may need to install `make`, `gcc`  and `php` first if you don’t have them.
 
 #### 4. Disabling Kernel Driver Input
 
@@ -157,7 +157,7 @@ tty: `ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
 
 ![Keyboard layout DE-AltGr](img/pp-de-altgr.svg)
 
-This layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. The extra letters “ÄÖÜ” are placed on dedicated keys at the bottom right while ß is on the third layer of S. The [DE-Pine](#de-pine) layout is an alternative version of this one that uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping.
+This layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. The extra letters “ÄÖÜ” are placed on dedicated keys at the bottom right while ß is on the third layer of S. The [DE-Pine](#de-pine) layout is an alternative version of this one that uses the Pine key for the third layer, freeing the AltGr key to be used as another dedicated key for ß. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping other than German-specific things.
 
 #### Installation Requirements
 
@@ -179,30 +179,34 @@ tty: `ppkb-de-pine.map`
 
 These layouts are limited in what they can do as they only change hardware key codes, but that means only one component is required to make them work in both xkb and tty.
 
-### Extended-Pine
+### Extended-Simple
 
-![Keyboard layout Extended-Pine](img/pp-usrspc-extended-pine.svg)
+![Keyboard layout Extended-Simple](img/pp-usrspc-extended-simple.svg)
 
-This layout is intended to be simple and does only two tings: It adds the additional number row symbols using the Fn as modifier, as well as extending the layout to include some missing keys that some might find important, specifically by adding F11 and F12 with the Pine key as modifier and PageUp/Down on P and ; with Fn, moving Insert from ; to Enter. [Extended-AltGr](#extended-altgr) is an alternative version of this layout that uses AltGr instead of Pine as a modifier and also adds international symbols, therefore requiring an xkb/tty component.
+This layout is intended to be simple and does only two tings: It adds the additional number row symbols using the Fn as modifier, as well as extending the layout to include some missing keys that some might find important, specifically by adding F11 (commonly used to toggle full screen) on Backspace with the Pine key as modifier and PageUp/Down on P and ; with Fn, moving Insert from ; to Enter.
+
+F12 is not added even though there are 12 keys in the top row because using the userspace driver’s special modifier keys Fn and Pine in combination with the Esc key activates Fn/Pine Lock (like Caps Lock), redefining these additional Esc levels is not possible with a keymap.
+
+[Extended-AltGr/Pine](#extended-altgr-pine) are “advanced” versions of this layout that add international symbols and F12, therefore also requiring an xkb/tty component.
 
 #### Installation Requirements
 
-Userspace driver: `extended.txt`
+Userspace driver: `extended-simple.txt`
 
 ## Full Layouts
 
 These layouts require both a driver component and an xkb and/or loadkeys component and allow full customisation.
 
-### Extended-AltGr
+### Extended-AltGr-Pine
 
-![Keyboard layout Extended-AltGr](img/pp-usrspc-extended-altgr.svg)
+![Keyboard layout Extended-AltGr/Pine](img/pp-usrspc-extended-altgr-pine.svg)
 
 This layout adds the additional number row symbols using the AltGr as modifier, as well as extending the layout to include some missing keys that some might find important, specifically by adding F11 and F12 and PageUp/Down on P and ;, moving Insert from ; to Enter and Del to the AltGr layer. It also adds international symbols on additional layers.
 
 #### Installation Requirements
 
-xkb: layout: `pp-usrspc`, variant: `extended-altgr`  
-tty: `ppkb-extended-altgr.map`  
+xkb: layout: `pp-usrspc`, variants: `extended-altgr` or `extended-pine`  
+tty: `ppkb-extended-altgr.map` or `ppkb-extended-pine`  
 Userspace driver: `full.txt`
 
 ### Mirrored
@@ -210,6 +214,8 @@ Userspace driver: `full.txt`
 ![Keyboard layout Mirrored](img/pp-usrspc-mirrored.svg)
 
 This layout provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12, PageUp/Down and international symbols.
+
+Since the right versions of Fn, Ctrl and Shift also double as the movement keys ◄ ▼ ► if left Fn is held, it’s not possible to combine left Fn and right Ctrl or Shift. For example, combining left Fn and right Shift to access the fourth layer does not work since LFN+RShift results in ►. Use RFN+LShift (thumb-only-friendly) or LFn+LShift or RFn+RShift instead. If you want right modifier keys that are dedicated and work in any combination, consider using [Mirrored-WASD](#mirrored-wasd) instead which moves the navigation keys to the WASD area.
 
 #### Installation Requirements
 
@@ -236,6 +242,8 @@ Userspace driver: `full.txt`
 This layout provides mirrored modifier keys, meaning that both left and right versions of Shift, Control, Fn and Alt exist. This is very useful for thumb-only handheld typing as it allows you to e.g. press RightShift with your right thumb and Q with your left thumb to type a capital Q instead of having to press both LeftShift and Q on the left side, which would require partially letting go of the device with either hand, unless your thumbs are twice as long as mine. It also expands key definitions by F11 F12, PageUp/Down and international symbols. It also expands key definitions by F11 F12, PageUp/Down and international symbols.
 
 Besides that, this layout intends to recreate the standard German QWERTZ layout, including placement of symbols. Symbols from missing keys are put on unused third layers of the number row, in the same spot as the symbols printed on the keycaps if possible. Unlike the normal [DE](#de-altgr) layouts, this one puts the extra letters “ÄÖÜß” on the Fn layer of AOUS.
+
+Since the right versions of Fn, Ctrl and Shift also double as the movement keys ◄ ▼ ► if left Fn is held, it’s not possible to combine left Fn and right Ctrl or Shift. For example, combining left Fn and right Shift to access the fourth layer does not work since LFN+RShift results in ►. Use RFN+LShift (thumb-only-friendly) or LFn+LShift or RFn+RShift instead. If you want right modifier keys that are dedicated and work in any combination, consider using [DE-Mirrored-WASD](#de-mirrored-wasd) instead which moves the navigation keys to the WASD area.
 
 #### Installation Requirements
 
