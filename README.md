@@ -206,7 +206,7 @@ This layout adds the additional number row symbols using the AltGr as modifier, 
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variants: `extended-altgr` or `extended-pine`  
-tty: `ppkb-extended-altgr.map` or `ppkb-extended-pine`  
+tty: `ppkb-extended-altgr.map` or `ppkb-extended-pine.map`  
 Userspace driver: `full.txt`
 
 ### Mirrored
