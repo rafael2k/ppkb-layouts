@@ -121,10 +121,12 @@ ShiftL keycode 104 =		registered
 keycode 20 =			t
 ShiftL keycode 20 =		U+2122
 keycode 39 =  	 		U+2122
-# Y
-keycode 21 =			y
-ShiftL keycode 21 =		yen
-keycode 40 =  	 		yen
+# Z
+keycode 21 =			z
+ShiftL keycode 21 =		U+017E
+Shift ShiftL keycode 21 =	U+017D
+keycode 40 =			U+017E
+Shift keycode 40 =		U+017D
 # U
 keycode 22 =			u
 ShiftL keycode 22 =		udiaeresis
@@ -207,12 +209,10 @@ keycode 111 =			U+2019
 # Shift
 keycode 42 =			Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
 keycode 82 =			Shift
-# Z
-keycode 44 =			z
-ShiftL keycode 44 =		U+017E
-Shift ShiftL keycode 44 =	U+017D
-keycode 83 =			U+017E
-Shift keycode 83 =		U+017D
+# Y
+keycode 44 =			y
+ShiftL keycode 44 =		yen
+keycode 83 =  	 		yen
 # X
 keycode 45 =			x
 ShiftL keycode 45 =		multiply

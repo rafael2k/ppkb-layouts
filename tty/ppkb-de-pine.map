@@ -93,10 +93,9 @@ ShiftL keycode 19 =		registered
 # T
 keycode 20 =			t
 ShiftL keycode 20 =		U+2122
-# Y
-keycode 21 =			z
-ShiftL keycode 21 =		U+017E
-Shift ShiftL keycode 21 =	U+017D
+# Z
+keycode 21 =			y
+ShiftL keycode 21 =		yen
 # U
 keycode 22 =			u
 ShiftL keycode 22 =		udiaeresis
@@ -152,9 +151,10 @@ keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
 keycode 42 =			Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
-# Z
-keycode 44 =			y
-ShiftL keycode 44 =		yen
+# Y
+keycode 44 =			z
+ShiftL keycode 44 =		U+017E
+Shift ShiftL keycode 44 =	U+017D
 # X
 keycode 45 =			x
 ShiftL keycode 45 =		multiply
