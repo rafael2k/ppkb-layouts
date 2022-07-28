@@ -92,9 +92,10 @@ AltGr keycode 19 =		registered
 # T
 keycode 20 =			t
 AltGr keycode 20 =		U+2122
-# Z
-keycode 21 =			y
-AltGr keycode 21 =		yen
+# Y
+keycode 21 =			z
+AltGr keycode 21 =		U+017E
+Shift AltGr keycode 21 =	U+017D
 # U
 keycode 22 =			u
 AltGr keycode 22 =		udiaeresis
@@ -150,10 +151,9 @@ keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
 keycode 42 =			Shift # Shift, AltGr and ShiftR are separate and the default behavior is accessed via Shift
-# Y
-keycode 44 =			z
-AltGr keycode 44 =		U+017E
-Shift AltGr keycode 44 =	U+017D
+# Z
+keycode 44 =			y
+AltGr keycode 44 =		yen
 # X
 keycode 45 =			x
 AltGr keycode 45 =		multiply
