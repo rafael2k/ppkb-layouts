@@ -5,281 +5,363 @@ compose as usual for "iso-8859-1"
 keymaps 0-63
 
 # Esc
-keycode 11 =			Escape
+keycode 11 =				Escape
+ShiftL ShiftR keycode 11 =		F11
 #keycode 68 =			
-ShiftL keycode 68 =		F11
+ShiftL keycode 68 =			F11
 # 1
-keycode 2 =			one
-Shift keycode 2 =		exclam
-ShiftL keycode 2 =		bar
-Shift ShiftL keycode 2 =	exclamdown
-keycode 59 =			bar
-Shift keycode 59 =		exclamdown
-ShiftL keycode 59 =		F1
-Control Alt keycode 59 =	Console_1
+keycode 2 =				one
+Shift keycode 2 =			exclam
+ShiftL keycode 2 =			bar
+ShiftR keycode 2 =			bar
+Shift ShiftL keycode 2 =		exclamdown
+Shift ShiftR keycode 2 =		exclamdown
+ShiftL ShiftR keycode 2 =		F1
+Control Alt ShiftL keycode 2 =		Console_1
+keycode 59 =				bar
+Shift keycode 59 =			exclamdown
+ShiftL keycode 59 =			F1
+Control Alt keycode 59 =		Console_1
 # 2
-keycode 3 =			two
-Shift keycode 3 =		quotedbl
-ShiftL keycode 3 =		backslash
-Shift ShiftL keycode 3 =	twosuperior
-keycode 60 =			backslash
-Shift keycode 60 =		twosuperior
-ShiftL keycode 60 =		F2
-Control Alt keycode 60 =	Console_2
+keycode 3 =				two
+Shift keycode 3 =			quotedbl
+ShiftL keycode 3 =			backslash
+ShiftR keycode 3 =			backslash
+Shift ShiftL keycode 3 =		twosuperior
+Shift ShiftR keycode 3 =		twosuperior
+ShiftL ShiftR keycode 3 =		F2
+Control Alt ShiftL keycode 3 =		Console_2
+keycode 60 =				backslash
+Shift keycode 60 =			twosuperior
+ShiftL keycode 60 =			F2
+Control Alt keycode 60 =		Console_2
 # 3
-keycode 4 =			three
-Shift keycode 4 =		section
-ShiftL keycode 4 =		pound
-Shift ShiftL keycode 4 =	threesuperior
-keycode 61 =			pound
-Shift keycode 61 =		threesuperior
-ShiftL keycode 61 =		F3
-Control Alt keycode 61 =	Console_3
+keycode 4 =				three
+Shift keycode 4 =			section
+ShiftL keycode 4 =			pound
+ShiftR keycode 4 =			pound
+Shift ShiftL keycode 4 =		threesuperior
+Shift ShiftR keycode 4 =		threesuperior
+ShiftL ShiftR keycode 4 =		F3
+Control Alt ShiftL keycode 4 =		Console_3
+keycode 61 =				pound
+Shift keycode 61 =			threesuperior
+ShiftL keycode 61 =			F3
+Control Alt keycode 61 =		Console_3
 # 4
-keycode 5 =			four
-Shift keycode 5 =		dollar
-ShiftL keycode 5 =		asterisk
-keycode 62 =			asterisk
-ShiftL keycode 62 =		F4
-Control Alt keycode 62 =	Console_4
+keycode 5 =				four
+Shift keycode 5 =			dollar
+ShiftL keycode 5 =			asterisk
+ShiftR keycode 5 =			asterisk
+ShiftL ShiftR keycode 5 =		F4
+Control Alt ShiftL keycode 5 =		Console_4
+keycode 62 =				asterisk
+ShiftL keycode 62 =			F4
+Control Alt keycode 62 =		Console_4
 # 5
-keycode 6 =			five
-Shift keycode 6 =		percent
-ShiftL keycode 6 =		asciitilde
-Shift ShiftL keycode 6 =	dead_circumflex
-keycode 63 =			asciitilde
-Shift keycode 63 =		dead_circumflex
-ShiftL keycode 63 =		F5
-Control Alt keycode 63 =	Console_5
+keycode 6 =				five
+Shift keycode 6 =			percent
+ShiftL keycode 6 =			asciitilde
+ShiftR keycode 6 =			asciitilde
+Shift ShiftL keycode 6 =		dead_circumflex
+Shift ShiftR keycode 6 =		dead_circumflex
+ShiftL ShiftR keycode 6 =		F5
+Control Alt ShiftL keycode 63 =		Console_5
+keycode 63 =				asciitilde
+Shift keycode 63 =			dead_circumflex
+ShiftL keycode 63 =			F5
+Control Alt keycode 63 =		Console_5
 # 6
-keycode 7 =			six
-Shift keycode 7 =		ampersand
-ShiftL keycode 7 =		dead_grave
-Shift ShiftL keycode 7 =	dead_acute
-keycode 64 =			dead_grave
-Shift keycode 64 =		dead_acute
-ShiftL keycode 64 =		F6
-Control Alt keycode 64 =	Console_6
+keycode 7 =				six
+Shift keycode 7 =			ampersand
+ShiftL keycode 7 =			dead_grave
+ShiftR keycode 7 =			dead_grave
+Shift ShiftL keycode 7 =		dead_acute
+Shift ShiftR keycode 7 =		dead_acute
+ShiftL ShiftR keycode 7 =		F6
+Control Alt ShiftL keycode 7 =		Console_6
+keycode 64 =				dead_grave
+Shift keycode 64 =			dead_acute
+ShiftL keycode 64 =			F6
+Control Alt keycode 64 =		Console_6
 # 7
-keycode 8 =			seven
-Shift keycode 8 =		slash
-ShiftL keycode 8 =		braceleft
-keycode 65 =			braceleft
-ShiftL keycode 65 =		F7
-Control Alt keycode 65 =	Console_7
+keycode 8 =				seven
+Shift keycode 8 =			slash
+ShiftL keycode 8 =			braceleft
+ShiftR keycode 8 =			braceleft
+ShiftL ShiftR keycode 8 =		F7
+Control Alt ShiftL keycode 65 =		Console_7
+keycode 65 =				braceleft
+ShiftL keycode 65 =			F7
+Control Alt keycode 65 =		Console_7
 # 8
-keycode 9 =			eight
-Shift keycode 9 =		parenleft
-ShiftL keycode 9 =		bracketleft
-keycode 66 =			bracketleft
-ShiftL keycode 66 =		F8
+keycode 9 =				eight
+Shift keycode 9 =			parenleft
+ShiftL keycode 9 =			bracketleft
+ShiftR keycode 9 =			bracketleft
+ShiftL ShiftR keycode 9 =		F8
+keycode 66 =				bracketleft
+ShiftL keycode 66 =			F8
 # 9
-keycode 10 =			nine
-Shift keycode 10 =		parenright
-ShiftL keycode 10 =		bracketright
-keycode 67 =			bracketright
-ShiftL keycode 67 =		F9
+keycode 10 =				nine
+Shift keycode 10 =			parenright
+ShiftL keycode 10 =			bracketright
+ShiftR keycode 10 =			bracketright
+ShiftL ShiftR keycode 10 =		F9
+keycode 67 =				bracketright
+ShiftL keycode 67 =			F9
 # 0
-keycode 13 =			zero
-Shift keycode 13 =		equal
-ShiftL keycode 13 =		braceright
-Shift ShiftL keycode 13 =	question
-keycode 87 =			braceright
-Shift keycode 87 =		question
-ShiftL keycode 87 =		F10
+keycode 13 =				zero
+Shift keycode 13 =			equal
+ShiftL keycode 13 =			braceright
+ShiftR keycode 13 =			braceright
+Shift ShiftL keycode 13 =		question
+Shift ShiftR keycode 13 =		question
+ShiftL ShiftR keycode 13 =		F10
+keycode 87 =				braceright
+Shift keycode 87 =			question
+ShiftL keycode 87 =			F10
 # Backspace
-keycode 14 =			BackSpace
-ShiftL keycode 14 =		Remove # "Delete" also exists but it doesn't delete things, no idea what that is
-keycode 88 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
-ShiftL keycode 88 =		F12
+keycode 14 =				BackSpace
+ShiftL keycode 14 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
+ShiftR keycode 14 =			Remove
+ShiftL ShiftR keycode 14 =		F12
+keycode 88 =				Remove
+ShiftL keycode 88 =			F12
 #----------------------------------------------------------------
 # Tab
-keycode 15 =			Tab
-ShiftL keycode 15 =		Compose
-keycode 1 =			Compose
+keycode 15 =				Tab
+ShiftL keycode 15 =			Compose
+ShiftR keycode 15 =			Compose
+keycode 1 =				Compose
 # Q
-keycode 16 =			q
-ShiftL keycode 16 =		Home
-keycode 102 =			Home
+keycode 16 =				q
+ShiftL keycode 16 =			Home
+ShiftR keycode 16 =			Home
+keycode 102 =				Home
 # W
-keycode 17 =			w
-ShiftL keycode 17 =		Up
-keycode 103 =			Up
-ShiftL keycode 103 = 	 	U+20A9
+keycode 17 =				w
+ShiftL keycode 17 =			Up
+ShiftR keycode 17 =			Up
+ShiftL ShiftR keycode 17 = 	 	U+20A9
+keycode 103 =				Up
+ShiftL keycode 103 =			U+20A9
 # E
-keycode 18 =			e
-ShiftL keycode 18 =		End
-keycode 107 =			End
-ShiftL keycode 107 =		eacute
-Shift ShiftL keycode 107 =	Eacute
+keycode 18 =				e
+ShiftL keycode 18 =			End
+ShiftR keycode 18 =			End
+ShiftL ShiftR keycode 18 =		eacute
+Shift ShiftL ShiftR keycode 18 =	Eacute
+keycode 107 =				End
+ShiftL keycode 107 =			eacute
+Shift ShiftL keycode 107 =		Eacute
 # R
-keycode 19 =			r
-ShiftL keycode 19 =		Prior
-keycode 104 =			Prior
-ShiftL keycode 104 =		registered
+keycode 19 =				r
+ShiftL keycode 19 =			Prior
+ShiftR keycode 19 =			Prior
+ShiftL ShiftR keycode 19 =		registered
+keycode 104 =				Prior
+ShiftL keycode 104 =			registered
 # T
-keycode 20 =			t
-ShiftL keycode 20 =		U+2122
-keycode 39 =  	 		U+2122
-# Z
-keycode 21 =			z
-ShiftL keycode 21 =		U+017E
-Shift ShiftL keycode 21 =	U+017D
-keycode 40 =			U+017E
-Shift keycode 40 =		U+017D
+keycode 20 =				t
+ShiftL keycode 20 =			U+2122
+ShiftR keycode 20 =			U+2122
+keycode 39 =				U+2122
+# Y
+keycode 21 =				z
+ShiftL keycode 21 =			U+017E
+ShiftR keycode 21 =			U+017E
+Shift ShiftL keycode 21 =		U+017D
+Shift ShiftR keycode 21 =		U+017D
+keycode 40 =				U+017E
+Shift keycode 40 =			U+017D
 # U
-keycode 22 =			u
-ShiftL keycode 22 =		udiaeresis
-Shift ShiftL keycode 22 =	Udiaeresis
-keycode 86 =			udiaeresis
-Shift keycode 86 =		Udiaeresis
+keycode 22 =				u
+ShiftL keycode 22 =			udiaeresis
+ShiftR keycode 22 =			udiaeresis
+Shift ShiftL keycode 22 =		Udiaeresis
+Shift ShiftR keycode 22 =		Udiaeresis
+keycode 86 =				udiaeresis
+Shift keycode 86 =			Udiaeresis
 # I
-keycode 23 =			i
-ShiftL keycode 23 =		adiaeresis
-Shift ShiftL keycode 23 =	Adiaeresis
-keycode 127 =			adiaeresis
-Shift keycode 127 =		Adiaeresis
-ShiftL keycode 127 =		idotless
+keycode 23 =				i
+ShiftL keycode 23 =			adiaeresis
+ShiftR keycode 23 =			adiaeresis
+Shift ShiftL keycode 23 =		Adiaeresis
+Shift ShiftR keycode 23 =		Adiaeresis
+ShiftL ShiftR keycode 23 =		idotless
+keycode 127 =				adiaeresis
+Shift keycode 127 =			Adiaeresis
+ShiftL keycode 127 =			idotless
 # O
-keycode 24 =			o
-ShiftL keycode 24 =		odiaeresis
-Shift ShiftL keycode 24 =	Odiaeresis
-keycode 70 =			odiaeresis
-Shift keycode 70 =		Odiaeresis
+keycode 24 =				o
+ShiftL keycode 24 =			odiaeresis
+ShiftR keycode 24 =			odiaeresis
+Shift ShiftL keycode 24 =		Odiaeresis
+Shift ShiftR keycode 24 =		Odiaeresis
+keycode 70 =				odiaeresis
+Shift keycode 70 =			Odiaeresis
 # P
-keycode 25 =			p
-ShiftL keycode 25 =		ssharp
-Shift ShiftL keycode 25 =	U+1E9E
-keycode 54 =			ssharp
-Shift keycode 54 =		U+1E9E
-ShiftL keycode 54 =		U+20BD
+keycode 25 =				p
+ShiftL keycode 25 =			ssharp
+ShiftR keycode 25 =			ssharp
+Shift ShiftL keycode 25 =		U+1E9E
+Shift ShiftR keycode 25 =		U+1E9E
+ShiftL ShiftR keycode 25 =		U+20BD
+keycode 54 =				ssharp
+Shift keycode 54 =			U+1E9E
+ShiftL keycode 54 =			U+20BD
 # Enter
-keycode 28 =			Return
-ShiftL keycode 28 =		Insert
-keycode 110 =			Insert
+keycode 28 =				Return
+ShiftL keycode 28 =			Insert
+ShiftR keycode 28 =			Insert
+keycode 110 =				Insert
 #----------------------------------------------------------------
 # Pine
-keycode 125 =			Meta_nul
-#keycode 99 =			? # didn't find what print is called but it's probably not used in ttys anyway
+keycode 125 =				Meta_nul
+#keycode 99 =				? # didn't find what print is called but it's probably not used in ttys anyway
 # A
-keycode 30 =			a
-ShiftL keycode 30 =		Left
-keycode 105 =	       		Left
+keycode 30 =				a
+ShiftL keycode 30 =			Left
+ShiftR keycode 30 =			Left
+keycode 105 =				Left
 # S
-keycode 31 =			s
-ShiftL keycode 31 =		Down
-keycode 108 =	       		Down
+keycode 31 =				s
+ShiftL keycode 31 =			Down
+ShiftR keycode 31 =			Down
+keycode 108 =				Down
 # D
-keycode 32 =			d
-ShiftL keycode 32 =		Right
-keycode 106 =	       		Right
-ShiftL keycode 106 =		degree
-Shift ShiftL keycode 106 =	eth
+keycode 32 =				d
+ShiftL keycode 32 =			Right
+ShiftL keycode 32 =			Right
+ShiftL ShiftR keycode 32 =		degree
+Shift ShiftL ShiftR keycode 32 =	eth
+keycode 106 =				Right
+ShiftL keycode 106 =			degree
+Shift ShiftL keycode 106 =		eth
 # F
-keycode 33 =			f
-ShiftL keycode 33 =		Next
-keycode 109 = 	 		Next
-ShiftL keycode 109 =		U+03B8
+keycode 33 =				f
+ShiftL keycode 33 =			Next
+ShiftR keycode 33 =			Next
+ShiftL ShiftR keycode 33 =		U+03B8
+keycode 109 =				Next
+ShiftL keycode 109 =			U+03B8
 # G
-keycode 34 =			g
-#keycode 41 =			
+keycode 34 =				g
+#keycode 41 =				
 # H
-keycode 35 =			h
-#keycode 43 =			
+keycode 35 =				h
+#keycode 43 =				
 # J
-keycode 36 =			j
-ShiftL keycode 36 =		at
-keycode 58 =			at
+keycode 36 =				j
+ShiftL keycode 36 =			at
+ShiftR keycode 36 =			at
+keycode 58 =				at
 # K
-keycode 37 =			k
-ShiftL keycode 37 =		U+20AC
-keycode 124 =			U+20AC
+keycode 37 =				k
+ShiftL keycode 37 =			U+20AC
+ShiftR keycode 37 =			U+20AC
+keycode 124 =				U+20AC
 # L
-keycode 38 =			l
-ShiftL keycode 38 =		U+0142
-Shift ShiftL keycode 38 =	U+0141
-keycode 126 =			U+0142
-Shift keycode 126 =		U+0141
+keycode 38 =				l
+ShiftL keycode 38 =			U+0142
+ShiftR keycode 38 =			U+0142
+Shift ShiftL keycode 38 =		U+0141
+Shift ShiftR keycode 38 =		U+0141
+keycode 126 =				U+0142
+Shift keycode 126 =			U+0141
 # Semicolon
-keycode 53 =			numbersign
-Shift keycode 53 =		apostrophe
-ShiftL keycode 53 =		U+2019
-keycode 111 =			U+2019
+keycode 53 =				numbersign
+Shift keycode 53 =			apostrophe
+ShiftL keycode 53 =			U+2019
+ShiftR keycode 53 =			U+2019
+keycode 111 =				U+2019
 #----------------------------------------------------------------
 # Shift
-keycode 42 =			Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
-keycode 82 =			Shift
-# Y
-keycode 44 =			y
-ShiftL keycode 44 =		yen
-keycode 83 =  	 		yen
+keycode 42 =				Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
+keycode 82 =				Shift
+# Z
+keycode 44 =				y
+ShiftL keycode 44 =			yen
+ShiftR keycode 44 =			yen
+keycode 83 =				yen
 # X
-keycode 45 =			x
-ShiftL keycode 45 =		multiply
-keycode 121 = 	 		multiply
+keycode 45 =				x
+ShiftL keycode 45 =			multiply
+ShiftR keycode 45 =			multiply
+keycode 121 =				multiply
 # C
-keycode 46 =			c
-ShiftL keycode 46 =		U+010D
-Shift ShiftL keycode 46 =	U+010C
-keycode 96 =			U+010D
-Shift keycode 96 =		U+010C
+keycode 46 =				c
+ShiftL keycode 46 =			U+010D
+ShiftL keycode 46 =			U+010D
+Shift ShiftL keycode 46 =		U+010C
+Shift ShiftR keycode 46 =		U+010C
+keycode 96 =				U+010D
+Shift keycode 96 =			U+010C
 # V
-keycode 47 =			v
-#keycode 117 =			
+keycode 47 =				v
+#keycode 117 =				
 # B
-keycode 48 =			b
-#keycode 26 =			
+keycode 48 =				b
+#keycode 26 =				
 # N
-keycode 49 =			n
-ShiftL keycode 49 =		ntilde
-Shift ShiftL keycode 49 =	Ntilde
-keycode 27 =	       		ntilde
-Shift keycode 27 =		Ntilde
+keycode 49 =				n
+ShiftL keycode 49 =			ntilde
+ShiftR keycode 49 =			ntilde
+Shift ShiftL keycode 49 =		Ntilde
+Shift ShiftR keycode 49 =		Ntilde
+keycode 27 =				ntilde
+Shift keycode 27 =			Ntilde
 # M
-keycode 50 =			m
-ShiftL keycode 50 =		mu
-keycode 78 =  	 		mu
+keycode 50 =				m
+ShiftL keycode 50 =			mu
+ShiftR keycode 50 =			mu
+keycode 78 =				mu
 # Comma
-keycode 51 =			comma
-Shift keycode 51 =		semicolon
-ShiftL keycode 51 =		less
-keycode 74 =			less
+keycode 51 =				comma
+Shift keycode 51 =			semicolon
+ShiftL keycode 51 =			less
+ShiftR keycode 51 =			less
+keycode 74 =				less
 # Period
-keycode 52 =			period
-Shift keycode 52 =		colon
-ShiftL keycode 52 =		greater
-Shift ShiftL keycode 52 =	U+2026
-keycode 55 =			greater
-Shift keycode 55 =		U+2026
+keycode 52 =				period
+Shift keycode 52 =			colon
+ShiftL keycode 52 =			greater
+ShiftR keycode 52 =			greater
+Shift ShiftL keycode 52 =		U+2026
+Shift ShiftR keycode 52 =		U+2026
+keycode 55 =				greater
+Shift keycode 55 =			U+2026
 # Slash
-keycode 12 =			minus
-Shift keycode 12 =		underscore
-ShiftL keycode 12 =		plus
-Shift ShiftL keycode 12 =	endash
-keycode 98 =			plus
-Shift keycode 98 =		endash
+keycode 12 =				minus
+Shift keycode 12 =			underscore
+ShiftL keycode 12 =			plus
+ShiftR keycode 12 =			plus
+Shift ShiftL keycode 12 =		endash
+Shift ShiftR keycode 12 =		endash
+keycode 98 =				plus
+Shift keycode 98 =			endash
 #----------------------------------------------------------------
 # Ctrl
-keycode 29 =			Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
-keycode 79 =			Control
+keycode 29 =				Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
+keycode 79 =				Control
 # Fn
-#keycode			# fn is not passed through
+keycode 194 =				ShiftL # only for the `full-improved` kernel driver; for level 3, not the same as Shift
 # Alt
-keycode 56 =			Alt # unlike Shift and Control that have regular, L and R versions, Alt only has LAlt and RAlt, Alt and AltGr are just aliases for them
-keycode 80 =			Alt
+keycode 56 =				Alt # unlike Shift and Control that have regular, L and R versions, Alt only has LAlt and RAlt, Alt and AltGr are just aliases for them
+keycode 80 =				Alt
 # Space
-keycode 57 =			space
-keycode 81 =			space
+keycode 57 =				space
+keycode 81 =				space
 # AltGr
-keycode 100 =			AltGr
-keycode 75 =			AltGr
+keycode 100 =				AltGr
+keycode 75 =				AltGr
 # Apostrophe
-keycode 76 =			ShiftL # for level 3, not the same as Shift
-keycode 77 =			ShiftL
+keycode 76 =				ShiftR # for level 3, not the same as Shift
+keycode 77 =				ShiftR
 # Left Bracket
-keycode 97 =			Control
-keycode 71 =			Control
+keycode 97 =				Control
+keycode 71 =				Control
 # Right Bracket
-keycode 72 =			Shift
-keycode 73 =			Shift
-
+keycode 72 =				Shift
+keycode 73 =				Shift

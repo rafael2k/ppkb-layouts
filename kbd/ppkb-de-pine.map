@@ -12,6 +12,8 @@ keycode 2 =			one
 Shift keycode 2 =		exclam
 ShiftL keycode 2 =		bar
 Shift ShiftL keycode 2 =	exclamdown
+ShiftR keycode 2 =		F1
+Control Alt ShiftR keycode 2 =	Console_1
 keycode 59 =			F1
 Control Alt keycode 59 =	Console_1
 # 2
@@ -19,6 +21,8 @@ keycode 3 =			two
 Shift keycode 3 =		quotedbl
 ShiftL keycode 3 =		backslash
 Shift ShiftL keycode 3 =	twosuperior
+ShiftR keycode 3 =		F2
+Control Alt ShiftR keycode 3 =	Console_2
 keycode 60 =			F2
 Control Alt keycode 60 =	Console_2
 # 3
@@ -26,12 +30,16 @@ keycode 4 =			three
 Shift keycode 4 =		section
 ShiftL keycode 4 =		pound
 Shift ShiftL keycode 4 =	threesuperior
+ShiftR keycode 4 =		F3
+Control Alt ShiftR keycode 4 =	Console_3
 keycode 61 =			F3
 Control Alt keycode 61 =	Console_3
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 ShiftL keycode 5 =		asterisk
+ShiftR keycode 5 =		F4
+Control Alt ShiftR keycode 5 =	Console_4
 keycode 62 =			F4
 Control Alt keycode 62 =	Console_4
 # 5
@@ -39,6 +47,8 @@ keycode 6 =			five
 Shift keycode 6 =		percent
 ShiftL keycode 6 =		asciitilde
 Shift ShiftL keycode 6 =	dead_circumflex
+ShiftR keycode 6 =		F5
+Control Alt ShiftR keycode 6 =	Console_5
 keycode 63 =			F5
 Control Alt keycode 63 =	Console_5
 # 6
@@ -46,33 +56,41 @@ keycode 7 =			six
 Shift keycode 7 =		ampersand
 ShiftL keycode 7 =		dead_grave
 Shift ShiftL keycode 7 =	dead_acute
+ShiftR keycode 7 =		F6
+Control Alt ShiftR keycode 7 =	Console_6
 keycode 64 =			F6
 Control Alt keycode 64 =	Console_6
 # 7
 keycode 8 =			seven
 Shift keycode 8 =		slash
 ShiftL keycode 8 =		braceleft
+ShiftR keycode 8 =		F7
+Control Alt ShiftR keycode 8 =	Console_7
 keycode 65 =			F7
 Control Alt keycode 65 =	Console_7
 # 8
 keycode 9 =			eight
 Shift keycode 9 =		parenleft
 ShiftL keycode 9 =		bracketleft
+ShiftR keycode 9 =		F8
 keycode 66 =			F8
 # 9
 keycode 10 =			nine
 Shift keycode 10 =		parenright
 ShiftL keycode 10 =		bracketright
+ShiftR keycode 10 =		F9
 keycode 67 =			F9
 # 0
 keycode 11 =			zero
 Shift keycode 11 =		equal
 ShiftL keycode 11 =		braceright
 Shift ShiftL keycode 11 =	question
+ShiftR keycode 11 =		F10
 keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
 ShiftL keycode 14 =		F12
+ShiftR keycode 14 =		Remove
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
 #----------------------------------------------------------------
 # Tab
@@ -94,9 +112,9 @@ ShiftL keycode 19 =		registered
 keycode 20 =			t
 ShiftL keycode 20 =		U+2122
 # Y
-keycode 44 =			z
-AltGr keycode 44 =		U+017E
-Shift AltGr keycode 44 =	U+017D
+keycode 21 =			z
+ShiftL keycode 21 =		U+017E
+Shift ShiftL keycode 21 =	U+017D
 # U
 keycode 22 =			u
 ShiftL keycode 22 =		udiaeresis
@@ -148,13 +166,14 @@ Shift ShiftL keycode 38 =	U+0141
 keycode 39 =			numbersign
 Shift keycode 39 =		apostrophe
 ShiftL keycode 39 =		U+2019
+ShiftR keycode 39 =		Insert
 keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
 keycode 42 =			Shift # Shift, ShiftL and ShiftR are separate and the default behavior is accessed via Shift
 # Z
-keycode 21 =			y
-AltGr keycode 21 =		yen
+keycode 44 =			y
+ShiftL keycode 44 =		yen
 # X
 keycode 45 =			x
 ShiftL keycode 45 =		multiply
@@ -177,24 +196,27 @@ ShiftL keycode 50 =		mu
 keycode 51 =			comma
 Shift keycode 51 =		semicolon
 ShiftL keycode 51 =		less
+ShiftR keycode 51 =		Home
 keycode 102 =			Home
 # Period
 keycode 52 =			period
 Shift keycode 52 =		colon
 ShiftL keycode 52 =		greater
 Shift ShiftL keycode 52 =	U+2026
+ShiftR keycode 52 =		Up
 keycode 103 =			Up
 # Slash
 keycode 53 =			minus
 Shift keycode 53 =		underscore
 ShiftL keycode 53 =		plus
 Shift ShiftL keycode 53 =	endash
+ShiftR keycode 53 =		End
 keycode 107 =			End
 #----------------------------------------------------------------
 # Ctrl
 keycode 29 =			Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
 # Fn
-#keycode			# fn is not passed through
+keycode 194 =			ShiftR # only for the `regular-improved` kernel driver; for level 3, not the same as Shift
 # Alt
 keycode 56 =			Alt
 # Space
@@ -205,13 +227,15 @@ Shift keycode 100 =		U+1E9E
 # Apostrophe
 keycode 40 =			adiaeresis
 Shift keycode 40 =		Adiaeresis
+ShiftR keycode 40 =		Left
 keycode 105 =			Left
 # Left Bracket
 keycode 26 =			odiaeresis
 Shift keycode 26 =		Odiaeresis
+ShiftR keycode 26 =		Down
 keycode 108 =			Down
 # Right Bracket
 keycode 27 =			udiaeresis
 Shift keycode 27 =		Udiaeresis
+ShiftR keycode 27 =		Right
 keycode 106 =			Right
-

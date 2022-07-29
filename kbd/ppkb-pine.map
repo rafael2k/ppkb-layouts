@@ -11,36 +11,48 @@ keycode 2 =			one
 Shift keycode 2 =		exclam
 ShiftL keycode 2 =		bar
 Shift ShiftL keycode 2 =	exclamdown
+ShiftR keycode 2 =		F1
+Control Alt ShiftR keycode 2 =	Console_1
 keycode 59 =			F1
 Control Alt keycode 59 =	Console_1
 # 2
 keycode 3 =			two
 Shift keycode 3 =		at
 ShiftL keycode 3 =		backslash
+ShiftR keycode 3 =		F2
+Control Alt ShiftR keycode 3 =	Console_2
 keycode 60 =			F2
 Control Alt keycode 60 =	Console_2
 # 3
 keycode 4 =			three
 Shift keycode 4 =		numbersign
 ShiftL keycode 4 =		pound
+ShiftR keycode 4 =		F3
+Control Alt ShiftR keycode 4 =	Console_3
 keycode 61 =			F3
-Control Alt keycode 60 =	Console_3
+Control Alt keycode 61 =	Console_3
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 ShiftL keycode 5 =		U+20AC
+ShiftR keycode 5 =		F4
+Control Alt ShiftR keycode 5 =	Console_4
 keycode 62 =			F4
 Control Alt keycode 62 =	Console_4
 # 5
 keycode 6 =			five
 Shift keycode 6 =		percent
 ShiftL keycode 6 =		asciitilde
+ShiftR keycode 6 =		F5
+Control Alt ShiftR keycode 6 =	Console_5
 keycode 63 =			F5
 Control Alt keycode 63 =	Console_5
 # 6
 keycode 7 =			six
 Shift keycode 7 =		asciicircum
 ShiftL keycode 7 =		grave
+ShiftR keycode 7 =		F6
+Control Alt ShiftR keycode 7 =	Console_6
 keycode 64 =			F6
 Control Alt keycode 64 =	Console_6
 # 7
@@ -48,25 +60,31 @@ keycode 8 =			seven
 Shift keycode 8 =		ampersand
 ShiftL keycode 8 =		minus
 Shift ShiftL keycode 8 =	U+2013
+ShiftR keycode 8 =		F7
+Control Alt ShiftR keycode 8 =	Console_7
 keycode 65 =			F7
 Control Alt keycode 65 =	Console_7
 # 8
 keycode 9 =			eight
 Shift keycode 9 =		asterisk
 ShiftL keycode 9 =		equal
+ShiftR keycode 9 =		F8
 keycode 66 =			F8
 # 9
 keycode 10 =			nine
 Shift keycode 10 =		parenleft
 ShiftL keycode 10 =		underscore
+ShiftR keycode 10 =		F9
 keycode 67 =			F9
 # 0
 keycode 11 =			zero
 Shift keycode 11 =		parenright
 ShiftL keycode 11 =		plus
+ShiftR keycode 11 =			F10
 keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
+ShiftR keycode 14 =		Remove
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
 #----------------------------------------------------------------
 # Tab
@@ -139,6 +157,7 @@ Shift ShiftL keycode 38 =	U+0141
 # Semicolon
 keycode 39 =			semicolon
 Shift keycode 39 =		colon
+ShiftR keycode 39 =		Insert
 keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
@@ -168,22 +187,25 @@ ShiftL keycode 50 =		mu
 # Comma
 keycode 51 =			comma
 Shift keycode 51 =		less
+ShiftR keycode 51 =		Home
 keycode 102 =			Home
 # Period
 keycode 52 =			period
 Shift keycode 52 =		greater
 ShiftL keycode 52 =		U+2026
+ShiftR keycode 52 =		Up
 keycode 103 =			Up
 # Slash
 keycode 53 =			slash
 Shift keycode 53 =		question
 ShiftL keycode 53 =		questiondown
+ShiftR keycode 53 =		End
 keycode 107 =			End
 #----------------------------------------------------------------
 # Ctrl
 keycode 29 =			Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
 # Fn
-#keycode			# fn is not passed through
+keycode 194 =			ShiftR # only for the `regular-improved` kernel driver; for level 3, not the same as Shift
 # Alt
 keycode 56 =			Alt
 # Space
@@ -194,13 +216,15 @@ keycode 100 =			AltGr
 keycode 40 =			apostrophe
 Shift keycode 40 =		quotedbl
 ShiftL keycode 40 =		U+2019
+ShiftR keycode 40 =		Left
 keycode 105 =			Left
 # Left Bracket
 keycode 26 =			bracketleft
 Shift keycode 26 =		braceleft
+ShiftR keycode 26 =		Down
 keycode 108 =			Down
 # Right Bracket
 keycode 27 =			bracketright
 Shift keycode 27 =		braceright
+ShiftR keycode 27 =		Right
 keycode 106 =			Right
-

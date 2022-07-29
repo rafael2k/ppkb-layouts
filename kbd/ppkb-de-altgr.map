@@ -12,6 +12,8 @@ keycode 2 =			one
 Shift keycode 2 =		exclam
 AltGr keycode 2 =		bar
 Shift AltGr keycode 2 =		exclamdown
+ShiftL keycode 2 =		F1
+Control Alt ShiftL keycode 2 =	Console_1
 keycode 59 =			F1
 Control Alt keycode 59 =	Console_1
 # 2
@@ -19,6 +21,8 @@ keycode 3 =			two
 Shift keycode 3 =		quotedbl
 AltGr keycode 3 =		backslash
 Shift AltGr keycode 3 =		twosuperior
+ShiftL keycode 3 =		F2
+Control Alt ShiftL keycode 3 =	Console_2
 keycode 60 =			F2
 Control Alt keycode 60 =	Console_2
 # 3
@@ -26,12 +30,16 @@ keycode 4 =			three
 Shift keycode 4 =		section
 AltGr keycode 4 =		pound
 Shift AltGr keycode 4 =		threesuperior
+ShiftL keycode 4 =		F3
+Control Alt ShiftL keycode 4 =	Console_3
 keycode 61 =			F3
 Control Alt keycode 61 =	Console_3
 # 4
 keycode 5 =			four
 Shift keycode 5 =		dollar
 AltGr keycode 5 =		asterisk
+ShiftL keycode 5 =		F4
+Control Alt ShiftL keycode 5 =	Console_4
 keycode 62 =			F4
 Control Alt keycode 62 =	Console_4
 # 5
@@ -39,6 +47,8 @@ keycode 6 =			five
 Shift keycode 6 =		percent
 AltGr keycode 6 =		asciitilde
 Shift AltGr keycode 6 =		dead_circumflex
+ShiftL keycode 6 =		F5
+Control Alt ShiftL keycode 6 =	Console_5
 keycode 63 =			F5
 Control Alt keycode 63 =	Console_5
 # 6
@@ -46,32 +56,40 @@ keycode 7 =			six
 Shift keycode 7 =		ampersand
 AltGr keycode 7 =		dead_grave
 Shift AltGr keycode 7 =		dead_acute
+ShiftL keycode 7 =		F6
+Control Alt ShiftL keycode 7 =	Console_6
 keycode 64 =			F6
-Control Alt keycode 59 =	Console_6
+Control Alt keycode 64 =	Console_6
 # 7
 keycode 8 =			seven
 Shift keycode 8 =		slash
 AltGr keycode 8 =		braceleft
+ShiftL keycode 8 =		F7
+Control Alt ShiftL keycode 8 =	Console_7
 keycode 65 =			F7
-Control Alt keycode 59 =	Console_7
+Control Alt keycode 65 =	Console_7
 # 8
 keycode 9 =			eight
 Shift keycode 9 =		parenleft
 AltGr keycode 9 =		bracketleft
+ShiftLkeycode 9 =		F8
 keycode 66 =			F8
 # 9
 keycode 10 =			nine
 Shift keycode 10 =		parenright
 AltGr keycode 10 =		bracketright
+ShiftL keycode 10 =		F9
 keycode 67 =			F9
 # 0
 keycode 11 =			zero
 Shift keycode 11 =		equal
 AltGr keycode 11 =		braceright
 Shift AltGr keycode 11 =	question
+ShiftL keycode 11 =		F10
 keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
+ShiftL keycode 14 =		Remove
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
 #----------------------------------------------------------------
 # Tab
@@ -147,6 +165,7 @@ Shift AltGr keycode 38 =	U+0141
 keycode 39 =			numbersign
 Shift keycode 39 =		apostrophe
 AltGr keycode 39 =		U+2019
+ShiftL keycode 39 =		Insert
 keycode 110 =			Insert
 #----------------------------------------------------------------
 # Shift
@@ -188,12 +207,13 @@ keycode 53 =			minus
 Shift keycode 53 =		underscore
 AltGr keycode 53 =		plus
 Shift AltGr keycode 53 =	endash
+ShiftL keycode 53 =		End
 keycode 107 =			End
 #----------------------------------------------------------------
 # Ctrl
 keycode 29 =			Control # Control, CtrlL and CtrlR are separate and the default behavior is accessed via Control
 # Fn
-#keycode			# fn is not passed through
+keycode 194 =			ShiftL # only for the `regular-improved` kernel driver; for level 3, not the same as Shift
 # Alt
 keycode 56 =			Alt
 # Space
@@ -203,13 +223,15 @@ keycode 100 =			AltGr
 # Apostrophe
 keycode 40 =			adiaeresis
 Shift keycode 40 =		Adiaeresis
+ShiftL keycode 40 =		Left
 keycode 105 =			Left
 # Left Bracket
 keycode 26 =			odiaeresis
 Shift keycode 26 =		Odiaeresis
+ShiftL keycode 26 =		Down
 keycode 108 =			Down
 # Right Bracket
 keycode 27 =			udiaeresis
 Shift keycode 27 =		Udiaeresis
+ShiftL keycode 106 =		Right
 keycode 106 =			Right
-
