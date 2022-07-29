@@ -258,7 +258,7 @@ These layouts are intended to be simple and just do two things: They make the ex
 #### Installation Requirements
 
 xkb: layout: `pp`, variants: `altgr` or `pine`  
-tty: `ppkb-altgr.map` or `ppkb-pine.map`
+kbd: `ppkb-altgr.map` or `ppkb-pine.map`
 
 ### FnSymbols-AltGrF12 / FnSymbols-PineF12
 
@@ -269,7 +269,7 @@ These layouts are the same as [AltGr/Pine](#altgr-pine) but they swap the number
 #### Installation Requirements
 
 xkb: layout: `pp`, variants: `fnsymbols-altgrf12` or `fnsymbols-pinef12`  
-tty: `ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
+kbd: `ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
 
 ### DE-AltGr
 
@@ -280,7 +280,7 @@ This layout intends to recreate the standard German QWERTZ layout, including pla
 #### Installation Requirements
 
 xkb: layout: `pp`, variant: `de-altgr`  
-tty: `ppkb-de-altgr.map`
+kbd: `ppkb-de-altgr.map`
 
 ### DE-Pine
 
@@ -291,7 +291,7 @@ This layout is the same as [DE-AltGr](#de-altgr) but it uses the Pine key for th
 #### Installation Requirements
 
 xkb: layout: `pp`, variant: `de-pine`  
-tty: `ppkb-de-pine.map`
+kbd: `ppkb-de-pine.map`
 
 ## Driver-Only Layouts
 
@@ -324,7 +324,7 @@ This layout adds the additional number row symbols using the AltGr as modifier, 
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variants: `extended-altgr` or `extended-pine`  
-tty: `ppkb-extended-altgr.map` or `ppkb-extended-pine.map`  
+kbd: `ppkb-extended-altgr.map` or `ppkb-extended-pine.map`  
 Userspace driver: `full.txt`
 
 ### Mirrored
@@ -338,7 +338,7 @@ Since the right versions of Fn, Ctrl and Shift also double as the movement keys 
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variant: `mirrored`  
-tty: `ppkb-mirrored.map`  
+kbd: `ppkb-mirrored.map`  
 Userspace driver: `full.txt`
 
 ### Mirrored-WASD
@@ -350,7 +350,7 @@ This layout moves the arrow keys, home/end and pageup/down to WASD QE RF. Like r
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variant: `mirrored-wasd`  
-tty: `ppkb-mirrored-wasd.map`  
+kbd: `ppkb-mirrored-wasd.map`  
 Userspace driver: `full.txt`
 
 ### DE-Mirrored
@@ -366,7 +366,7 @@ Since the right versions of Fn, Ctrl and Shift also double as the movement keys 
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variant: `de-mirrored`  
-tty: `ppkb-de-mirrored.map`  
+kbd: `ppkb-de-mirrored.map`  
 Userspace driver: `full.txt`
 
 ### DE-Mirrored-WASD
@@ -380,7 +380,7 @@ Besides that, this layout intends to recreate the standard German QWERTZ layout,
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variant: `de-mirrored-wasd`  
-tty: `ppkb-de-mirrored-wasd.map`  
+kbd: `ppkb-de-mirrored-wasd.map`  
 Userspace driver: `full.txt`
 
 ### Phalio
@@ -392,7 +392,7 @@ This layout started with the goal of making it as close to my usual custom layou
 #### Installation Requirements
 
 xkb: layout: `pp-usrspc`, variant: `phalio`  
-tty: `ppkb-phalio.map`  
+kbd: `ppkb-phalio.map`  
 Userspace driver: `phalio.txt`
 
 ## Customising Layouts
