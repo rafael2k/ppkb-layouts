@@ -6,4 +6,4 @@ if [ ! -d /usr/local/share/kbd/keymaps/ ]; then
 fi
 
 echo "Copying files:"
-cp -v tty/* /usr/local/share/kbd/keymaps/
+cp -v kbd/* /usr/local/share/kbd/keymaps/
