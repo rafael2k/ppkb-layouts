@@ -371,7 +371,7 @@ xkb_symbols "extended-altgr" {
 
 xkb_symbols "extended-pine" {
 
-    include "pp-usrspc(extended-altgr)"
+    include "pp-driver(extended-altgr)"
     name[Group1]= "PinePhone Keyboard Case Userspace Extended Pine";
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
 

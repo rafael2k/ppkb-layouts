@@ -6849,7 +6849,7 @@
       </variantList>
     </layout><layout>
       <configItem>
-	<name>pp-usrspc</name>
+	<name>pp-driver</name>
         <shortDescription>pp</shortDescription>
         <description>PinePhone Keyboard Case Userspace Full</description>
       </configItem>

@@ -290,7 +290,7 @@
   jv              Indonesian (Javanese)
   my              Malay (Jawi, Arabic Keyboard)
   pp              PinePhone Keyboard
-  pp-usrspc       PinePhone Keyboard (with userspace driver)
+  pp-driver       PinePhone Keyboard (with a modified userspace or kernel driver)
   custom          A user-defined custom Layout
 
 ! variant
@@ -779,13 +779,13 @@
   fnsymbols-altgrf12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and AltGr for F1-F12)
   de-pine         pp: PinePhone Keyboard (DE with Pine/Caps for additional symbols)
   de-altgr        pp: PinePhone Keyboard (DE with RAlt/AltG(r) for additional symbols)
-  extended-altgr  pp-usrspc: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
-  extended-pine   pp-usrspc: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
-  mirrored        pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
-  mirrored-wasd   pp-usrspc: PinePhone Keyboard Userspace (EN-US mirrored modifier keys, WASD movement keys)
-  de-mirrored     pp-usrspc: PinePhone Keyboard Userspace (DE mirrored modifier keys)
-  mirrored-wasd   pp-usrspc: PinePhone Keyboard Userspace (DE mirrored modifier keys, WASD movement keys)
-  phalio          pp-usrspc: PinePhone Keyboard Userspace (Phalio)
+  extended-altgr  pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
+  extended-pine   pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
+  mirrored        pp-driver: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
+  mirrored-wasd   pp-driver: PinePhone Keyboard Userspace (EN-US mirrored modifier keys, WASD movement keys)
+  de-mirrored     pp-driver: PinePhone Keyboard Userspace (DE mirrored modifier keys)
+  mirrored-wasd   pp-driver: PinePhone Keyboard Userspace (DE mirrored modifier keys, WASD movement keys)
+  phalio          pp-driver: PinePhone Keyboard Userspace (Phalio)
 
 ! option
   grp                  Switching to another layout
