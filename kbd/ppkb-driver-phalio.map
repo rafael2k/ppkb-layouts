@@ -212,10 +212,10 @@ ShiftR keycode 23 =			adiaeresis
 ShiftL keycode 23 =			adiaeresis
 Shift ShiftR keycode 23 =		Adiaeresis
 Shift ShiftL keycode 23 =		Adiaeresis
-Shift ShiftL ShiftR keycode 23 =	idotless
+ShiftL ShiftR keycode 23 =		idotless
 keycode 127 =				adiaeresis
 Shift keycode 127 =			Adiaeresis
-Shift ShiftR keycode 127 =		idotless
+ShiftR keycode 127 =			idotless
 # O
 keycode 24 =				o
 ShiftR keycode 24 =			odiaeresis
