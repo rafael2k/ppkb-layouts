@@ -1,0 +1,64 @@
+- keyboards: ["PinePhone Keyboard"]
+
+  layers:
+    - modifiers: ['f24']
+      keymap:
+        # row 1 (esc)
+        0: f10
+        1: f1
+        2: f2
+        3: f3
+        4: f4
+        5: f5
+        6: f6
+        7: f7
+        8: f8
+        9: f9
+        equal: f11
+        backspace: f12
+        # row 2 (tab)
+        tab: esc
+        q: home
+        w: up
+        e: end
+        r: pageup
+        t: semicolon
+        y: apostrophe
+        u: 102nd
+        i: compose
+        o: scrolllock
+        p: rightshift
+        enter: insert
+        # row 3 (pine)
+        leftmeta: sysrq
+        a: left
+        s: down
+        d: right
+        f: pagedown
+        g: grave
+        h: backslash
+        j: capslock
+        k: yen
+        l: rightmeta
+        slash: delete
+        # row 4 (shift)
+        leftshift: kp0
+        z: kpdot
+        x: kpcomma
+        c: kpenter
+        v: kpequal
+        b: leftbrace
+        n: rightbrace
+        m: kpplus
+        comma: kpminus
+        dot: kpasterisk
+        minus: kpslash
+        # row 5 (ctrl)
+        leftctrl: kp1
+        #f24:
+        leftalt: kp2
+        space: kp3
+        rightalt: kp4
+        kp5: kp6
+        rightctrl: kp7
+        kp8: kp9
