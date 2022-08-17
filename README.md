@@ -59,8 +59,6 @@ If you need any help installing a layout or making your own, feel free to contac
 
 **All layouts were thoroughly tested in every possible modifier combination and in both GUIs and TTYs, but only partly tested after I added support for modified kernel drivers, which required significant changes. It is possible that some key(combination)s don’t work that should work. Please report such occurrences so that they can be fixed.**
 
-**Also note that the userspace input driver is currently not working with kernels 5.17 and 5.18. If you’re on one of these versions, you’ll have to use a layout that does [not require the userspace driver](#xkb-kbd-only-layouts) or compile your own [modified kernel driver](#kernel-driver).**
-
 Lastly I would like to thank [Megi](https://xnux.eu/log/) for all of his work regarding the PinePhone Keyboard, and of course the PinePhone in general, and for answering my questions that resulted in me being able to modify the kernel driver to get all layouts (and especially my own layout, I can’t live without it), to work flawlessly. You can donate to him at [https://xnux.eu/contribute.html](https://xnux.eu/contribute.html).
 
 ## Layouts
