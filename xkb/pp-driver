@@ -182,7 +182,6 @@ xkb_symbols "full" {
     key <KP9>  { [ Right,		Right,			NoSymbol,		NoSymbol		] };
 
     include "level3(ralt_switch)"
-    include "level5(modifier_mapping)"
 };
 
 xkb_symbols "extended-altgr" {
@@ -366,7 +365,6 @@ xkb_symbols "extended-altgr" {
     key <KP9>  { [ Right,		Right,			NoSymbol,		NoSymbol		] };
 
     include "level3(ralt_switch)"
-    include "level5(modifier_mapping)"
 };
 
 xkb_symbols "extended-pine" {
@@ -380,7 +378,6 @@ xkb_symbols "extended-pine" {
     key <KP4>  { [ Alt_R,               Alt_R,             	Alt_R,             	Alt_R			] };
 
     include "level3(lwin_switch)"
-    include "level5(modifier_mapping)"
 };
 
 xkb_symbols "mirrored" {
@@ -562,9 +559,6 @@ xkb_symbols "mirrored" {
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Right,			Right,			Right,			Right,			Shift_R,		Shift_R			] };
     key <KP9>  { [ Right,		Right,			Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
 };
 
 partial alphanumeric_keys
@@ -747,9 +741,6 @@ xkb_symbols "mirrored-wasd" {
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
     key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
 };
 
 xkb_symbols "de-mirrored" {
@@ -931,9 +922,6 @@ xkb_symbols "de-mirrored" {
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Right,			Right,			Right,			Right,			Shift_R,		Shift_R			] };
     key <KP9>  { [ Right,		Right,			Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
 };
 
 xkb_symbols "de-mirrored-wasd" {
@@ -1115,9 +1103,6 @@ xkb_symbols "de-mirrored-wasd" {
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
     key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
 };
 
 partial alphanumeric_keys
@@ -1300,7 +1285,4 @@ xkb_symbols "phalio" {
     // ]: f8 f9
     key <KP8>  { [ Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R,		Shift_R			] };
     key <KP9>  { [ Shift_L,		Shift_L,		Shift_L,		Shift_L			] }; // Shift_R is for some reason not working in fn layer, so use Shift_L there instead (maybe somehow the driver's fn handling does not include both shiftl and r unlike regular key handling?)
-
-    include "level3(modifier_mapping)"
-    include "level5(modifier_mapping)"
 };

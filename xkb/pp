@@ -146,8 +146,6 @@ xkb_symbols "basic" {
     // Right Bracket
     key <AD12> { [ bracketright,	braceright,		NoSymbol,		NoSymbol,		Right,			Right			] };
     key <RGHT> { [ Right,		Right,			NoSymbol,		NoSymbol		] };
-
-    include "level5(modifier_mapping)"
 };
 
 partial alphanumeric_keys
