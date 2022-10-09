@@ -2,6 +2,10 @@
 
 Various keyboard layouts for the PinePhone Keyboard Case to use it as intended or to go beyond into the realm of custom layouts.
 
+If you need any help, feel free to contact me via any of [these methods](https://phal.io/links).
+
+If you find this helpful, you have the option of donating to me [here](https://phal.io/donate). Any amount is highly appreciated :)
+
 ## Content
 
 1. [Introduction](#introduction)
@@ -43,13 +47,16 @@ Various keyboard layouts for the PinePhone Keyboard Case to use it as intended o
 	5. [Kernel Driver](#kernel-driver-1)
 	6. [kbct](#kbct-1)
 5. [Troubleshooting](#troubleshooting)
-	1. [Stuck (Modifier) Keys](#stuck-modifier-keys)
-	2. [Ghost Key Presses](#ghost-key-presses)
-	3. [TTY Switch Shortcuts Not Working](#tty-switch-shortcuts-not-working)
+	1. [Typing Not Working](#typing-not-working)
+	2. [Stuck (Modifier) Keys](#stuck-modifier-keys)
+	3. [Ghost Key Presses](#ghost-key-presses)
+	4. [TTY Switch Shortcuts Not Working](#tty-switch-shortcuts-not-working)
 
 ## Introduction
 
-The current default PinePhone Keyboard driver features two layers: The regular layer and the Fn layer that gives access to movement keys, F1-10 and Delete. The missing symbols of a regular keyboard that are printed on another layer of the number row keycaps are not accessible at all. They were in the old driver, but some could only be accessed if shift was also held. This is all due to the way keyboards work in software. To be able to use the extra symbols, a keyboard layout has to be loaded that maps non-standard symbols to the standardised hardware keys, just like how any other language or otherwise customised layout works. This repository includes such layouts, from minimal ones that just make all symbols printed on the keycaps accessible to more fancy ones. Thanks to the keyboard just sending the position of the pressed key in the keyboard matrix and the driver(s) being open, layouts can be fully customised. If you want to know more about how all of this works and how to modify a layout or even make your own entirely, read [Customising Layouts](#customising-layouts).
+The current kernel input driver features two layers: The regular layer and the Fn layer that gives access to movement keys, F1-10 and Delete. The missing symbols of a regular keyboard that are printed on another layer of the number row keycaps are not accessible at all by default. They were in the old driver, but some could only be accessed if shift was also held. This is all due to the way keyboards work in software. To be able to use the extra symbols, a keyboard layout has to be loaded that maps non-standard symbols to the standardised hardware keys, just like how any other language or otherwise customised layout works. This repository includes such layouts, from minimal ones that just make all symbols printed on the keycaps accessible to more fancy ones. Thanks to the keyboard just sending the position of the pressed key in the keyboard matrix and the driver(s) being open, layouts can be fully customised. If you want to know more about how all of this works and how to modify a layout or even make your own entirely, read [Customising Layouts](#customising-layouts).
+
+If you only want the number row symbols to work and nothing else, an xkb model for that may already come with your distribution. Read [this](https://phal.io/tech/pinephone-keyboard#ppkb-model) for more information.
 
 Note that the PinePhone is commonly abbreviated as PP and the PinePhone Keyboard as PPKB.
 
@@ -251,18 +258,32 @@ This will only add the pp and pp-driver layout files, so it won’t override any
 
 #### Selecting Layout
 
-xkb is what manages keyboard layouts in graphical environments by default, so there should be ways integrated within your GUI to change it or search engine results that tell you how to do it for your system. If you use systemd, you can simply use `localectl set-x11-keymap <layout> pc105 <variant>`. Substitute `<layout>` and `<variant>` with whatever you want to use, e.g. `localectl set-x11-keymap pp pc105 altgr`. Despite the name, this works for both X11 and Wayland. If you use Sxmo/Sway, you can also put the following lines into your Sway config `~/.config/sxmo/sway`:
+Xkb is *the* software handling keyboard layouts on Linux, both on X and on Wayland, so your desktop environment should have a way to set the layout, model and extra options, either in graphical settings or in some config file.
+
+On **Sxmo/Sway**, put the following into your Sway config `~/.config/sxmo/sway`. It only changes the keys of the PPKB, so any other hardware keyboard you connect will be unaffected.
 
 ```
-input * {
+input "0:0:PinePhone_Keyboard" {
     xkb_layout "pp"
     xkb_variant "altgr"
 }
 ```
 
+On **Plasma Mobile**, at least when I was still using it, there were no settings for physical keyboards in the mobile settings application. But you can install the regular desktop settings application with e.g. `sudo pacman -S systemsettings` and set it there by going to Hardware -> Input Devices -> Keyboard and going to the Layouts tab.
+
+On **Phosh**, at least according to the [Mobian Wiki](https://wiki.mobian-project.org/doku.php?id=ppaccessories#symbol-keys) but I assume it also works elsewhere, you can either set the layout in the settings application and go to Keyboard, or edit the file `/usr/lib/systemd/system/phosh.service.d/override.conf` and potentially add something like this:
+
+```
+[Service]
+Environment=XKB_DEFAULT_LAYOUT=pp
+Environment=XKB_DEFAULT_VARIANT=altgr
+```
+
+If you can’t figure out how to set the xkb layout on your system, as a last resort you could simply override the default US layout with the custom one you want to use. If you make a mistake, you won’t be able to type with hardware keyboards at all, so make sure you can either use an on-screen keyboard or SSH to revert the changes if necessary. First, make a backup of the original US layout so you can revert to it at any time by using `sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.orig`. Use this same command with the paths swapped to restore the original. Then find the key definitions for the layout you want in either `xkb/pp` or `xkb/pp-driver` of this repository, depending on which one the layout requirements of this readme tell you to use. You can find the right variant within the file by searching for the variant name the layout lists in its requirements, with quotation marks, e.g. searching for `"altgr"`. Once you’re there, copy everything starting from the `{` behind the variant name you searched for to its matching `}` before the next variant begins. Then edit the file `/usr/share/X11/xkb/symbols/us`, remove everything in the `{}` brackets after `"basic"` and paste what you just copied into them instead. Reboot and the layout should be active. Note that, depending on what layout you choose, you still have to [copy the xkb files](#copying-files) to your xkb directory as some variants reference other variants there.
+
 ### kbd
 
-To install and use a kbd layout, you may optionally copy the keymap file somewhere, and you have to tell your system to use it.
+To install and use a kbd layout, you may optionally copy the keymap file somewhere, and then tell your system to use it.
 
 #### Copying Files
 
@@ -329,7 +350,7 @@ Note that each time you want to use a different usserspace driver keymap or have
 
 #### Explanation
 
-For Full layouts, there are two options for modified kernel input drivers: `pinephone-keyboard-full` and `pinephone-keyboard-full-improved`. Both let you type the same symbols of the selected layout, just like the userspace driver. But they still have differences that could be important to you. All kernel drivers allow you to use the pine key entirely as normal, even if pressed by itself, unlike the userspace driver. It also works even while the userspace driver is broken (as it has been for quite a while, as of 2022-07-25). `pinephone-keyboard-full-improved` (as well as any `*-improved`) in addition fully removes the Fn layer and replaces it with regular xkb/kbd modifiers, thereby removing the very annoying behaviour of getting keys stuck if Fn is not let go of last. That makes this the best and most comfortable option, at the cost of more difficult installation and maintaining (you’ll have to compile each new kernel version yourself), as well as losing the ability to send raw scan codes for e.g. F1-12 and arrow keys, which also means that the GUI (not TTY) keyboard shortcut to switch to TTY won’t work. You can always define a regular shortcut in your desktop environment or use `chvt <number>`, but that won’t work if the GUI is frozen and you have no SSH access. Or use TTYescape, available for postmarketOS and in the [AUR](https://aur.archlinux.org/packages/ttyescape). Still, at least in my opinion that is a small price to pay for a perfectly working custom keyboard layout. If you do need raw scan codes, try [https://github.com/samvel1024/kbct](https://github.com/samvel1024/kbct) in combination with `*-improved`.
+For Full layouts, there are two options for modified kernel input drivers: `pinephone-keyboard-full` and `pinephone-keyboard-full-improved`. Both let you type the same symbols of the selected layout, just like the userspace driver. But they still have differences that could be important to you. All kernel drivers allow you to use the pine key entirely as normal, even if pressed by itself, unlike the userspace driver. `pinephone-keyboard-full-improved` (as well as any `*-improved`) in addition fully removes the Fn layer and replaces it with regular xkb/kbd modifiers, thereby removing the very annoying behaviour of getting keys stuck if Fn is not let go of last. That makes this the best and most comfortable option, at the cost of more difficult installation and maintaining (you’ll have to compile each new kernel version yourself), as well as losing the ability to send raw scan codes for e.g. F1-12 and arrow keys, which also means that the GUI (not TTY) keyboard shortcut to switch to TTY won’t work. You can always define a regular shortcut in your desktop environment or use `chvt <number>`, but that won’t work if the GUI is frozen and you have no SSH access. Or use TTYescape, available for postmarketOS and in the [AUR](https://aur.archlinux.org/packages/ttyescape). Still, at least in my opinion that is a small price to pay for a perfectly working custom keyboard layout. If you do need raw scan codes, try [https://github.com/samvel1024/kbct](https://github.com/samvel1024/kbct) in combination with `*-improved`.
 
 #### Introduction
 
@@ -581,16 +602,18 @@ Note that kbct layers do not have the bug of getting keys stuck like the PPKB dr
 
 ## Troubleshooting
 
+### Typing Not Working
+
+See [https://phal.io/tech/pinephone-keyboard#typing-not-working](https://phal.io/tech/pinephone-keyboard#typing-not-working)
+
 ### Stuck (Modifier) Keys
 
-Driver-based modifier keys (Fn and, if using the userspace driver, Pine) currently have the unfortunate behaviour of not stopping a key press event when the modifier key is let go of before other keys of a key combination, e.g. holding Fn -> holding ► -> releasing Fn -> releasing ► will continue to send that ► keypress indefinitely until you “un-stuck” the affected key by doing the key combination again and releasing Fn last or just pressing the affected key, depending on what works. You can also get normal modifier keys stuck like this, e.g. holding Fn -> holding Shift -> releasing Fn -> releasing Shift will continue sending the Shift signal, making it impossible to use non-shift layers. If it happens, get it unstuck as just described. To prevent it from happening in the first place, get used to always releasing Fn last, or use a [modified kernel driver that says “*-improved”](#kernel-driver) (either the one the layout tells you to use or `regular-improved` for the first category of layouts). This removes this bug altogether. `xev` may also help in identifying the stuck key, but unfortunately not always.
+See [https://phal.io/tech/pinephone-keyboard#keys-repeating-or-getting-stuck](https://phal.io/tech/pinephone-keyboard#keys-repeating-or-getting-stuck)
 
 ### Ghost Key Presses
 
-The electrical signals keyboards use to determine key presses are based on a grid with a X and Y axis. This introduces some limitations. Consider pressing Pine+shift+F. In the grid, Pine would activate the signals 1:3 and shift 1:4. Now pressing either F or V has the same effect on the grid because they are on 3 and 4 on the Y axis, but these signals are already active, and both are on 5 on the X axis. So pressing either of them activates both, creating an additional undesired key press, a ghost key press. This issue is present in any keyboard that uses this system but it can be worked around by making sure that all modifier keys use separate signals so that they don’t interfere with the main grid, since usually only multiple modifier keys are used but not multiple regular keys. Unfortunately this issue is quite prevalent on the PinePhone Keyboard. As this is a hardware limitation, there is nothing you can do. If a ghost key press prints multiple symbols, just delete the extra one, or try to use another modifier key if a layout features multiple instances of the same modifier key. For shortcuts you will have to make sure that you only put a shortcut on one of a pair of ghostly keys, for example only binding Pine+shift+F to flashlight and not binding Pine+shift+V to anything. This limitation also make some TTYs inaccessible, use `chvt <number>` instead if you need to access one that can’t be reached with a shortcut.
+See [https://phal.io/tech/pinephone-keyboard#ghost-key-presses](https://phal.io/tech/pinephone-keyboard#ghost-key-presses)
 
 ### TTY Switch Shortcuts Not Working
 
-The keyboard shortcuts to switch from a GUI to TTY directly read scan codes, so they only work with the scan codes that are supposed to be used for F1-F12. The kernel drivers included in this repository that remove the Fn layer (`*-improved`) don’t have these scan codes at all, so the shortcuts can’t be used with them. Layouts that have these scan codes but F1-F12 mapped to something else, like the mirrored layouts that map them to Fn+AltGr or LFn+“RFn” require just pressing ctrl+alt+Fn+number. Within TTYs, the switching command is a part of kbd keymaps and they can be mapped to anything. Using whatever prints F1-F12 for the shortcut works, but I also added them to the same key combinations that are required to use them in GUIs for consistency. Remember that `chvt <number>` can also be used, and if you use Plasma Mobile… I mean if your GUI is bugged, TTYescape exists for postmarketOS and in the [AUR](https://aur.archlinux.org/packages/ttyescape) which allows you to switch to TTY using the buttons on the side of the phone.
-
-Currently it seems like TTY shortcuts from within GUIs don’t work at all. I don’t know why that is and it definitely worked before, I made plenty use of it especially when I was still using Plasma Mobile. For now, use the above options of `chvt` when you have access to a terminal/SSH or otherwise TTYescape.
+See [https://phal.io/tech/pinephone-keyboard#tty-switching](https://phal.io/tech/pinephone-keyboard#tty-switching)
