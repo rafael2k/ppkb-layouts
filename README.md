@@ -360,7 +360,7 @@ This is my first time doing anything with the kernel, so this section might not 
 
 #### Compiling the Kernel
 
-If you have a device that is faster than the PinePhone (Pro), you might want to cross-compile on that device instead. To do so on a non-ARM device, install the appropriate package for your distro as described [here](https://wiki.pine64.org/wiki/Cross-compiling#Installing_the_Toolchain). The following describes how to compile a modified Megi kernel as used in Arch, on Arch. Install `base-devel` if you haven’t already. Replace the path to the patch file with yours and your desired patch file.
+If you have a device that is faster than the PinePhone (Pro), you might want to cross-compile on that device instead. To do so on a non-ARM64 device, install the appropriate package for your distro as described [here](https://wiki.pine64.org/wiki/Cross-compiling#Installing_the_Toolchain). The following describes how to compile a modified Megi kernel as used in Arch, on Arch. Install `base-devel` if you haven’t already. Replace the path to the patch file with yours and your desired patch file.
 
 ```
 git clone https://github.com/dreemurrs-embedded/Pine64-Arch.git
@@ -370,23 +370,22 @@ cp ~/code/git/ppkb-layouts/kernel-driver/pinephone-keyboard-full.patch ./
 
 Edit the `PKGBUILD` and insert `'pinephone-keyboard-full.patch'` in the `# PinePhone Patches` section.
 
-Optionally, but highly suggested, edit the config file and set `CONFIG_KEYBOARD_PINEPHONE=m` which will make the driver a loadable module, allowing you to change it at any time without having to recompile the entire kernel.
+Optionally, edit the `config` file and set `CONFIG_KEYBOARD_PINEPHONE=m` which will make the driver a loadable module, allowing you to change it at any time without having to recompile the entire kernel. In the same file you may also edit the line `CONFIG_LOCALVERSION="-danctnix"` to change the appended version name to something else, allowing you to easily identify that your own custom kernel is being used and not the default one.
 
-If you cross-compile, replace each invocation of `make` in the PKGBUILD with `make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-` and `strip` with `aarch64-linux-gnu-strip`. Also execute `export CARCH=aarch64`. Then use the following lines. If you compile on the PinePhone itself, you can use `makepkg -si` instead of `makepkg -s` which will compile and also install it, allowing you to skip the following pacman commands.
+If you cross-compile, execute `export CARCH=aarch64 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-` first. Then use the following lines. If you compile on the PinePhone itself, you can use `makepkg -si` instead of `makepkg -s` which will compile and also install it, allowing you to skip the pacman commands at the end of this section.
 
 ```
 makepkg -g >> PKGBUILD
 makepkg -s
 ```
 
-Compiling could take a while. Once done, if you compiled on a different device, move the following two files to the PinePhone and `cd` to where you put them. Then install with pacman:
+Compiling could take a while. Once done, if you compiled on a different device, move the following file from the directory you are in to the PinePhone. Then install it on the PinePhone with pacman:
 
 ```
-sudo pacman -U ./linux-megi-5.18.7-1-aarch64.pkg.tar.zst
-sudo pacman -U ./linux-megi-headers-5.18.7-1-aarch64.pkg.tar.zst
+sudo pacman -U ~/linux-megi-5.18.7-1-aarch64.pkg.tar.zst
 ```
 
-Reboot and you will be running your own custom kernel with a custom keyboard layout! One that you can edit without having to re-compile the entire kernel! See the next section for how to edit the driver once it’s installed as a loadable module. Modifying the kernel requires you to compile each new kernel version yourself as well though, as updating to a new version your distro provides will of course include the default driver again.
+Reboot and you will be running your own custom kernel with a custom keyboard layout! Modifying the kernel requires you to compile each new kernel version yourself since updating to a new version your distro provides will of course include the default driver again.
 
 #### As a Module
 
