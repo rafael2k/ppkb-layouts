@@ -269,6 +269,8 @@ input "0:0:PinePhone_Keyboard" {
 }
 ```
 
+Your distribution may already come with a layout defined for the PPKB in `/etc/sway/config.d/pinephone-keyboard.conf`. Defining the layout again in your Sway config breaks it. Remove the file or comment out all lines by putting a `#` in front of each one.
+
 On **Plasma Mobile**, at least when I was still using it, there were no settings for physical keyboards in the mobile settings application. But you can install the regular desktop settings application with e.g. `sudo pacman -S systemsettings` and set it there by going to Hardware -> Input Devices -> Keyboard and going to the Layouts tab.
 
 On **Phosh**, at least according to the [Mobian Wiki](https://wiki.mobian-project.org/doku.php?id=ppaccessories#symbol-keys) but I assume it also works elsewhere, you can either set the layout in the settings application and go to Keyboard, or edit the file `/usr/lib/systemd/system/phosh.service.d/override.conf` and potentially add something like this:
