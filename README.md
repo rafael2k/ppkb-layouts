@@ -11,19 +11,19 @@ If you find this helpful, you have the option of donating to me [here](https://p
 1. [Introduction](#introduction)
 2. [Layouts](#layouts)
 	1. [xkb/kbd-Only Layouts](#xkb-kbd-only-layouts)
-		1. [**Simple AltGr**, **Simple Pine** (number row symbols on AltGr/Pine, F11 F12, international symbols)](#simple-altgr-simple-pine)
-		2. [**FnSymbols AltGr**, **FnSymbols Pine** (number row symbols on Fn, F11 F12, international symbols)](#fnsymbols-altgr-fnsymbols-pine)
-		3. [**DE Dedicated Umlauts AltGr** (QWERTZ, DE number row symbols on AltGr, dedicated ÄÖÜ, ẞ on S, F11 F12, international symbols)](#de-dedicated-umlauts-altgr)
-		4. [**DE Dedicated Umlauts Pine** (QWERTZ, DE number row symbols on Pine, dedicated ÄÖÜẞ, F11 F12, international symbols)](#de-dedicated-umlauts-pine)
-		5. [**Default with Sprinkles of DE** (number row symbols on AltGr, ÄÖÜẞ on AOUS, F11 F12 on Q W)](#default-with-sprinkles-of-de)
+		1. [**Simple AltGr**, **Simple Pine**](#simple-altgr-simple-pine) (number row symbols on AltGr/Pine, F11 F12, international symbols)
+		2. [**FnSymbols AltGr**, **FnSymbols Pine**](#fnsymbols-altgr-fnsymbols-pine) (number row symbols on Fn, F11 F12, international symbols)
+		3. [**DE Dedicated Umlauts AltGr**](#de-dedicated-umlauts-altgr) (QWERTZ, DE number row symbols on AltGr, dedicated ÄÖÜ, ẞ on S, F11 F12, international symbols)
+		4. [**DE Dedicated Umlauts Pine**](#de-dedicated-umlauts-pine) (QWERTZ, DE number row symbols on Pine, dedicated ÄÖÜẞ, F11 F12, international symbols)
+		5. [**Default with Sprinkles of DE**](#default-with-sprinkles-of-de) (number row symbols on AltGr, ÄÖÜẞ on AOUS, F11 F12 on Q W)
 	2. [Userspace Driver-Only Layouts](#userspace-driver-only-layouts)
-		1. [**Extended Simple** (number row symbols on Fn, F11, PageUp/Down)](#extended-simple)
+		1. [**Extended Simple**](#extended-simple) (number row symbols on Fn, F11, PageUp/Down)
 	3. [Full Layouts](#full-layouts)
-		1. [**Extended AltGr**, **Extended Pine** (number row symbols on AltGr/Pine, F11 F12, PageUp/Down, international symbols)](#extended-altgr-extended-pine)
-		2. [**Mirrored** (mirrored modifier keys, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)](#mirrored)
-		3. [**Mirrored WASD** (arrow/navigation keys on WASD, mirrored modifier keys, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)](#mirrored-wasd)
-		4. [**DE Mirrored** (mirrored modifier keys, DE number row symbols, ÄÖÜẞ on AOUS, DE number row symbols on Fn, F11 F12, PageUp/Down, international symbols)](#de-mirrored)
-		5. [**DE Mirrored WASD** (arrow/navigation keys on WASD, mirrored modifier keys, DE number row symbols on Fn, ÄÖÜẞ on AOUS, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)](#de-mirrored-wasd)
+		1. [**Extended AltGr**, **Extended Pine**](#extended-altgr-extended-pine) (number row symbols on AltGr/Pine, F11 F12, PageUp/Down, international symbols)
+		2. [**Mirrored**](#mirrored) (mirrored modifier keys, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)
+		3. [**Mirrored WASD**](#mirrored-wasd) (arrow/navigation keys on WASD, mirrored modifier keys, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)
+		4. [**DE Mirrored**](#de-mirrored) (mirrored modifier keys, DE number row symbols, ÄÖÜẞ on AOUS, DE number row symbols on Fn, F11 F12, PageUp/Down, international symbols)
+		5. [**DE Mirrored WASD**](#de-mirrored-wasd) (arrow/navigation keys on WASD, mirrored modifier keys, DE number row symbols on Fn, ÄÖÜẞ on AOUS, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)
 		6. [**Phalio**](#phalio)
 3. [Installing Layouts](#installing-layouts)
 	1. [xkb](#xkb)
@@ -404,7 +404,7 @@ This layout started with the goal of making it as close to my usual custom layou
 - F11 on 0 because I’m used to it being to the right to toggle full screen, F10 on Esc because that’s where I put 0
 - 0 is moved to Esc because it’s less than 1 and should come before 1
 - Esc is moved to the Fn layer of Tab to make room for 0 and that’s still close to the original position (the default position on the PPKB is different from regular keyboards anyway)
-- + is now a dedicated key since 0 was moved to Esc, this is where I always have + and just like - it’s important and should be a dedicated key
+- ​+ is now a dedicated key since 0 was moved to Esc, this is where I always have + and just like - it’s important and should be a dedicated key
 - / is also crucial and very often used and has to be a dedicated key, I always have it next to enter and \| on its layers
 - brackets are in pairs in the bottom row because they can’t be in my usual locations, two pairs each are above the 4 wide spacebar and to the right of it so it’s easy to know where each one is
 - @$&€ are on HJKL where they are easy to reach and grouped as the first 3 are important in code and stuff
