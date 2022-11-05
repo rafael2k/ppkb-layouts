@@ -13,9 +13,10 @@ If you find this helpful, you have the option of donating to me [here](https://p
 	1. [xkb/kbd-Only Layouts](#xkb-kbd-only-layouts)
 		1. [**Simple AltGr**, **Simple Pine**](#simple-altgr-simple-pine) (number row symbols on AltGr/Pine, F11 F12, international symbols)
 		2. [**FnSymbols AltGr**, **FnSymbols Pine**](#fnsymbols-altgr-fnsymbols-pine) (number row symbols on Fn, F11 F12, international symbols)
-		3. [**DE Dedicated Umlauts AltGr**](#de-dedicated-umlauts-altgr) (QWERTZ, DE number row symbols on AltGr, dedicated ÄÖÜ, ẞ on S, F11 F12, international symbols)
-		4. [**DE Dedicated Umlauts Pine**](#de-dedicated-umlauts-pine) (QWERTZ, DE number row symbols on Pine, dedicated ÄÖÜẞ, F11 F12, international symbols)
-		5. [**Default with Sprinkles of DE**](#default-with-sprinkles-of-de) (number row symbols on AltGr, ÄÖÜẞ on AOUS, F11 F12 on Q W)
+		3. [**DE Simple AltGr**, **DE Simple Pine**](#de-simple-altgr-de-simple-pine) (QWERTZ, default number row symbols on AltGr/Pine, ÄÖÜẞ on AOUS, DE ",.-", F11 F12, international symbols)
+		4. [**DE Dedicated Umlauts AltGr**](#de-dedicated-umlauts-altgr) (QWERTZ, DE number row symbols on AltGr, dedicated ÄÖÜ, ẞ on S, F11 F12, international symbols)
+		5. [**DE Dedicated Umlauts Pine**](#de-dedicated-umlauts-pine) (QWERTZ, DE number row symbols on Pine, dedicated ÄÖÜẞ, F11 F12, international symbols)
+		6. [**Default with Sprinkles of DE**](#default-with-sprinkles-of-de) (number row symbols on AltGr, ÄÖÜẞ on AOUS, F11 F12 on Q W)
 	2. [Userspace Driver-Only Layouts](#userspace-driver-only-layouts)
 		1. [**Extended Simple**](#extended-simple) (number row symbols on Fn, F11, PageUp/Down)
 	3. [Full Layouts](#full-layouts)
@@ -120,6 +121,34 @@ These layouts are the same as [Simple AltGr or Simple Pine](#simple-altgr-simple
 
 xkb: layout: `pp`, variants: `fnsymbols-altgrf12` or `fnsymbols-pinef12`  
 kbd: `ppkb-fnsymbols-altgrf12.map` or `ppkb-fnsymbols-pinef12.map`
+
+### DE Simple AltGr, DE Simple Pine
+
+![Keyboard layout DE Simple AltGr/Pine](img/pp-de-simple-altgr-pine.svg)
+
+These layouts are intended to include the most important features of the standard German layout: Y and Z swapped, ÄÖÜẞ on AOUS and the usual ,; .: -_ mapping since these are often used, well included in people’s muscle memory and crucial to a good typing experience, at least in my opinion. All other symbols are kept unchanged, so you can look at what is printed on the keycaps and know what they will type instead of having to memorise them. With one exception: Since `;:` is now on `,` and `.`, the `;:` key would be useless and wasted. Additionally, the `/?` key has been changed to `-_` and these symbols would now be missing. I therefore moved `/?` to `;:`. If you want as many keys as possible to type what is printed on them, I would recommend swapping the `/?` and `;:` keycaps for this layout, as well as Y and Z of course (see [Removing Keycaps](https://phal.io/tech/pinephone-keyboard#removing-keycaps)). `<` and `>` are kept on the same keys as printed but moved to the AltGr or Pine layer to make room for `;` and `:`. I believe this is the best compromise between the German layout and keycaps showing what the keys are mapped to, but I’m of course open to suggestions on how to improve this. 
+
+These layouts also make the extra symbols on the number row accessible using either AltGr or the Pine key and they add more symbols for international compatibility. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping other than German-specific things.
+
+#### Changes from Default
+
+- AltGr *or* Pine key to access additional layer
+- number row symbols on AltGr *or* Pine layer
+- QWERTZ (Y and Z swapped) (coloured green)
+- ÄÖÜẞ on AOUS (AltGr *or* Pine layer) (as most of these layouts have anyway)
+- standard German ,; .: -_ (coloured green)
+- /? moved to ;: since these symbols were moved to ,.
+- <> moved to the AltGr *or* Pine layer to make room for ;: (coloured orange)
+- F11 and F12 on Esc and Backspace (AltGr *or* Pine layer)
+- additional international and miscellaneous symbols on AltGr *or* Pine layer
+- compose key
+
+#### Installation Requirements
+
+(these don’t exist yet, coming soon)
+
+xkb: layout: `pp`, variants: `de-simple-altgr` or `de-simple-pine`  
+kbd: `ppkb-de-simple-altgr.map` or `ppkb-de-simple-pine.map`
 
 ### DE Dedicated Umlauts AltGr
 

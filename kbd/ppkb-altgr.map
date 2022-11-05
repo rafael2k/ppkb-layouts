@@ -74,6 +74,7 @@ keycode 66 =			F8
 keycode 10 =			nine
 Shift keycode 10 =		parenleft
 AltGr keycode 10 =		underscore
+ShiftL keycode 10 =		F9
 keycode 67 =			F9
 # 0
 keycode 11 =			zero
