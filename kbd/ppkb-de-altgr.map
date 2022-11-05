@@ -89,6 +89,7 @@ ShiftL keycode 11 =		F10
 keycode 68 =			F10
 # Backspace
 keycode 14 =			BackSpace
+AltGr keycode 14 =		F12
 ShiftL keycode 14 =		Remove
 keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no idea what that is
 #----------------------------------------------------------------

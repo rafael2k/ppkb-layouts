@@ -44,7 +44,7 @@ xkb_symbols "basic" {
     key <AE10> { [ 0,			parenright,		plus,			plus,			 F10,			F10			] };
     key <FK10> { [ F10,			F10, 			NoSymbol, 		NoSymbol		] };
     // Backspace
-    key <BKSP> { [ Backspace,		Backspace,		NoSymbol,		NoSymbol,		Delete,			Delete			] };
+    key <BKSP> { [ Backspace,		Backspace,		F12,			F12,			Delete,			Delete			] };
     key <DELE> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------
     // ROW 2 (TAB TO ENTER)
