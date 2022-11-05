@@ -779,6 +779,7 @@
   fnsymbols-altgrf12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and AltGr for F1-F12)
   de-pine         pp: PinePhone Keyboard (DE with Pine/Caps for additional symbols)
   de-altgr        pp: PinePhone Keyboard (DE with RAlt/AltG(r) for additional symbols)
+  default-de-sprinkles pp: PinePhone Keyboard (Default with ÄÖÜẞ on AOUS and F11 F12 on Q W)
   extended-altgr  pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
   extended-pine   pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
   mirrored        pp-driver: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
