@@ -289,8 +289,8 @@
   id              Indonesian (Latin)
   jv              Indonesian (Javanese)
   my              Malay (Jawi, Arabic Keyboard)
-  pp              PinePhone Keyboard
-  pp-driver       PinePhone Keyboard (with a modified userspace or kernel driver)
+  pp              PPKB Template
+  pp-driver       PPKB Custom Driver Template
   custom          A user-defined custom Layout
 
 ! variant
@@ -773,20 +773,20 @@
   phonetic        id: Indonesian (Arab Pegon, phonetic)
   phoneticx       id: Indonesian (Arab Pegon, extended phonetic)
   phonetic        my: Malay (Jawi, phonetic)
-  pine            pp: PinePhone Keyboard (EN-US with Pine/Caps for additional symbols)
-  altgr           pp: PinePhone Keyboard (EN-US with RAlt/AltG(r) for additional symbols)
-  fnsymbols-pinef12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and Pine for F1-F12)
-  fnsymbols-altgrf12 pp: PinePhone Keyboard (EN-US with Fn for additional symbols and AltGr for F1-F12)
-  de-pine         pp: PinePhone Keyboard (DE with Pine/Caps for additional symbols)
-  de-altgr        pp: PinePhone Keyboard (DE with RAlt/AltG(r) for additional symbols)
-  default-de-sprinkles pp: PinePhone Keyboard (Default with ÄÖÜẞ on AOUS and F11 F12 on Q W)
-  extended-altgr  pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
-  extended-pine   pp-driver: PinePhone Keyboard Userspace (EN-US with additional characters, symbols and keys)
-  mirrored        pp-driver: PinePhone Keyboard Userspace (EN-US mirrored modifier keys)
-  mirrored-wasd   pp-driver: PinePhone Keyboard Userspace (EN-US mirrored modifier keys, WASD movement keys)
-  de-mirrored     pp-driver: PinePhone Keyboard Userspace (DE mirrored modifier keys)
-  mirrored-wasd   pp-driver: PinePhone Keyboard Userspace (DE mirrored modifier keys, WASD movement keys)
-  phalio          pp-driver: PinePhone Keyboard Userspace (Phalio)
+  pine            pp: PinePhone Keyboard Simple Pine
+  altgr           pp: PinePhone Keyboard Simple AltGr
+  fnsymbols-pinef12 pp: PinePhone Keyboard FnSymbols Pine
+  fnsymbols-altgrf12 pp: PinePhone Keyboard FnSymbols AltGr
+  de-pine         pp: PinePhone Keyboard DE Dedicated Umlauts Pine
+  de-altgr        pp: PinePhone Keyboard DE Dedicated Umlauts AltGr
+  default-de-sprinkles pp: PinePhone Keyboard Default with Sprinkles of DE
+  extended-altgr  pp-driver: PinePhone Keyboard Extended AltGr
+  extended-pine   pp-driver: PinePhone Keyboard Extended Pine
+  mirrored        pp-driver: PinePhone Keyboard Mirrored
+  mirrored-wasd   pp-driver: PinePhone Keyboard Mirrored WASD
+  de-mirrored     pp-driver: PinePhone Keyboard DE Mirrored
+  de-mirrored-wasd pp-driver: PinePhone Keyboard DE Mirrored WASD
+  phalio          pp-driver: PinePhone Keyboard Phalio
 
 ! option
   grp                  Switching to another layout

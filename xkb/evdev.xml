@@ -6807,49 +6807,49 @@
       <configItem>
 	<name>pp</name>
         <shortDescription>pp</shortDescription>
-        <description>PinePhone Keyboard Case EN-US Default</description>
+        <description>PPKB Template</description>
       </configItem>
       <variantList>
        <variant>
          <configItem>
           <name>pine</name>
-            <description>PinePhone Keyboard Case EN-US with Pine/Caps for additional symbols</description>
+            <description>PinePhone Keyboard Simple Pine</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>altgr</name>
-            <description>PinePhone Keyboard Case EN-US with RAlt/AltG(r) for additional symbols</description>
+            <description>PinePhone Keyboard Simple AltGr</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>fnsymbols-pinef12</name>
-            <description>PinePhone Keyboard Case EN-US with Fn for additional symbols and Pine for F1-F12</description>
+            <description>PinePhone Keyboard FnSymbols Pine</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>fnsymbols-altgrf12</name>
-            <description>PinePhone Keyboard Case EN-US with Fn for additional symbols and AltGr for F1-F12</description>
+            <description>PinePhone Keyboard FnSymbols AltGr</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>de-pine</name>
-            <description>PinePhone Keyboard Case DE with Pine/Caps for additional symbols</description>
+            <description>PinePhone Keyboard DE Dedicated Umlauts Pine</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>de-altgr</name>
-            <description>PinePhone Keyboard Case DE with RAlt/AltG(r) for additional symbols</description>
+            <description>PinePhone Keyboard DE Dedicated Umlauts AltGr</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>default-de-sprinkles</name>
-            <description>PinePhone Keyboard (Default with ÄÖÜẞ on AOUS and F11 F12 on Q W)</description>
+            <description>PinePhone Keyboard Default with Sprinkles of DE</description>
          </configItem>
        </variant>
       </variantList>
@@ -6857,49 +6857,49 @@
       <configItem>
 	<name>pp-driver</name>
         <shortDescription>pp</shortDescription>
-        <description>PinePhone Keyboard Case Userspace Full</description>
+        <description>PPKB Custom Driver Template</description>
       </configItem>
       <variantList>
        <variant>
          <configItem>
           <name>extended-altgr</name>
-            <description>PinePhone Keyboard Case Userspace with additional characters, symbols and keys</description>
+            <description>PinePhone Keyboard Extended AltGr</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>extended-pine</name>
-            <description>PinePhone Keyboard Case Userspace with additional characters, symbols and keys</description>
+            <description>PinePhone Keyboard Extended Pine</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>mirrored</name>
-            <description>PinePhone Keyboard Case Userspace with mirrored modifier keys</description>
+            <description>PinePhone Keyboard Mirrored</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>mirrored-wasd</name>
-            <description>PinePhone Keyboard Case Userspace with mirrored modifier keys and WASD movement keys</description>
+            <description>PinePhone Keyboard Mirrored WASD</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>de-mirrored</name>
-            <description>PinePhone Keyboard Case Userspace DE with mirrored modifier keys</description>
+            <description>PinePhone Keyboard DE Mirrored</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>de-mirrored-wasd</name>
-            <description>PinePhone Keyboard Case Userspace DE with mirrored modifier keys and WASD movement keys</description>
+            <description>PinePhone Keyboard DE Mirrored WASD</description>
          </configItem>
        </variant>
        <variant>
          <configItem>
           <name>phalio</name>
-            <description>PinePhone Keyboard Case Userspace Phalio</description>
+            <description>PinePhone Keyboard Phalio</description>
          </configItem>
        </variant>
       </variantList>
