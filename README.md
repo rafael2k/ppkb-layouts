@@ -130,6 +130,8 @@ These layouts are intended to include the most important features of the standar
 
 These layouts also make the extra symbols on the number row accessible using either AltGr or the Pine key and they add more symbols for international compatibility. F11 and F12 are also added just because there was space but on different layers due to F1-10 and Del being on the same layer by default and this layout not intending to change any default mapping other than German-specific things.
 
+The version of this layout with the Pine key to access additional symbols has a significant drawback: Pressing `Shift` + `Pine` + `A` to type a capital Ä will also type a Z, see [Ghost Key Presses](#ghost-key-presses). If you rarely need a capital Ä, this won’t be a big deal and you can just delete the Z when it happens. Otherwise use the AltGr version.
+
 #### Changes from Default
 
 - AltGr *or* Pine key to access additional layer
@@ -144,8 +146,6 @@ These layouts also make the extra symbols on the number row accessible using eit
 - compose key
 
 #### Installation Requirements
-
-(these don’t exist yet, coming soon)
 
 xkb: layout: `pp`, variants: `de-simple-altgr` or `de-simple-pine`  
 kbd: `ppkb-de-simple-altgr.map` or `ppkb-de-simple-pine.map`

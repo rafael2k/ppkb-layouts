@@ -777,6 +777,8 @@
   altgr           pp: PinePhone Keyboard Simple AltGr
   fnsymbols-pinef12 pp: PinePhone Keyboard FnSymbols Pine
   fnsymbols-altgrf12 pp: PinePhone Keyboard FnSymbols AltGr
+  de-simple-altgr pp: PinePhone Keyboard DE Simple AltGr
+  de-simple-pine  pp: PinePhone Keyboard DE Simple Pine
   de-pine         pp: PinePhone Keyboard DE Dedicated Umlauts Pine
   de-altgr        pp: PinePhone Keyboard DE Dedicated Umlauts AltGr
   default-de-sprinkles pp: PinePhone Keyboard Default with Sprinkles of DE

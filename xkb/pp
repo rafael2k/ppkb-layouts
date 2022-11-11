@@ -49,7 +49,7 @@ xkb_symbols "basic" {
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------
     // ROW 2 (TAB TO ENTER)
     // Tab
-    key <TAB>  { [ Tab,			Tab,			NoSymbol,		NoSymbol		] };
+    key <TAB>  { [ Tab,			Tab,			Multi_key,		Multi_key		] };
     // Q
     key <AD01> { [ q,			Q,			NoSymbol,		NoSymbol		] };
     // W
@@ -258,6 +258,54 @@ xkb_symbols "fnsymbols-altgrf12" {
     key <DELE> { [ Delete,		Delete,			NoSymbol,		NoSymbol		] };
 
     include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "de-simple-altgr" {
+
+    include "pp(basic)"
+    name[Group1]= "PinePhone Keyboard Case DE with Pine/Caps for additional symbols";
+
+    // regular:    | regular            | shift                 | altgr		       	| shift+altgr		| fn (kernel)	       	| shift+fn (kernel)	|
+    // fn:         | fn	                | shift+fn		| altgr+fn		| shift+altgr+fn      	|
+    // Y
+    key <AD06> { [ z,			Z,			zcaron,			Zcaron			] };
+    // Z
+    key <AB01> { [ y,			Y,			yen,			NoSymbol		] };
+    // Semicolon
+    key <AC10> { [ slash,               question,		questiondown,		questiondown		] };
+    // Comma
+    key <AB08> { [ comma,		semicolon,		less,			NoSymbol		] };
+    // Period
+    key <AB09> { [ period,              colon,              	greater,             	ellipsis                ] };
+    // Slash
+    key <AB10> { [ minus,               underscore,		endash,			NoSymbol		] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "de-simple-pine" {
+
+    include "pp(basic)"
+    name[Group1]= "PinePhone Keyboard Case DE with Pine/Caps for additional symbols";
+
+    // regular:    | regular            | shift                 | altgr		       	| shift+altgr		| fn (kernel)	       	| shift+fn (kernel)	|
+    // fn:         | fn	                | shift+fn		| altgr+fn		| shift+altgr+fn      	|
+    // Y
+    key <AD06> { [ z,			Z,			zcaron,			Zcaron			] };
+    // Z
+    key <AB01> { [ y,			Y,			yen,			NoSymbol		] };
+    // Semicolon
+    key <AC10> { [ slash,               question,		questiondown,		questiondown		] };
+    // Comma
+    key <AB08> { [ comma,		semicolon,		less,			NoSymbol		] };
+    // Period
+    key <AB09> { [ period,              colon,              	greater,             	ellipsis                ] };
+    // Slash
+    key <AB10> { [ minus,               underscore,		endash,			NoSymbol		] };
+
+    include "level3(lwin_switch)"
 };
 
 partial alphanumeric_keys

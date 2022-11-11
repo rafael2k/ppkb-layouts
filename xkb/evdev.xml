@@ -6836,6 +6836,18 @@
        </variant>
        <variant>
          <configItem>
+          <name>de-simple-altgr</name>
+            <description>PinePhone Keyboard DE Simple AltGr</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
+          <name>de-simple-pine</name>
+            <description>PinePhone Keyboard DE Simple Pine</description>
+         </configItem>
+       </variant>
+       <variant>
+         <configItem>
           <name>de-pine</name>
             <description>PinePhone Keyboard DE Dedicated Umlauts Pine</description>
          </configItem>
