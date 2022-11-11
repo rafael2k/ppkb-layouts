@@ -27,15 +27,16 @@ If you find this helpful, you have the option of donating to me [here](https://p
 		5. [**DE Mirrored WASD**](#de-mirrored-wasd) (arrow/navigation keys on WASD, mirrored modifier keys, DE number row symbols on Fn, ÄÖÜẞ on AOUS, number row symbols on Fn, F11 F12, PageUp/Down, international symbols)
 		6. [**Phalio**](#phalio)
 3. [Installing Layouts](#installing-layouts)
-	1. [xkb](#xkb)
-	2. [kbd](#kbd)
-	3. [Userspace Driver](#userspace-driver)
-	4. [Kernel Driver](#kernel-driver)
+	1. [Installing and Updating](#installing-and-updating)
+	2. [xkb](#xkb)
+	3. [kbd](#kbd)
+	4. [Userspace Driver](#userspace-driver)
+	5. [Kernel Driver](#kernel-driver)
 		1. [Explanation](#explanation)
 		2. [Introduction](#introduction-1)
 		3. [Compiling the Kernel](#compiling-the-kernel)
 		4. [As a Module](#as-a-module)
-	5. [kbct](#kbct)
+	6. [kbct](#kbct)
 4. [Requesting Custom Layouts](#requesting-custom-layouts)
 5. [Customising Layouts](#customising-layouts)
 	1. [Introduction to Key Press Handling](#introduction-to-key-press-handling)
@@ -434,7 +435,7 @@ This layout started with the goal of making it as close to my usual custom layou
 - 0 is moved to Esc because it’s less than 1 and should come before 1
 - Esc is moved to the Fn layer of Tab to make room for 0 and that’s still close to the original position (the default position on the PPKB is different from regular keyboards anyway)
 - ​+ is now a dedicated key since 0 was moved to Esc, this is where I always have + and just like - it’s important and should be a dedicated key
-- / is also crucial and very often used and has to be a dedicated key, I always have it next to enter and \| on its layers
+- / is also crucial and very often used and has to be a dedicated key, I always have it next to enter and \ | on its layers
 - brackets are in pairs in the bottom row because they can’t be in my usual locations, two pairs each are above the 4 wide spacebar and to the right of it so it’s easy to know where each one is
 - @$&€ are on HJKL where they are easy to reach and grouped as the first 3 are important in code and stuff
 - F1-F9 are moved from the Fn layer to the Fn+RFn layer and swapped with the symbols (coloured orange)
@@ -450,25 +451,29 @@ Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.pa
 
 ## Installing Layouts
 
-Layouts may consist of xkb, kbd, userspace driver or kernel driver components. xkb defines symbols for graphical environments and kbd defines symbols for TTYs. If you only use graphical environments, you may omit the kbd part and vice versa. Driver components influence both environments and are usually combined with xkb and kbd components for full customisability. You can only use either the userspace driver or the kernel driver. The userspace driver is simpler to install but less customisable and just like the default kernel driver has the issue of [getting keys stuck if Fn/Pine is not let go of last](#stuck-modifier-keys), while custom kernel drivers (the ones that have `-improved` in their name) get rid of this issue and allow maximum customisation (see [Kernel Driver](#kernel-driver) for a longer explanation on the differences). Each layout includes a list of its components that have to be installed to use the layout.
+### Installing and Updating
 
-To download the layouts, simply use `git clone https://codeberg.org/phalio/ppkb-layouts.git`.
+Layouts may consist of xkb, kbd, userspace driver or kernel driver components. xkb defines symbols for graphical environments and kbd defines symbols for TTYs. If you only use graphical environments, you may omit the kbd part (although it won’t hurt in case you ever need it) and vice versa. Driver components influence both environments and are usually combined with xkb and kbd components for full customisability. You can only use either the userspace driver or the kernel driver. The userspace driver is simpler to install but less customisable and just like the default kernel driver has the issue of [getting keys stuck if Fn/Pine is not let go of last](#stuck-modifier-keys), while custom kernel drivers (the ones that have `-improved` in their name) get rid of this issue and allow maximum customisation (see [Kernel Driver](#kernel-driver) for a longer explanation on the differences). Each layout includes a list of its components that have to be installed to use the layout.
+
+To download the layouts, simply use `git clone https://codeberg.org/phalio/ppkb-layouts.git`. To update them, `cd` to the `ppkb-layouts` directory, use `git pull`, execute the install scripts you need again and reboot.
 
 ### xkb
 
-To install and use an xkb layout, you have to copy xkb files to certain directories and then tell your system what layout to use.
+Xkb sets layouts for graphical environments (what you most likely want).
 
 #### Copying Files
 
-Copying the xkb files can simple be done by using the `install-xkb.sh` script that comes with this repository. It has to be executed with sudo, so check what it does first. To copy the files manually instead, you have to copy `xkb/pp` and `xkb/pp-driver` to `/usr/share/X11/xkb/symbols/`, as well as `xkb/evdev.xml` to both `/usr/share/X11/xkb/rules/evdev.xml` and `/usr/share/X11/xkb/rules/base.xml`, and `xkb/evdev.lst` to both `/usr/share/X11/xkb/rules/evdev.lst` and `/usr/share/X11/xkb/rules/base.lst`.
+Copying the xkb files can simply be done by using the `install-xkb.sh` script that comes with this repository. It has to be executed with sudo, so check what it does first. To copy the files manually instead, you have to copy `xkb/pp` and `xkb/pp-driver` to `/usr/share/X11/xkb/symbols/`, as well as `xkb/evdev.xml` to both `/usr/share/X11/xkb/rules/evdev.xml` and `/usr/share/X11/xkb/rules/base.xml`, and `xkb/evdev.lst` to both `/usr/share/X11/xkb/rules/evdev.lst` and `/usr/share/X11/xkb/rules/base.lst`.
 
 This will only add the pp and pp-driver layout files, so it won’t override any other custom layouts you may have. It will however override any custom entries you have made in evdev.
 
 #### Selecting Layout
 
-Xkb is *the* software handling keyboard layouts on Linux, both on X and on Wayland, so your desktop environment should have a way to set the layout, model and extra options, either in graphical settings or in some config file.
+Xkb is *the* software handling keyboard layouts on Linux, both on X and on Wayland, so your desktop environment should have a way to set the layout either in graphical settings applications or in some config file.
 
-On **Sxmo/Sway**, put the following into your Sway config `~/.config/sxmo/sway`. It only changes the keys of the PPKB, so any other hardware keyboard you connect will be unaffected.
+##### Sxmo/Sway
+
+Put the following into your Sway config `~/.config/sxmo/sway`. It only changes the keys of the PPKB, so any other hardware keyboard you connect will be unaffected.
 
 ```
 input "0:0:PinePhone_Keyboard" {
@@ -477,23 +482,25 @@ input "0:0:PinePhone_Keyboard" {
 }
 ```
 
+Reload Sway with `sway reload` or reboot. Note that using the default shortcut to reload Sway, Pine+Shift+C, results in an additional ghost key press, also typing a capital D. Make sure that you don’t accidentally insert this D into the sway config and break it this way.
+
 Your distribution may already come with a layout defined for the PPKB in `/etc/sway/config.d/pinephone-keyboard.conf`. Defining the layout again in your Sway config breaks it. Remove the file or comment out all lines by putting a `#` in front of each one.
 
-On **Plasma Mobile**, at least when I was still using it, there were no settings for physical keyboards in the mobile settings application. But you can install the regular desktop settings application with e.g. `sudo pacman -S systemsettings` and set it there by going to Hardware -> Input Devices -> Keyboard and going to the Layouts tab.
+##### Plasma Mobile
 
-On **Phosh**, at least according to the [Mobian Wiki](https://wiki.mobian-project.org/doku.php?id=ppaccessories#symbol-keys) but I assume it also works elsewhere, you can either set the layout in the settings application and go to Keyboard, or edit the file `/usr/lib/systemd/system/phosh.service.d/override.conf` and potentially add something like this:
+After using the xkb install script or manually copying the files, reboot. Currently there are no settings for physical keyboards in the mobile settings application. But you can install the regular desktop settings application with e.g. `sudo pacman -S systemsettings` and set it there by going to `Hardware` -> `Input Devices` -> `Keyboard` and going to the `Layouts` tab.
 
-```
-[Service]
-Environment=XKB_DEFAULT_LAYOUT=pp
-Environment=XKB_DEFAULT_VARIANT=altgr
-```
+##### Phosh
 
-If you can’t figure out how to set the xkb layout on your system, as a last resort you could simply override the default US layout with the custom one you want to use. If you make a mistake, you won’t be able to type with hardware keyboards at all, so make sure you can either use an on-screen keyboard or SSH to revert the changes if necessary. First, make a backup of the original US layout so you can revert to it at any time by using `sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.orig`. Use this same command with the paths swapped to restore the original. Then find the key definitions for the layout you want in either `xkb/pp` or `xkb/pp-driver` of this repository, depending on which one the layout requirements of this readme tell you to use. You can find the right variant within the file by searching for the variant name the layout lists in its requirements, with quotation marks, e.g. searching for `"altgr"`. Once you’re there, copy everything starting from the `{` behind the variant name you searched for to its matching `}` before the next variant begins. Then edit the file `/usr/share/X11/xkb/symbols/us`, remove everything in the `{}` brackets after `"basic"` and paste what you just copied into them instead. Reboot and the layout should be active. Note that, depending on what layout you choose, you still have to [copy the xkb files](#copying-files) to your xkb directory as some variants reference other variants there.
+After using the xkb install script or manually copying the files, reboot. Then open the Settings application and go to `Keyboard`. Tap the plus to add a new layout (it could take a couple of seconds for the layout list to open). Tap the three vertical dots at the bottom of the list, enter `pine` into the search bar and select `Other` in the list. Now you should be presented with a list of all layouts from this repository. Select the one you want and tap `Add` in the top right corner. The layout should now be added to the list above the plus. Tap the three dots next to the new layout and tap "Move Up" until it’s at the top. The layout should now be active.
+
+##### If All Fails
+
+If you can’t figure out how to set the xkb layout on your system, ask others for help. As a last resort you could simply override the default US layout with the custom one you want to use, I could help you with that too. If you make a mistake, you won’t be able to type with hardware keyboards at all, so make sure you can either use an on-screen keyboard or SSH to revert the changes if necessary. First, make a backup of the original US layout so you can revert to it at any time by using `sudo cp /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.orig`. Use this same command with the paths swapped to restore the original. Then find the key definitions for the layout you want in either `xkb/pp` or `xkb/pp-driver` of this repository, depending on which one the layout requirements of this readme tell you to use. You can find the right variant within the file by searching for the variant name the layout lists in its requirements, with quotation marks, e.g. searching for `"altgr"`. Once you’re there, copy everything starting from the `{` behind the variant name you searched for to its matching `}` before the next variant begins. Then edit the file `/usr/share/X11/xkb/symbols/us`, remove everything in the `{}` brackets after `"basic"` and paste what you just copied into them instead. Reboot and the layout should be active. Note that, depending on what layout you choose, you still have to [copy the xkb files](#copying-files) to your xkb directory as some variants reference other variants there.
 
 ### kbd
 
-To install and use a kbd layout, you may optionally copy the keymap file somewhere, and then tell your system to use it.
+This sets layouts for TTYs, not graphical environments. If you don’t know what that means, just make sure to also to install the xkb component required by your desired layout.
 
 #### Copying Files
 
@@ -506,8 +513,6 @@ To set a permanent layout, edit `/etc/vconsole.conf` and add the line `KEYMAP=/u
 To immediately set a layout that will not persist after a reboot, use either `sudo loadkeys /usr/local/share/kbd/keymaps/ppkb-altgr.map` from within your TTY, or via GUI/SSH use either `sudo loadkeys -C /dev/console -d /usr/local/share/kbd/keymaps/ppkb-altgr.map` or become root with `sudo su` and use `loadkeys /usr/local/share/kbd/keymaps/ppkb-altgr.map`, depending on what works. For me, the former worked on Arch Sxmo and the latter on Manjaro Plasma Mobile. Doing it this way may sometimes fail if the layout contains unsupported symbols, but it will always work with the vconsole.conf file.
 
 ### Userspace Driver
-
-To use a layout requiring the userspace driver, you have to download the driver, copy a custom keymap file to it, compile the driver with the keymap and start it.
 
 #### 1. Download
 
