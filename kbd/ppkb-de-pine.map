@@ -95,6 +95,7 @@ keycode 111 =			Remove # "Delete" also exists but it doesn't delete things, no i
 #----------------------------------------------------------------
 # Tab
 keycode 15 =			Tab
+ShiftL keycode 15 =		Compose
 # Q
 keycode 16 =			q
 ShiftL keycode 16 =		at
