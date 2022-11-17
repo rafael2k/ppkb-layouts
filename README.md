@@ -488,7 +488,22 @@ Your distribution may already come with a layout defined for the PPKB in `/etc/s
 
 ##### Plasma Mobile
 
-After using the xkb install script or manually copying the files, reboot. Currently there are no settings for physical keyboards in the mobile settings application. But you can install the regular desktop settings application with e.g. `sudo pacman -S systemsettings` and set it there by going to `Hardware` -> `Input Devices` -> `Keyboard` and going to the `Layouts` tab.
+Edit `/etc/xdg/kxkbrc` with sudo and paste the following lines into it. Replace the values of `LayoutList` and `VariantList` with the xkb layout and variant listed above in the section of your desired layout.
+
+```
+[$Version]
+
+[Layout]
+DisplayNames=PPKB
+LayoutList=pp
+Model=
+Options=
+ResetOldOptions=true
+Use=true
+VariantList=altgr
+```
+
+(Source: [https://gitlab.com/postmarketOS/pmaports/-/issues/1639](https://gitlab.com/postmarketOS/pmaports/-/issues/1639))
 
 ##### Phosh
 
