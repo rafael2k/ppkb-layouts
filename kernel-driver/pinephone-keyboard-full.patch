@@ -1,8 +1,8 @@
 diff --git a/drivers/input/keyboard/pinephone-keyboard.c b/drivers/input/keyboard/pinephone-keyboard.c
-index d74ae97ed..f1fe2f397 100644
+index 671642857d0c..e39ac1945497 100644
 --- a/drivers/input/keyboard/pinephone-keyboard.c
 +++ b/drivers/input/keyboard/pinephone-keyboard.c
-@@ -39,7 +39,7 @@ MODULE_PARM_DESC(disable_input, "Disable the keyboard part of the driver");
+@@ -43,7 +43,7 @@ MODULE_PARM_DESC(disable_fn, "Disable the FN layer special handling");
  #define PPKB_DEFAULT_KEYMAP_COLS	12
  
  static const uint32_t ppkb_default_fn_keymap[] = {
@@ -11,7 +11,7 @@ index d74ae97ed..f1fe2f397 100644
  	KEY(0,  1, KEY_F1),
  	KEY(0,  2, KEY_F2),
  	KEY(0,  3, KEY_F3),
-@@ -49,25 +49,55 @@ static const uint32_t ppkb_default_fn_keymap[] = {
+@@ -53,25 +53,55 @@ static const uint32_t ppkb_default_fn_keymap[] = {
  	KEY(0,  7, KEY_F7),
  	KEY(0,  8, KEY_F8),
  	KEY(0,  9, KEY_F9),
@@ -83,7 +83,7 @@ index d74ae97ed..f1fe2f397 100644
  };
  
  static const struct matrix_keymap_data ppkb_default_fn_keymap_data = {
-@@ -76,7 +106,7 @@ static const struct matrix_keymap_data ppkb_default_fn_keymap_data = {
+@@ -80,7 +109,7 @@ static const struct matrix_keymap_data ppkb_default_fn_keymap_data = {
  };
  
  static const uint32_t ppkb_default_keymap[] = {
@@ -92,7 +92,7 @@ index d74ae97ed..f1fe2f397 100644
  	KEY(0,  1, KEY_1),
  	KEY(0,  2, KEY_2),
  	KEY(0,  3, KEY_3),
-@@ -86,7 +116,7 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -90,7 +119,7 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(0,  7, KEY_7),
  	KEY(0,  8, KEY_8),
  	KEY(0,  9, KEY_9),
@@ -101,7 +101,7 @@ index d74ae97ed..f1fe2f397 100644
  	KEY(0, 11, KEY_BACKSPACE),
  
  	KEY(1,  0, KEY_TAB),
-@@ -112,7 +142,7 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -116,7 +145,7 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(2,  7, KEY_J),
  	KEY(2,  8, KEY_K),
  	KEY(2,  9, KEY_L),
@@ -110,7 +110,7 @@ index d74ae97ed..f1fe2f397 100644
  
  	KEY(3,  0, KEY_LEFTSHIFT),
  	KEY(3,  1, KEY_Z),
-@@ -124,13 +154,13 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -128,13 +157,13 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(3,  7, KEY_M),
  	KEY(3,  8, KEY_COMMA),
  	KEY(3,  9, KEY_DOT),

@@ -1,8 +1,8 @@
 diff --git a/drivers/input/keyboard/pinephone-keyboard.c b/drivers/input/keyboard/pinephone-keyboard.c
-index d74ae97ed..9e912931e 100644
+index 671642857d0c..fdd294bec638 100644
 --- a/drivers/input/keyboard/pinephone-keyboard.c
 +++ b/drivers/input/keyboard/pinephone-keyboard.c
-@@ -38,45 +38,8 @@ MODULE_PARM_DESC(disable_input, "Disable the keyboard part of the driver");
+@@ -42,45 +42,8 @@ MODULE_PARM_DESC(disable_fn, "Disable the FN layer special handling");
  #define PPKB_DEFAULT_KEYMAP_ROWS	6
  #define PPKB_DEFAULT_KEYMAP_COLS	12
  
@@ -49,7 +49,7 @@ index d74ae97ed..9e912931e 100644
  	KEY(0,  1, KEY_1),
  	KEY(0,  2, KEY_2),
  	KEY(0,  3, KEY_3),
-@@ -86,7 +49,7 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -90,7 +53,7 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(0,  7, KEY_7),
  	KEY(0,  8, KEY_8),
  	KEY(0,  9, KEY_9),
@@ -58,7 +58,7 @@ index d74ae97ed..9e912931e 100644
  	KEY(0, 11, KEY_BACKSPACE),
  
  	KEY(1,  0, KEY_TAB),
-@@ -112,7 +75,7 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -116,7 +79,7 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(2,  7, KEY_J),
  	KEY(2,  8, KEY_K),
  	KEY(2,  9, KEY_L),
@@ -67,7 +67,7 @@ index d74ae97ed..9e912931e 100644
  
  	KEY(3,  0, KEY_LEFTSHIFT),
  	KEY(3,  1, KEY_Z),
-@@ -124,15 +87,15 @@ static const uint32_t ppkb_default_keymap[] = {
+@@ -128,15 +91,15 @@ static const uint32_t ppkb_default_keymap[] = {
  	KEY(3,  7, KEY_M),
  	KEY(3,  8, KEY_COMMA),
  	KEY(3,  9, KEY_DOT),
@@ -88,11 +88,11 @@ index d74ae97ed..9e912931e 100644
  	KEY(5,  3, KEY_LEFTALT),
  	KEY(5,  5, KEY_RIGHTALT),
  };
-@@ -276,13 +239,6 @@ static void ppkb_update(struct i2c_client *client)
- 
+@@ -281,13 +244,6 @@ static void ppkb_update(struct i2c_client *client)
  			dev_dbg(dev, "row %u col %u %sed\n",
  				row, col, value ? "press" : "releas");
--			if (keymap[code] == KEY_FN) {
+ 
+-			if (!disable_fn && keymap[code] == KEY_FN) {
 -				dev_dbg(dev, "FN is now %sed\n",
 -					value ? "press" : "releas");
 -				keymap = value ? ppkb->fn_keymap
@@ -102,7 +102,7 @@ index d74ae97ed..9e912931e 100644
  			input_event(ppkb->input, EV_MSC, MSC_SCAN, code);
  			input_report_key(ppkb->input, keymap[code], value);
  		}
-@@ -322,7 +278,6 @@ static irqreturn_t ppkb_irq_thread(int irq, void *data)
+@@ -327,7 +283,6 @@ static irqreturn_t ppkb_irq_thread(int irq, void *data)
  
  static int ppkb_probe(struct i2c_client *client)
  {
@@ -110,7 +110,7 @@ index d74ae97ed..9e912931e 100644
  	const struct matrix_keymap_data *keymap_data = &ppkb_default_keymap_data;
  	struct device *dev = &client->dev;
  	unsigned int phys_rows, phys_cols;
-@@ -351,13 +306,11 @@ static int ppkb_probe(struct i2c_client *client)
+@@ -356,13 +311,11 @@ static int ppkb_probe(struct i2c_client *client)
  		return ret;
  
  	/* Allow the devicetree to override the default keymaps. */
@@ -125,7 +125,7 @@ index d74ae97ed..9e912931e 100644
  	} else {
  		map_rows = PPKB_DEFAULT_KEYMAP_ROWS;
  		map_cols = PPKB_DEFAULT_KEYMAP_COLS;
-@@ -419,13 +372,6 @@ static int ppkb_probe(struct i2c_client *client)
+@@ -424,13 +377,6 @@ static int ppkb_probe(struct i2c_client *client)
  	__set_bit(EV_MSC, ppkb->input->evbit);
  	__set_bit(EV_REP, ppkb->input->evbit);
  
