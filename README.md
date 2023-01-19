@@ -2,7 +2,9 @@
 
 Various keyboard layouts for the PinePhone Keyboard Case to use it as intended or to go beyond into the realm of custom layouts.
 
-If you need any help, feel free to contact me via any of [these methods](https://phal.io/links). If you would like me to make a custom layout for you, read [Requesting Custom Layouts](#requesting-custom-layouts).
+If you need any help, feel free to contact me via any of [these methods](https://phal.io/links). I’m also in the Arch Mobile and PinePhone chat rooms, so you can just ping me there. **Seriously, this is all very confusing, especially if you don’t have previous knowledge of how keyboard stuff works. Don’t be like me, wasting countless hours not getting something to work because I don’t want to ask for help. Just ask me!**
+
+If you would like me to make a custom layout for you, read [Requesting Custom Layouts](#requesting-custom-layouts).
 
 If you find this helpful, you have the option of donating to me [here](https://phal.io/donate). Any amount is highly appreciated :)
 
@@ -484,7 +486,7 @@ input "0:0:PinePhone_Keyboard" {
 
 Reload Sway with `sway reload` or reboot. Note that using the default shortcut to reload Sway, Pine+Shift+C, results in an additional ghost key press, also typing a capital D. Make sure that you don’t accidentally insert this D into the sway config and break it this way.
 
-Your distribution may already come with a layout defined for the PPKB in `/etc/sway/config.d/pinephone-keyboard.conf`. Defining the layout again in your Sway config breaks it. Remove the file or comment out all lines by putting a `#` in front of each one.
+Your distribution may already come with a layout defined for the PPKB in `/etc/sway/config.d/pinephone-keyboard.conf`. Your Sway config will break if you add a layout definition while this other layout definition file also exists. Remove this file or comment out all lines by putting a `#` in front of each one. Note that system updates might restore the file to its original state, so if your Sway config breaks after an update, check if this file was reverted.
 
 ##### Plasma Mobile
 
