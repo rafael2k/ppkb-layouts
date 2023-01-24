@@ -84,8 +84,6 @@ Lastly I would like to thank [Megi](https://xnux.eu/log/) for all of his work re
 
 These layouts are limited in what they can do (specifically they cannot add an Fn layer to any key that doesn’t have one by default) but they are the simplest to install as they only require putting the xkb and/or kbd files into the right spot and using a command. They also require the new kernel driver, the one where Fn+numRow results in F1-F10. If you’re still on an older kernel version where these key combinations print extra symbols like |\£, you have to use a layout from the other categories.
 
-Optionally, you may use them with the `regular-improved` kernel driver to prevent Fn from getting keys stuck if not released last.
-
 ### Simple AltGr, Simple Pine
 
 ![Keyboard layout AltGr/Pine](img/pp-altgr-pine.svg)
@@ -276,7 +274,7 @@ This layout adds the additional number row symbols using either AltGr or Pine as
 
 xkb: layout: `pp-driver`, variants: `extended-altgr` or `extended-pine`  
 kbd: `ppkb-extended-altgr.map` or `ppkb-extended-pine.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch`
 
 ### Mirrored
 
@@ -306,11 +304,7 @@ As you can see, `"{}` exist twice. That is because they are on the Fn layer and 
 
 xkb: layout: `pp-driver`, variant: `mirrored`  
 kbd: `ppkb-mirrored.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
-
-**If you use this layout in a graphical environment with `kernel-driver/pinephone-keyboard-full-improved.patch`,** you also have to install the following kbct component to circumvent an undesired behaviour in xkb that makes it only send one arrow key press when you hold the arrow keys. See the last paragraph of [General xkb Usage](#general-usage) for a more detailed explanation.
-
-kbct: `ppkb-driver-full-improved-fix.yaml`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch`
 
 ### Mirrored WASD
 
@@ -338,7 +332,7 @@ As you can see, `{}"` exist twice. That is because they are on the Fn layer and 
 
 xkb: layout: `pp-driver`, variant: `mirrored-wasd`  
 kbd: `ppkb-mirrored-wasd.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-mirrored-wasd.patch`
 
 ### DE Mirrored
 
@@ -374,11 +368,7 @@ Since the right versions of Fn, Ctrl and Shift also double as the movement keys 
 
 xkb: layout: `pp-driver`, variant: `de-mirrored`  
 kbd: `ppkb-de-mirrored.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
-
-**If you use this layout in a graphical environment with `kernel-driver/pinephone-keyboard-full-improved.patch`,** you also have to install the following kbct component to circumvent an undesired behaviour in xkb that makes it only send one arrow key press when you hold the arrow keys. See the last paragraph of [General xkb Usage](#general-usage) for a more detailed explanation.
-
-kbct: `ppkb-driver-full-improved-fix.yaml`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch`
 
 ### DE Mirrored WASD
 
@@ -413,7 +403,7 @@ Besides that, this layout intends to recreate the standard German QWERTZ layout,
 
 xkb: layout: `pp-driver`, variant: `de-mirrored-wasd`  
 kbd: `ppkb-de-mirrored-wasd.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-mirrored-wasd.patch`
 
 ### Phalio
 
@@ -449,13 +439,13 @@ This layout started with the goal of making it as close to my usual custom layou
 
 xkb: layout: `pp-driver`, variant: `phalio`  
 kbd: `ppkb-phalio.map`  
-Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-full.patch` or `kernel-driver/pinephone-keyboard-full-improved.patch`
+Driver: `userspace-driver/full.txt` or `kernel-driver/pinephone-keyboard-mirrored-wasd.patch`
 
 ## Installing Layouts
 
 ### Installing and Updating
 
-Layouts may consist of xkb, kbd, userspace driver or kernel driver components. xkb defines symbols for graphical environments and kbd defines symbols for TTYs. If you only use graphical environments, you may omit the kbd part (although it won’t hurt in case you ever need it) and vice versa. Driver components influence both environments and are usually combined with xkb and kbd components for full customisability. You can only use either the userspace driver or the kernel driver. The userspace driver is simpler to install but less customisable and just like the default kernel driver has the issue of [getting keys stuck if Fn/Pine is not let go of last](#stuck-modifier-keys), while custom kernel drivers (the ones that have `-improved` in their name) get rid of this issue and allow maximum customisation (see [Kernel Driver](#kernel-driver) for a longer explanation on the differences). Each layout includes a list of its components that have to be installed to use the layout.
+Layouts may consist of xkb, kbd, userspace driver or kernel driver components. xkb defines symbols for graphical environments and kbd defines symbols for TTYs. If you only use graphical environments, you may omit the kbd part (although it won’t hurt in case you ever need it) and vice versa. Driver components influence both environments and are usually combined with xkb and kbd components for full customisability. You can only use either the userspace driver or the kernel driver. The userspace driver is simpler to install but less customisable and might still have the issue of [getting keys stuck if Fn/Pine is not let go of last](#stuck-modifier-keys), while custom kernel drivers allow maximum customisation (see [Kernel Driver](#kernel-driver) for a longer explanation on the differences). Each layout includes a list of its components that have to be installed to use the layout.
 
 To download the layouts, simply use `git clone https://codeberg.org/phalio/ppkb-layouts.git`. To update them, `cd` to the `ppkb-layouts` directory, use `git pull`, execute the install scripts you need again and reboot.
 
@@ -582,7 +572,7 @@ Note that each time you want to use a different usserspace driver keymap or have
 
 #### Explanation
 
-For Full layouts, there are two options for modified kernel input drivers: `pinephone-keyboard-full` and `pinephone-keyboard-full-improved`. Both let you type the same symbols of the selected layout, just like the userspace driver. But they still have differences that could be important to you. All kernel drivers allow you to use the pine key entirely as normal, even if pressed by itself, unlike the userspace driver. `pinephone-keyboard-full-improved` (as well as any `*-improved`) in addition fully removes the Fn layer and replaces it with regular xkb/kbd modifiers, thereby removing the very annoying behaviour of getting keys stuck if Fn is not let go of last. That makes this the best and most comfortable option, at the cost of more difficult installation and maintaining (you’ll have to compile each new kernel version yourself), as well as losing the ability to send raw scan codes for e.g. F1-12 and arrow keys, which also means that the GUI (not TTY) keyboard shortcut to switch to TTY won’t work. You can always define a regular shortcut in your desktop environment or use `chvt <number>`, but that won’t work if the GUI is frozen and you have no SSH access. Or use TTYescape, available for postmarketOS and in the [AUR](https://aur.archlinux.org/packages/ttyescape). Still, at least in my opinion that is a small price to pay for a perfectly working custom keyboard layout. If you do need raw scan codes, try [https://github.com/samvel1024/kbct](https://github.com/samvel1024/kbct) in combination with `*-improved`.
+The kernel driver allows you to use the Pine key entirely as normal (e.g. as the Win key), even if pressed by itself, unlike the userspace driver where it’s always a special driver-level modifier key. Custom kernel drivers can map different scan codes to any key and therefore allow the highest degree of customisability, at the cost of more difficult installation and maintaining (you’ll have to compile each new kernel version yourself).
 
 #### Introduction
 
@@ -651,7 +641,7 @@ clean:
 	make -C /home/alarm/code/git/linux M=$(PWD) clean
 ```
 
-Apply the desired patch by using `git apply ~/code/git/ppkb-layouts/kernel-driver/pinephone-keyboard-full-improved.patch`. If you want to revert a patch, use `git apply -R ~/code/git/ppkb-layouts/kernel-driver/pinephone-keyboard-full-improved.patch` or reset it by using `git checkout -- pinephone-keyboard.c`.
+Apply the desired patch by using `git apply ~/code/git/ppkb-layouts/kernel-driver/pinephone-keyboard-full.patch`. If you want to revert a patch, use `git apply -R ~/code/git/ppkb-layouts/kernel-driver/pinephone-keyboard-full.patch` or reset it by using `git checkout -- pinephone-keyboard.c`.
 
 Compile the driver by executing `make`.
 
@@ -777,11 +767,11 @@ In the `xkb/evdev.xml` file, scroll down to the other PPKB layouts, e.g. by sear
 
 In the `xkb/evdev.lst` file, there are two separate locations for layout files and for their variants. To add a new layout, search for “pp-driver” and add a new line below it whose first word is the layout file name, followed by a description. To add a variant, search for “fnsymbols” to get to the variants section. Add a new line with the first word being the variant name and the second word being the file name, followed by a colon and a description.
 
-For some reason, Shift_R didn’t work if mapped to something using the Fn layer, so if you have this issue too just use Shift_L there, I guess. Mapping Control_R to any scan code that is not `<RCTL>` broke all Control_Rs for me, so use Control_L on non-`<RCTL>` scan codes that are supposed to be ctrl. If you used the scan codes for F13-F24, only F19 and F24 can be mapped to something in xkb as the others will always be overridden with stuff like media keys as these scan codes are also commonly used on extra laptop keys. Any key that has any modifier (shift, ctrl, level3 etc.) mapped to its first layer will not repeat any signal on any level of that key when it’s held down. This issue is present in the regular mirrored layouts if using the `full-improved` kernel driver since the first levels of the ◄▼► arrow keys are mapped to modifier keys. Holding those keys only creates one arrow key press signal and does not repeat it. I’m not aware of a way to change this. This bug is not present using the non-improved drivers as the arrow keys use different scan codes that don’t have modifiers mapped to them there. The only way I was able to circumvent this is by using [kbct](#kbct-1) to separate these levels to different driver-level scan codes, just like the PPKB drivers do, and like `kbct/ppkb-driver-full-improved-fix.yaml` does but without the regular drivers’ stuck modifier bug. That layout takes the scan codes as defined by the `full-improved` kernel driver and adds a scan code-based fn layer with the same scan codes as the `full` userspace or kernel driver.
+For some reason, Shift_R didn’t work if mapped to something using the Fn layer, so if you have this issue too just use Shift_L there, I guess. Mapping Control_R to any scan code that is not `<RCTL>` broke all Control_Rs for me, so use Control_L on non-`<RCTL>` scan codes that are supposed to be ctrl. If you used the scan codes for F13-F24, only F19 and F24 can be mapped to something in xkb as the others will always be overridden with stuff like media keys as these scan codes are also commonly used on extra laptop keys. Any key that has any modifier (shift, ctrl, level3 etc.) mapped to its first layer will not repeat any signal on any level of that key when it’s held down. This issue was present in the regular mirrored layouts if using the now deprecated `full-improved` kernel driver since the first levels of the ◄▼► arrow keys are mapped to modifier keys. Holding those keys only creates one arrow key press signal and does not repeat it. I’m not aware of a way to change this. This bug is not present using the non-improved drivers as the arrow keys use different scan codes that don’t have modifiers mapped to them there. The only way I was able to circumvent this is by using [kbct](#kbct-1) to separate these levels to different driver-level scan codes, just like the PPKB drivers do, and like `kbct/ppkb-driver-full-improved-fix.yaml` does but without the regular drivers’ stuck modifier bug. That layout takes the scan codes as defined by the `full-improved` kernel driver and adds a scan code-based fn layer with the same scan codes as the `full` userspace or kernel driver.
 
 #### PPKB-Specific Usage
 
-If a driver-level Fn (and Pine) level is used, a key can have two (or three) scan codes that are then used for these levels instead of additional regular levels in the xkb file. All existing layouts in this repository have all of these extra scan codes for the default and included custom drivers already included below the corresponding main scan code. If a driver with the Fn layer handling removed (`*-improved`) is used, regular xkb levels are used instead. I mapped the Fn key to the scan code for F24 in these drivers and that scan code to activate an additional layer. To make a layout compatible with both systems, both multiple scan codes and additional levels that both contain the same mappings should be used. Just take a look at the existing layouts to see what that’s like.
+If a driver-level Fn (and Pine) level is used, a key can have two (or three) scan codes that are then used for these levels instead of additional regular levels in the xkb file. All existing layouts in this repository have all of these extra scan codes for the default and included custom drivers already included below the corresponding main scan code. If the Fn layer handling of the kernel driver is disabled or a custom driver with the Fn layer handling removed is being used, regular xkb levels are used instead. To make a layout compatible with both systems, both multiple scan codes and additional levels that both contain the same mappings should be used. Just take a look at the existing layouts to see what that’s like.
 
 Mirrored layouts were quite a challenge to make, mostly due to the fifth level being accessed by pressing two special modifier keys. Getting both Fn and another key to do the same with a driver-based Fn layer is quite straightforward. Simply define the symbols for that level twice: Once on level 3(+4 with shift) for use with an ISO_Level3_Shift key, and then once more on a separate scan code (from the Fn level) on level 1 (+2 with shift). If not using a driver-based Fn level, just bind the Fn key to ISO_Level3_Shift as well.
 
@@ -812,9 +802,11 @@ TTY switch shortcuts are also defined in kbd. They are automatically mapped to t
 
 #### PPKB-Specific Usage
 
-If a driver-level Fn (and Pine) level is used, a key can have two (or three) scan codes that are then used for these levels instead of additional regular levels in the kbd file. All existing layouts in this repository have all of these extra scan codes for the default and included custom drivers already included below the corresponding main scan code. If a driver with the Fn layer handling removed (`*-improved`) is used, regular kbd levels are used instead. I mapped the Fn key to the scan code for F24 in these drivers and that scan code to a modifier like ShiftL that is then used for additional layers. For some reason, the F24 scan code produces no scan code with `showkey --scancodes` but every time showkey was active and I was pressing Fn, dmesg said `keyboard: can't emulate rawmode for keycode 194`. Mapping that keycode to something does indeed work. To make a layout compatible with both systems, both multiple scan codes and additional levels that both contain the same mappings should be used. Just take a look at the existing layouts to see what that’s like.
+If a driver-level Fn (and Pine) level is used, a key can have two (or three) scan codes that are then used for these levels instead of additional regular levels in the kbd file. All existing layouts in this repository have all of these extra scan codes for the default and included custom drivers already included below the corresponding main scan code. If the Fn layer handling of the kernel driver is disabled or a custom driver with the Fn layer handling removed is being used, regular kbd levels are used instead. I mapped the scan code of the Fn key to a modifier like ShiftL that is then used for additional layers. To make a layout compatible with both systems, both multiple scan codes and additional levels that both contain the same mappings should be used. Just take a look at the existing layouts to see what that’s like.
 
 These two systems also apply to mirrored layouts. The LFn+RFn/+AltGr level on a driver-based Fn level is accessed by using the keycode for the key’s Fn level in addition to ShiftL, ShiftR or AltGr, depending on the layout. For an kbd-based Fn level, RFn and LFn are mapped to ShiftL and ShiftR. For both of them to do the same, each key has to have the levels involving Fn defined twice, or thrice to also work with driver-based Fn. This might be a little tedious but it also gives more control over possibly only using one of the two Fns for a key, like when the right modifiers also double as movement keys. The LFn+RFn/+AltGr level is then mapped to `ShiftL ShiftR keycode …`. All of this is a little confusing, so just take a look at the existing mirrored layouts (either ones where the right modifiers double as arrow keys or ones where they do not (WASD)) and see where symbols have to be placed and which levels have to be duplicates.
+
+For some reason, the F24 scan code produces no scan code with `showkey --scancodes` but every time showkey was active and I was pressing Fn, dmesg said `keyboard: can't emulate rawmode for keycode 194`. Mapping that keycode to something does indeed work.
 
 ### Userspace Driver
 
@@ -830,11 +822,11 @@ Of the scan codes for F13-F24, only F19 and F24 can be mapped to something in xk
 
 Changing the scan codes the kernel driver sends is simple. The full driver is located in `drivers/input/keyboard/pinephone-keyboard.c` of the kernel repository. There are two separate sets of key definitions, one for the driver-based Fn level and one for the regular level. The two numbers are the key’s position in the keyboard matrix, followed by the scan code you want it to send. As Megi linked in the default userspace driver keymap, you can find their aliases at [https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/input-event-codes.h#L76](https://elixir.bootlin.com/linux/latest/source/include/uapi/linux/input-event-codes.h#L76). Use any that starts with KEY.
 
-To add an Fn level to more keys, simply copy its definition from the normal level over to the Fn level and give it a different scan code. Note that the Fn key must always have Fn mapped to it on both levels if using a driver-based Fn level. If the Fn level of Fn were to be mapped to a different scan code, the active Fn mode would be stuck indefinitely. Pressing Fn activates the Fn layer, changing the scan codes *all* keys send to instead send the ones separately defined for the Fn layer. If there is no longer an Fn scan code to release and therefore end the Fn layer functionality, there is no way to exit the Fn layer. The drivers should just send release signals for all keys when the Fn layer gets activated or deactivated or something to avoid this, but unfortunately they don’t. The regular modifier keys like shift also have to stay the same in the Fn layer if they are to be used there.
+To add an Fn level to more keys, simply copy its coordinates from the normal level over to the Fn level and give it a different scan code. Don’t forget to also add the `PPKB_ROWS +`.
 
 Alternatively you can remove the driver-based Fn layer altogether by simply removing the Fn keymap and all lines of code that mention the Fn layer, as is done in the `*-improved` kernel drivers in this repository. This has the advantage of removing the bug of keys getting stuck if Fn is not released last, which has the same cause as why Fn must be Fn in the Fn layer as described in the last paragraph.
 
-For mirrored layouts that use two instances of Fn, it might also be possible to assign the Fn scan code to two keys if the functionality is tied to the scan code and not to the key itself as it is in the userspace driver. It might work here since the Fn layer toggling in the Fn layer itself is also dependent solely on the presence of the Fn scan code. But I haven’t tested this yet because I’ve already spent way too much time on this and currently using the driver’s Fn layer is suboptimal anyway. I don’t use it.
+The scan code for Fn can be assigned to any key, including multiple keys at the same time. These keys will then activate the second set of scan codes also defined in the kernel driver.
 
 Of the scan codes for F13-F24, only F19 and F24 can be mapped to something in xkb as the others will always be overridden with stuff like media keys as these scan codes are also commonly used on extra laptop keys. If you use GUIs, you therefore likely don’t want to use the scan codes for F13-F18 and F20-F23.
 
@@ -843,8 +835,6 @@ Of the scan codes for F13-F24, only F19 and F24 can be mapped to something in xk
 Follow the install instructions from [https://github.com/samvel1024/kbct](https://github.com/samvel1024/kbct). To compile from source, install [Rust](https://www.rust-lang.org/tools/install) by running the command on that site if you haven’t already. Then execute the install block [here](https://github.com/samvel1024/kbct#installation).
 
 Modifying and making layouts is simple. Refer to [https://github.com/samvel1024/kbct#configuration](https://github.com/samvel1024/kbct#configuration). The the keyboard name you have to use is “PinePhone Keyboard”.
-
-Note that kbct layers do not have the bug of getting keys stuck like the PPKB drivers. The one kbct layout that is currently featured in this repository takes the scan codes as defined by the `full-improved` kernel driver and adds a scan code-based fn layer with the same scan codes as the `full` userspace or kernel driver, just to remove the stuck key bug and to cirvumvent the bug described in the last paragraph of [General xkb Usage](#general-usage).
 
 ## Troubleshooting
 

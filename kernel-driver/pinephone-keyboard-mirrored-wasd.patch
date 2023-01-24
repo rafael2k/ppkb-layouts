@@ -1,5 +1,5 @@
 diff --git a/drivers/input/keyboard/pinephone-keyboard.c b/drivers/input/keyboard/pinephone-keyboard.c
-index 6717dd1b3..27940ab67 100644
+index 6717dd1b3..5922de5e6 100644
 --- a/drivers/input/keyboard/pinephone-keyboard.c
 +++ b/drivers/input/keyboard/pinephone-keyboard.c
 @@ -51,7 +51,7 @@ MODULE_PARM_DESC(disable_fn, "Disable the FN layer special handling");
@@ -41,7 +41,7 @@ index 6717dd1b3..27940ab67 100644
 -	KEY(4,  6, KEY_APOSTROPHE),
 -	KEY(4,  8, KEY_RIGHTBRACE),
 -	KEY(4,  9, KEY_LEFTBRACE),
-+	KEY(4,  6, KEY_KP5),
++	KEY(4,  6, KEY_FN),
 +	KEY(4,  8, KEY_KP8),
 +	KEY(4,  9, KEY_RIGHTCTRL),
  
@@ -120,7 +120,7 @@ index 6717dd1b3..27940ab67 100644
 +
 +	KEY(PPKB_ROWS + 4,  1, KEY_KP1),
 +	KEY(PPKB_ROWS + 4,  4, KEY_KP3),
-+	KEY(PPKB_ROWS + 4,  6, KEY_KP6),
++	KEY(PPKB_ROWS + 4,  6, KEY_FN),
 +	KEY(PPKB_ROWS + 4,  8, KEY_KP9),
 +	KEY(PPKB_ROWS + 4,  9, KEY_KP7),
 +
