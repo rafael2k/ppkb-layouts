@@ -521,6 +521,8 @@ To immediately set a layout that will not persist after a reboot, use either `su
 
 ### Userspace Driver
 
+*Keep in mind that the userspace driver currently still suffers from the [Stuck (Modifier) Keys](#stuck-modifier-keys) bug, unlike the kernel driver where it was fixed.*
+
 #### 1. Download
 
 First clone Megi’s repository by using `git clone https://megous.com/git/pinephone-keyboard`.
