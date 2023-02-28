@@ -1,4 +1,4 @@
-THIS IS AN UNOFFICIAL FORK. Official address is here: https://codeberg.org/phalio/ppkb-layouts/#user-content-xkb-kbd-only-layouts
+THIS IS AN UNOFFICIAL FORK. Official address is here: https://codeberg.org/phalio/ppkb-layouts/
 
 # ppkb-layouts
 
