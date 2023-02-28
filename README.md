@@ -1,3 +1,5 @@
+THIS IS AN UNOFFICIAL FORK. Official address is here: https://codeberg.org/phalio/ppkb-layouts/#user-content-xkb-kbd-only-layouts
+
 # ppkb-layouts
 
 Various keyboard layouts for the PinePhone Keyboard Case to use it as intended or to go beyond into the realm of custom layouts.
